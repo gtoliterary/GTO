@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frequently Asked Questions | GTO Literary Marketing</title>
+  <meta name="description" content="Find clear, transparent answers about working with GTO Literary Marketing, our consultancy process, marketing services, independent author support, and campaign strategies." />
+  <meta name="keywords" content="Book Marketing Agency, Literary Marketing Consultant, Book Promotion Services, Book Marketing FAQ, Author Marketing Services, Amazon Book Marketing, Book Launch Strategy" />
+  <meta name="author" content="Gideon - Founder &amp; Literary Marketing Consultant" />
+  <meta name="robots" content="index, follow" />
+
+  <style>
+    /* ==========================================================================
+       1. CSS VARIABLES & BRAND PALETTE
+       ========================================================================== */
+    :root {
+      --color-black: #0B0B0C;
+      --color-black-surface: #121215;
+      --color-black-card: #18181C;
+      --color-black-border: #26262B;
+      --color-gold: #C5A059;
+      --color-gold-light: #DFBE7F;
+      --color-gold-dark: #9E7B36;
+      --color-gold-muted: rgba(197, 160, 89, 0.15);
+      --color-cream: #F9F6F0;
+      --color-cream-deep: #EFEAE0;
+      --color-white: #FFFFFF;
+      --color-text-dark: #161618;
+      --color-text-muted-dark: #58575C;
+      --color-text-muted-light: #B8B5AD;
+      --color-border-gold: rgba(197, 160, 89, 0.35);
+      --color-border-light: rgba(22, 22, 24, 0.12);
+
+      --font-serif: "Playfair Display", "Didot", "Bodoni MT", "Georgia", serif;
+      --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+      --container-max: 1240px;
+      --container-narrow: 920px;
+      --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      --shadow-luxury: 0 16px 40px rgba(0, 0, 0, 0.08);
+    }
+
+    /* ==========================================================================
+       2. RESET & BASE
+       ========================================================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--color-black);
+      color: var(--color-cream);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    img, svg {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    ul, ol {
+      list-style: none;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 1rem;
+      background: var(--color-gold);
+      color: var(--color-black);
+      padding: 0.75rem 1.25rem;
+      font-weight: 700;
+      z-index: 10000;
+    }
+    .skip-link:focus {
+      top: 1rem;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 1.75rem;
+    }
+
+    .container-narrow {
+      width: 100%;
+      max-width: var(--container-narrow);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* ==========================================================================
+       3. EXACT HEADER & SUB-BAR (FROM SCREENSHOT PATTERN)
+       ========================================================================== */
+    .site-header {
+      background-color: var(--color-black);
+      border-bottom: 1px solid rgba(197, 160, 89, 0.15);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 90px;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      gap: 1.5rem;
+    }
+
+    .brand-link {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+
+    .logo-box {
+      width: 54px;
+      height: 54px;
+      border: 1px solid var(--color-gold);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #0B0B0C;
+      position: relative;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .logo-box .logo-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: none;
+    }
+
+    .logo-box .logo-placeholder-letter {
+      font-family: var(--font-serif);
+      color: var(--color-gold);
+      font-size: 1.4rem;
+      font-style: italic;
+      line-height: 1;
+      margin-top: 2px;
+    }
+
+    .logo-box .logo-placeholder-text {
+      font-size: 0.45rem;
+      font-family: var(--font-sans);
+      color: var(--color-gold);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    .brand-text-block {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-title {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      color: var(--color-white);
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      line-height: 1.15;
+    }
+
+    .brand-subtitle {
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      color: var(--color-gold);
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-top: 0.2rem;
+    }
+
+    .nav-menu-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .nav-links-list {
+      display: flex;
+      align-items: center;
+      gap: 2.2rem;
+    }
+
+    .nav-links-list a {
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--color-text-muted-light);
+      padding: 0.45rem 0;
+      position: relative;
+    }
+
+    .nav-links-list a:hover,
+    .nav-links-list a.active {
+      color: var(--color-gold);
+    }
+
+    .nav-links-list a.active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 100%;
+      height: 1.5px;
+      background-color: var(--color-gold);
+    }
+
+    .header-cta-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--color-gold);
+      background: transparent;
+      color: var(--color-gold);
+      font-family: var(--font-sans);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 0.85rem 1.65rem;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+
+    .header-cta-btn:hover {
+      background: var(--color-gold);
+      color: var(--color-black);
+      box-shadow: 0 0 20px rgba(197, 160, 89, 0.25);
+    }
+
+    .header-sub-banner {
+      background-color: #0E0E10;
+      border-bottom: 1px solid rgba(197, 160, 89, 0.12);
+      padding: 0.75rem 0;
+      text-align: center;
+    }
+
+    .sub-banner-text {
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--color-gold);
+    }
+
+    .mobile-toggle {
+      display: none;
+      background: none;
+      border: 1px solid var(--color-gold);
+      color: var(--color-gold);
+      padding: 0.5rem;
+      cursor: pointer;
+    }
+
+    /* ==========================================================================
+       4. HERO BANNER
+       ========================================================================== */
+    .faq-hero {
+      padding: 5rem 0 3.75rem;
+      background: radial-gradient(circle at top center, rgba(197, 160, 89, 0.08) 0%, rgba(11, 11, 12, 1) 70%);
+      border-bottom: 1px solid var(--color-black-border);
+      text-align: center;
+    }
+
+    .section-eyebrow {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--color-gold);
+      margin-bottom: 1rem;
+    }
+
+    .faq-hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.2rem, 4.2vw, 3.4rem);
+      color: var(--color-white);
+      margin-bottom: 1.25rem;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    .faq-hero h1 span {
+      color: var(--color-gold);
+      font-style: italic;
+    }
+
+    .faq-hero p {
+      max-width: 680px;
+      margin: 0 auto;
+      color: var(--color-text-muted-light);
+      font-size: 1.05rem;
+      line-height: 1.75;
+    }
+
+    /* ==========================================================================
+       5. CONTENT & CONTROLS (SEARCH & CATEGORY TABS)
+       ========================================================================== */
+    .faq-content-area {
+      background-color: var(--color-cream);
+      color: var(--color-text-dark);
+      padding: 4.5rem 0 6rem;
+      min-height: 700px;
+    }
+
+    .faq-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+      margin-bottom: 3rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--color-border-light);
+    }
+
+    .category-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .category-tab-btn {
+      background: #FFFFFF;
+      border: 1px solid var(--color-border-light);
+      color: var(--color-text-dark);
+      padding: 0.55rem 1.15rem;
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+      transition: var(--transition);
+      text-transform: uppercase;
+    }
+
+    .category-tab-btn:hover,
+    .category-tab-btn.active {
+      background: var(--color-black);
+      color: var(--color-gold);
+      border-color: var(--color-black);
+    }
+
+    .search-box-wrapper {
+      position: relative;
+      min-width: 290px;
+    }
+
+    .search-box-wrapper input {
+      width: 100%;
+      padding: 0.65rem 1rem 0.65rem 2.4rem;
+      border: 1px solid var(--color-border-light);
+      background: #FFFFFF;
+      font-family: var(--font-sans);
+      font-size: 0.88rem;
+      color: var(--color-text-dark);
+      outline: none;
+      transition: var(--transition);
+    }
+
+    .search-box-wrapper input:focus {
+      border-color: var(--color-gold-dark);
+      box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.15);
+    }
+
+    .search-box-wrapper svg {
+      position: absolute;
+      left: 0.85rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 16px;
+      color: var(--color-text-muted-dark);
+    }
+
+    /* ==========================================================================
+       6. ACCORDION COMPONENT
+       ========================================================================== */
+    .faq-accordion-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .faq-item {
+      background: var(--color-white);
+      border: 1px solid var(--color-border-light);
+      border-radius: 2px;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+      transition: var(--transition);
+      overflow: hidden;
+    }
+
+    .faq-item:hover {
+      border-color: rgba(197, 160, 89, 0.5);
+    }
+
+    .faq-item.open {
+      border-color: var(--color-gold);
+      box-shadow: var(--shadow-luxury);
+    }
+
+    .faq-question-btn {
+      width: 100%;
+      background: none;
+      border: none;
+      text-align: left;
+      padding: 1.65rem 2rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      color: var(--color-text-dark);
+      font-weight: 600;
+      line-height: 1.35;
+      transition: var(--transition);
+    }
+
+    .faq-item.open .faq-question-btn {
+      color: var(--color-gold-dark);
+      border-bottom: 1px solid var(--color-cream-deep);
+    }
+
+    .faq-icon-indicator {
+      width: 32px;
+      height: 32px;
+      border: 1px solid var(--color-border-light);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--color-gold-dark);
+      transition: var(--transition);
+      background: var(--color-cream);
+    }
+
+    .faq-item.open .faq-icon-indicator {
+      transform: rotate(45deg);
+      background: var(--color-black);
+      border-color: var(--color-black);
+      color: var(--color-gold);
+    }
+
+    .faq-answer-panel {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    .faq-answer-inner {
+      padding: 1.75rem 2rem 2.25rem;
+      font-size: 1.02rem;
+      color: #2D2C30;
+      line-height: 1.8;
+    }
+
+    .faq-answer-inner p {
+      margin-bottom: 1.15rem;
+    }
+
+    .faq-answer-inner p:last-child {
+      margin-bottom: 0;
+    }
+
+    .faq-answer-inner ul {
+      margin: 1rem 0 1.25rem 1.5rem;
+    }
+
+    .faq-answer-inner ul li {
+      list-style-type: disc;
+      margin-bottom: 0.5rem;
+    }
+
+    .faq-category-badge {
+      display: inline-block;
+      font-family: var(--font-sans);
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-gold-dark);
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+
+    .empty-faq-message {
+      display: none;
+      text-align: center;
+      padding: 4rem 2rem;
+      background: var(--color-white);
+      border: 1px solid var(--color-border-light);
+    }
+
+    /* ==========================================================================
+       7. ETHICAL GUARANTEE SPOTLIGHT
+       ========================================================================== */
+    .ethical-spotlight {
+      margin-top: 4.5rem;
+      background: #FFFFFF;
+      border-left: 4px solid var(--color-gold);
+      border-top: 1px solid var(--color-border-light);
+      border-right: 1px solid var(--color-border-light);
+      border-bottom: 1px solid var(--color-border-light);
+      padding: 2.5rem;
+    }
+
+    .ethical-spotlight h3 {
+      font-family: var(--font-serif);
+      font-size: 1.45rem;
+      color: var(--color-text-dark);
+      margin-bottom: 0.75rem;
+    }
+
+    .ethical-spotlight p {
+      color: var(--color-text-muted-dark);
+      font-size: 0.98rem;
+      line-height: 1.75;
+      margin-bottom: 1.25rem;
+    }
+
+    .ethical-spotlight p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ==========================================================================
+       8. CONSULTATION CTA SECTION
+       ========================================================================== */
+    .cta-section {
+      background-color: var(--color-black);
+      padding: 5.5rem 0;
+      text-align: center;
+      border-top: 1px solid var(--color-border-gold);
+    }
+
+    .cta-box {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .cta-box h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 3.6vw, 2.75rem);
+      color: var(--color-white);
+      margin-bottom: 1.25rem;
+      font-weight: 500;
+    }
+
+    .cta-box p {
+      color: var(--color-text-muted-light);
+      font-size: 1.05rem;
+      line-height: 1.75;
+      margin-bottom: 2.25rem;
+    }
+
+    .btn-gold-solid {
+      background: var(--color-gold);
+      color: var(--color-black);
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 1rem 2.25rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--color-gold);
+      transition: var(--transition);
+    }
+
+    .btn-gold-solid:hover {
+      background: var(--color-gold-light);
+      border-color: var(--color-gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(197, 160, 89, 0.28);
+    }
+
+    /* ==========================================================================
+       9. FOOTER
+       ========================================================================== */
+    .site-footer {
+      background-color: #080809;
+      color: var(--color-text-muted-light);
+      padding: 4.5rem 0 2rem;
+      border-top: 1px solid rgba(197, 160, 89, 0.12);
+      font-size: 0.9rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 0.8fr 1fr 1.1fr;
+      gap: 2.5rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid rgba(197, 160, 89, 0.12);
+    }
+
+    .footer-brand p {
+      margin-top: 1.15rem;
+      font-size: 0.88rem;
+      line-height: 1.7;
+    }
+
+    .footer-quote {
+      font-family: var(--font-serif);
+      font-style: italic;
+      color: var(--color-gold);
+      margin-top: 0.6rem;
+      font-size: 0.95rem;
+    }
+
+    .footer-col h4 {
+      font-family: var(--font-serif);
+      color: var(--color-white);
+      font-size: 1.05rem;
+      margin-bottom: 1.25rem;
+      font-weight: 500;
+    }
+
+    .footer-links li {
+      margin-bottom: 0.65rem;
+    }
+
+    .footer-links a {
+      color: var(--color-text-muted-light);
+      font-size: 0.86rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--color-gold);
+      padding-left: 4px;
+    }
+
+    .placeholder-badge {
+      display: inline-block;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      background: rgba(197, 160, 89, 0.15);
+      color: var(--color-gold);
+      border: 1px solid rgba(197, 160, 89, 0.35);
+      padding: 0.15rem 0.5rem;
+      margin-top: 0.35rem;
+    }
+
+    .footer-bottom {
+      padding-top: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      font-size: 0.82rem;
+    }
+
+    .footer-legal a {
+      margin-left: 1.25rem;
+      color: var(--color-text-muted-light);
+    }
+
+    .footer-legal a:hover {
+      color: var(--color-gold);
+    }
+
+    /* ==========================================================================
+       10. RESPONSIVE BREAKPOINTS
+       ========================================================================== */
+    @media (max-width: 1024px) {
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 860px) {
+      .mobile-toggle {
+        display: block;
+      }
+      .nav-menu-wrapper {
+        position: fixed;
+        top: 90px;
+        left: 0;
+        right: 0;
+        background: #0B0B0C;
+        border-bottom: 1px solid var(--color-border-gold);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2rem;
+        gap: 1.5rem;
+        transform: translateY(-130%);
+        opacity: 0;
+        visibility: hidden;
+        transition: var(--transition);
+      }
+      .nav-menu-wrapper.open {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+      }
+      .nav-links-list {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.2rem;
+        width: 100%;
+      }
+      .header-cta-btn {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .faq-question-btn {
+        padding: 1.25rem 1.25rem;
+        font-size: 1.1rem;
+      }
+      .faq-answer-inner {
+        padding: 1.25rem 1.25rem 1.75rem;
+      }
+      .faq-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .search-box-wrapper {
+        width: 100%;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+      .footer-legal a {
+        margin: 0 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ========================================================================
+       TOP HEADER (Matches Pattern Exactly)
+       ======================================================================== -->
+  <header class="site-header" role="banner">
+    <div class="container nav-container">
+
+      <!-- LOGO PART -->
+      <a href="index.html" class="brand-link" aria-label="GTO Literary Marketing Home">
+        <div class="logo-box" id="logoBoxContainer">
+          <span class="logo-placeholder-letter" id="fallbackLetter">G</span>
+          <span class="logo-placeholder-text" id="fallbackSubtext">LOGO.JPG</span>
+          <img src="Gilded Literary Marketing Emblem.png" alt="GTO Literary Logo" class="logo-img" id="actualLogoImg" onerror="this.style.display='none';" onload="this.style.display='block'; document.getElementById('fallbackLetter').style.display='none'; document.getElementById('fallbackSubtext').style.display='none';" />
+        </div>
+        <div class="brand-text-block">
+          <span class="brand-title">GTO Literary</span>
+          <span class="brand-subtitle">MARKETING</span>
+        </div>
+      </a>
+
+      <!-- MOBILE TOGGLE BUTTON -->
+      <button class="mobile-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <!-- NAVIGATION MENU -->
+      <nav class="nav-menu-wrapper" id="navMenuWrapper" role="navigation" aria-label="Main Navigation">
+        <ul class="nav-links-list">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="services.html">SERVICES</a></li>
+          <li><a href="blog.html">BLOG</a></li>
+          <li><a href="faq.html" class="active" aria-current="page">FAQ</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+        <a href="contact.html" class="header-cta-btn">FREE CONSULTATION</a>
+      </nav>
+
+    </div>
+
+    <!-- SUB-BAR BANNER -->
+    <div class="header-sub-banner">
+      <div class="container">
+        <p class="sub-banner-text">FOR AUTHORS, PUBLISHERS &amp; LITERARY PROFESSIONALS</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       MAIN PAGE CONTENT
+       ======================================================================== -->
+  <main id="main-content">
+
+    <!-- HERO SECTION -->
+    <section class="faq-hero">
+      <div class="container">
+        <span class="section-eyebrow">Clarity, Process &amp; Transparency</span>
+        <h1>Frequently Asked <span>Questions</span></h1>
+        <p>
+          Everything you need to know about working with GTO Literary Marketing, our bespoke strategic advisory, client onboarding, and practical promotion solutions.
+        </p>
+      </div>
+    </section>
+
+    <!-- ACCORDION SECTION -->
+    <section class="faq-content-area">
+      <div class="container-narrow">
+
+        <!-- CONTROLS TOOLBAR (Category Tabs + Live Keyword Filter) -->
+        <div class="faq-toolbar">
+          <div class="category-tabs" role="tablist" aria-label="FAQ categories">
+            <button type="button" class="category-tab-btn active" data-category="all">All Questions (10)</button>
+            <button type="button" class="category-tab-btn" data-category="agency">About GTO</button>
+            <button type="button" class="category-tab-btn" data-category="services">Services &amp; Process</button>
+            <button type="button" class="category-tab-btn" data-category="expectations">Guarantees &amp; Sales</button>
+          </div>
+
+          <div class="search-box-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="search" id="faqSearchInput" placeholder="Filter questions by keyword..." aria-label="Search FAQs" />
+          </div>
+        </div>
+
+        <!-- ACCORDION LIST -->
+        <div class="faq-accordion-list" id="faqAccordionList">
+
+          <!-- QUESTION 1 -->
+          <div class="faq-item" data-category="agency">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span>What does GTO Literary Marketing do?</span>
+              <span class="faq-icon-indicator" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer-panel">
+              <div class="faq-answer-inner">
+                <span class="faq-category-badge">About GTO Literary Marketing</span>
+                <p>
+                  GTO Literary Marketing is a specialized literary marketing consultancy founded by Gideon. We assist authors, independent publishers, and literary professionals in bridging the critical gap between completing a book and connecting with an engaged audience.
+                </p>
+                <p>
+                  Our work focuses on strategic book discoverability, commercial positioning, Amazon and retail optimization, reader funnel development, book launch campaigns, author branding, and community outreach. Rather than relying on generic mass-blast marketing, we build sustainable marketing frameworks tailored to each book’s unique genre, voice, and target readership.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- QUESTION 2 -->
+          <div class="faq-item" data-category="agency">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span>Who can work with GTO?</span>
+              <span class="faq-icon-indicator" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer-panel">
+              <div class="faq-answer-inner">
+                <span class="faq-category-badge">Client Scope</span>
+                <p>
+                  We work with a diverse spectrum of literary creators across the globe, including:
+                </p>
+                <ul>
+                  <li><strong>Independent &amp; Self-Published Authors</strong> who require professional-grade marketing direction to compete effectively with major publishers.</li>
+                  <li><strong>Traditionally Published Authors</strong> whose publishers provide limited marketing support or who wish to run their own proactive author-platform campaigns.</li>
+                  <li><strong>Hybrid Authors &amp; Small Presses</strong> seeking strategic guidance to maximize backlist performance or launch new titles.</li>
+                  <li><strong>Debut Writers</strong> preparing for their first commercial release who need a clear, structured roadmap.</li>
+                </ul>
+                <p>
+                  We serve clients internationally across multiple fiction genres and non-fiction categories.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- QUESTION 3 -->
+          <div class="faq-item" data-category="agency">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span>Do you work with independent authors?</span>
+              <span class="faq-icon-indicator" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer-panel">
+              <div class="faq-answer-inner">
+                <span class="faq-category-badge">Independent Authors</span>
+                <p>
+                  Yes, passionately. Independent authors are at the heart of modern publishing innovation. However, independent writers frequently face the challenge of wearing every hat simultaneously—writer, editor, publisher, and marketer.
+                </p>
+                <p>
+                  GTO Literary Marketing provides independent creators with the structural discipline, metadata expertise, and promotional clarity typically reserved for publishing houses, allowing authors to focus on their creative craft while we establish their marketing foundation.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- QUESTION 4 -->
+          <div class="faq-item" data-category="services">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span>What marketing services do you offer?</span>
+              <span class="faq-icon-indicator" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer-panel">
+              <div class="faq-answer-inner">
+                <span class="faq-category-badge">Service Portfolio</span>
+                <p>
+                  We provide ten distinct, specialized literary marketing services:
+                </p>
+                <ul>
+                  <li><strong>Amazon Book Marketing:</strong> Backend metadata, keyword architecture, category taxonomy, and A+ Content optimization.</li>
+                  <li><strong>BookBub Promotion:</strong> Strategic feature positioning, profile optimization, and newsletter ad advisory.</li>
+                  <li><strong>AI Book Discoverability:</strong> Modern search optimization ensuring books are recognized and recommended by AI assistants.</li>
+                  <li><strong>Book Club Outreach:</strong> Reading group targeting, discussion guides, and virtual author visit planning.</li>
+                  <li><strong>Email Marketing:</strong> Lead magnets, reader onboarding sequences, and high-engagement newsletter design.</li>
+                  <li><strong>Author Branding:</strong> Digital platform identity, bio crafting, and aesthetic cohesion.</li>
+                  <li><strong>Social Media Book Promotion:</strong> Content frameworks, reader engagement systems, and platform prioritization.</li>
+                  <li><strong>Book Launch Campaigns:</strong> Complete pre-launch, launch week, and post-launch timeline orchestration.</li>
+                  <li><strong>Reader Funnel Development:</strong> Direct reader acquisition paths from first discovery to backlist purchase.</li>
+                  <li><strong>Book Review and Reader Outreach:</strong> Advance reader team (ARC) coordination and ethical review acquisition.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- QUESTION 5 -->
+          <div class="faq-item" data-category="services">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span>How does the consultation process work?</span>
+              <span class="faq-icon-indicator" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer-panel">
+              <div class="faq-answer-inner">
+                <span class="faq-category-badge">Consultation Workflow</span>
+                <p>
+                  Our initial consultation is structured, pressure-free, and designed to evaluate genuine fit:
+                </p>
+                <ol style="margin: 1rem 0 1.25rem 1.5rem;">
+                  <li style="margin-bottom: 0.6rem;"><strong>Step 1: Consultation Request:</strong> You submit your book title, genre, author website (if available), and current marketing focus via our <a href="contact.html" style="color: var(--color-gold-dark); text-decoration: underline;">Contact Page</a>.</li>
+                  <li style="margin-bottom: 0.6rem;"><strong>Step 2: Preliminary Review:</strong> Gideon personally evaluates your book’s existing digital footprint, retail positioning, and current marketing presence.</li>
+                  <li style="margin-bottom: 0.6rem;"><strong>Step 3: Free Strategic Discussion:</strong> We conduct a complimentary 30-minute consultation call or email strategy brief to discuss your goals, identify roadblocks, and assess how we can help.</li>
+                  <li><strong>Step 4: Tailored Proposal:</strong> If we agree there is strong alignment, we provide a clear, customized proposal detailing scope, deliverables, and timelines.</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+
+          <!-- QUESTION 6 -->
+          <div class="faq-item" data-category="services">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span>Do you offer customized marketing plans?</span>
+              <span class="faq-icon-indicator" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer-panel">
+              <div class="faq-answer-inner">
+                <span class="faq-category-badge">Custom Strategy</span>
+                <p>
+                  Always. There is no single formula that works identically for a psychological thriller, a historical romance, a poetry collection, and a business leadership book. Reader habits, market saturation, and promotional levers differ drastically across categories.
+                </p>
+                <p>
+                  Every strategy crafted by GTO Literary Marketing is built around your specific publishing timeline, your individual goals, your current audience size, and the competitive landscape of your genre.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- QUESTION 7 -->
+          <div class="faq-item" data-category="services">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span>Can I request only one service?</span>
+              <span class="faq-icon-indicator" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer-panel">
+              <div class="faq-answer-inner">
+                <span class="faq-category-badge">Modular Flexibility</span>
+                <p>
+                  Yes. While many authors engage us for comprehensive end-to-end launch management, our services are completely modular.
+                </p>
+                <p>
+                  If you only need an exhaustive Amazon metadata and blurb overhaul, a reader funnel setup, or a dedicated book club discussion guide package, you can commission that individual service without being forced into an unnecessary multi-service retainer.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- QUESTION 8 -->
+          <div class="faq-item" data-category="expectations">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span>Do you guarantee book sales?</span>
+              <span class="faq-icon-indicator" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer-panel">
+              <div class="faq-answer-inner">
+                <span class="faq-category-badge">Ethical Standards</span>
+                <p>
+                  <strong>No. We do not guarantee specific sales numbers, bestseller list placements, BookBub editorial selections, or positive reviews—and no ethical literary marketing agency should.</strong>
+                </p>
+                <p>
+                  Book purchasing decisions depend on factors that no third-party consultant controls: reader taste, pricing dynamics, current economic climates, and retail platform algorithms.
+                </p>
+                <p>
+                  What we <em>do</em> guarantee is the highest standard of strategic rigor:
+                </p>
+                <ul>
+                  <li>Meticulous keyword and metadata research that maximizes search indexing.</li>
+                  <li>Conversion-focused copywriting that presents your work with utmost professionalism.</li>
+                  <li>Targeted outreach to genuine book clubs, reviewers, and reader communities.</li>
+                  <li>A cohesive marketing system designed to position your book for long-term organic discovery.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- QUESTION 9 -->
+          <div class="faq-item" data-category="services">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span>When should I start marketing my book before launch?</span>
+              <span class="faq-icon-indicator" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer-panel">
+              <div class="faq-answer-inner">
+                <span class="faq-category-badge">Launch Timelines</span>
+                <p>
+                  Ideally, strategic planning should begin <strong>60 to 90 days prior to your official publication date</strong>. This window allows sufficient runway for advance reader copy (ARC) distribution, editorial review queries, retail page setup, and early email newsletter cultivation.
+                </p>
+                <p>
+                  However, if your book has already been published, it is never too late. We frequently assist authors with backlist revitalization—diagnosing why an existing book is underperforming and implementing metadata overhauls to reignite discoverability.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- QUESTION 10 -->
+          <div class="faq-item" data-category="agency">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span>How can I get started?</span>
+              <span class="faq-icon-indicator" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer-panel">
+              <div class="faq-answer-inner">
+                <span class="faq-category-badge">Next Steps</span>
+                <p>
+                  Getting started is straightforward. Visit our <a href="contact.html" style="color: var(--color-gold-dark); text-decoration: underline; font-weight: 600;">Contact Page</a> and submit the brief consultation form. Tell us a little about your book, your current publishing status, and the specific areas where you feel you need guidance.
+                </p>
+                <p>
+                  Gideon will review your details and respond directly with next steps to arrange your complimentary consultation.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- EMPTY SEARCH STATE -->
+          <div class="empty-faq-message" id="emptyFaqMsg">
+            <h3 style="font-family: var(--font-serif); font-size: 1.4rem; margin-bottom: 0.5rem; color: var(--color-text-dark);">No questions match your search</h3>
+            <p style="color: var(--color-text-muted-dark); margin-bottom: 1.5rem;">Try adjusting your keyword or click below to view all questions.</p>
+            <button type="button" class="category-tab-btn active" id="resetFaqBtn">Show All Questions</button>
+          </div>
+
+        </div>
+
+        <!-- ETHICAL COMMITMENT BOX -->
+        <div class="ethical-spotlight">
+          <h3>Our Professional &amp; Ethical Commitment</h3>
+          <p>
+            At GTO Literary Marketing, we believe authors deserve honest counsel, transparent methodology, and realistic expectations. We never purchase artificial reviews, deploy spam tactics, or make ungrounded promises. Every strategy we execute is designed to honor your creative accomplishment and foster authentic reader relationships.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONSULTATION BANNER -->
+    <section class="cta-section">
+      <div class="container cta-box">
+        <span class="section-eyebrow">Personal Strategic Advisory</span>
+        <h2>Have a Question Specific to Your Book?</h2>
+        <p>
+          Every book has its own creative voice and distinct commercial path. Schedule a complimentary consultation with Gideon to discuss your title’s potential.
+        </p>
+        <a href="contact.html" class="btn-gold-solid">Request a Free Book Marketing Consultation</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <a href="index.html" class="brand-link">
+            <div class="logo-box" style="width: 44px; height: 44px;">
+              <span class="logo-placeholder-letter" style="font-size: 1.1rem;">G</span>
+              <span class="logo-placeholder-text" style="font-size: 0.4rem;">LOGO</span>
+            </div>
+            <div class="brand-text-block">
+              <span class="brand-title" style="font-size: 1.15rem;">GTO Literary</span>
+              <span class="brand-subtitle" style="font-size: 0.65rem;">MARKETING</span>
+            </div>
+          </a>
+          <p class="footer-quote">"Helping Great Books Reach More Readers."</p>
+          <p>
+            An international literary marketing consultancy dedicated to helping authors, publishers, and literary professionals achieve sustainable visibility and reader engagement.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="blog.html">Blog &amp; Resources</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Key Areas of Advisory</h4>
+          <ul class="footer-links">
+            <li><a href="services.html">Amazon Book Marketing</a></li>
+            <li><a href="services.html">Book Launch Campaigns</a></li>
+            <li><a href="services.html">Author Platform Branding</a></li>
+            <li><a href="services.html">Book Club Outreach</a></li>
+            <li><a href="services.html">AI Book Discoverability</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Consultancy Inquiries</h4>
+          <div style="margin-bottom: 0.85rem;">
+            <strong style="color: var(--color-white); display: block;">Founder &amp; Consultant</strong>
+            <span>Gideon</span>
+          </div>
+          <div style="margin-bottom: 0.85rem;">
+            <strong style="color: var(--color-white); display: block;">Planned Business Email</strong>
+            <span>hello@gtoliterary.com</span><br />
+          </div>
+          <div>
+            <strong style="color: var(--color-white); display: block;">Client Scope</strong>
+            <span>Serving Authors Worldwide</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="yearEl">2025</span> GTO Literary Marketing. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       INTERNAL JAVASCRIPT (Accordion, Live Search & Category Filter)
+       ======================================================================== -->
+  <script>
+    (function () {
+      // 1. Current Year
+      var yr = document.getElementById('yearEl');
+      if (yr) yr.textContent = new Date().getFullYear();
+
+      // 2. Mobile Nav Toggle
+      var toggle = document.getElementById('mobileNavToggle');
+      var menu = document.getElementById('navMenuWrapper');
+      if (toggle && menu) {
+        toggle.addEventListener('click', function () {
+          var open = menu.classList.toggle('open');
+          toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+      }
+
+      // 3. Accordion Interaction (Accessible, Smooth Height Transition)
+      var faqItems = document.querySelectorAll('.faq-item');
+
+      faqItems.forEach(function (item) {
+        var btn = item.querySelector('.faq-question-btn');
+        var panel = item.querySelector('.faq-answer-panel');
+
+        btn.addEventListener('click', function () {
+          var isOpen = item.classList.contains('open');
+
+          // Optional: close other items for an elegant single-open accordion feel
+          faqItems.forEach(function (otherItem) {
+            if (otherItem !== item && otherItem.classList.contains('open')) {
+              otherItem.classList.remove('open');
+              otherItem.querySelector('.faq-question-btn').setAttribute('aria-expanded', 'false');
+              otherItem.querySelector('.faq-answer-panel').style.maxHeight = null;
+            }
+          });
+
+          if (isOpen) {
+            item.classList.remove('open');
+            btn.setAttribute('aria-expanded', 'false');
+            panel.style.maxHeight = null;
+          } else {
+            item.classList.add('open');
+            btn.setAttribute('aria-expanded', 'true');
+            panel.style.maxHeight = panel.scrollHeight + 'px';
+          }
+        });
+      });
+
+      // 4. Category Tabs & Search Filtering
+      var categoryTabs = document.querySelectorAll('.category-tab-btn');
+      var searchInput = document.getElementById('faqSearchInput');
+      var emptyMsg = document.getElementById('emptyFaqMsg');
+      var resetBtn = document.getElementById('resetFaqBtn');
+
+      var currentCat = 'all';
+      var searchQuery = '';
+
+      function filterFaqs() {
+        var visibleCount = 0;
+
+        faqItems.forEach(function (item) {
+          var itemCat = item.getAttribute('data-category');
+          var text = item.textContent.toLowerCase();
+
+          var matchCat = (currentCat === 'all') || (itemCat === currentCat);
+          var matchSearch = (searchQuery === '') || (text.indexOf(searchQuery) !== -1);
+
+          if (matchCat && matchSearch) {
+            item.style.display = 'block';
+            visibleCount++;
+          } else {
+            item.style.display = 'none';
+          }
+        });
+
+        if (emptyMsg) {
+          emptyMsg.style.display = (visibleCount === 0) ? 'block' : 'none';
+        }
+      }
+
+      categoryTabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          categoryTabs.forEach(function (t) { t.classList.remove('active'); });
+          tab.classList.add('active');
+          currentCat = tab.getAttribute('data-category');
+          filterFaqs();
+        });
+      });
+
+      if (searchInput) {
+        searchInput.addEventListener('input', function (e) {
+          searchQuery = e.target.value.trim().toLowerCase();
+          filterFaqs();
+        });
+      }
+
+      if (resetBtn) {
+        resetBtn.addEventListener('click', function () {
+          currentCat = 'all';
+          searchQuery = '';
+          if (searchInput) searchInput.value = '';
+          categoryTabs.forEach(function (t) {
+            t.classList.toggle('active', t.getAttribute('data-category') === 'all');
+          });
+          filterFaqs();
+        });
+      }
+
+    })();
+  </script>
+</body>
+</html>

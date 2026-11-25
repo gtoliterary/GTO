@@ -1,0 +1,1559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms & Conditions | GTO Literary Marketing</title>
+  <meta name="description" content="Terms and Conditions and Client Advisory Agreement for GTO Literary Marketing. Detailed terms on consultancy services, intellectual property, payments, and client responsibilities.">
+  <style>
+    /* ==========================================================================
+       GTO LITERARY MARKETING - LUXURY EDITORIAL DESIGN SYSTEM & CSS RESET
+       Zero External Dependencies | 100% Standalone & Self-Contained
+       ========================================================================== */
+    :root {
+      --bg-dark: #0B0B0C;
+      --bg-card: #121215;
+      --bg-surface: #18181C;
+      --bg-elevated: #222228;
+      --border-dark: #2A2A32;
+      --border-gold-subtle: rgba(197, 160, 89, 0.25);
+      
+      --gold-primary: #C5A059;
+      --gold-light: #DFBE7F;
+      --gold-dark: #9E7B36;
+      --gold-glow: rgba(197, 160, 89, 0.12);
+      
+      --text-cream: #F9F6F0;
+      --text-muted: #A3A3B0;
+      --text-dim: #70707D;
+      --text-white: #FFFFFF;
+
+      --font-serif: "Georgia", "Garamond", "Times New Roman", serif;
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+      --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      --max-width: 1240px;
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 12px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      background-color: var(--bg-dark);
+      color: var(--text-cream);
+    }
+
+    body {
+      font-family: var(--font-sans);
+      line-height: 1.65;
+      background-color: var(--bg-dark);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--gold-primary);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    a:hover {
+      color: var(--gold-light);
+    }
+
+    /* ==========================================================================
+       HEADER & NAVIGATION (STRICT BRAND SPECIFICATION)
+       ========================================================================== */
+    .top-header {
+      background-color: #000000;
+      border-bottom: 1px solid var(--border-dark);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+    }
+
+    .header-container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      text-decoration: none;
+    }
+
+    .logo-box {
+      width: 54px;
+      height: 54px;
+      border: 1.5px solid var(--gold-primary);
+      background-color: #000000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .logo-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .logo-fallback {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #141416, #050505);
+      border: 1px solid rgba(197, 160, 89, 0.3);
+      text-align: center;
+      padding: 2px;
+    }
+
+    .logo-fallback span:first-child {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--gold-primary);
+      line-height: 1;
+    }
+
+    .fallback-sub {
+      font-size: 7px;
+      font-family: var(--font-sans);
+      letter-spacing: 0.8px;
+      color: var(--text-dim);
+      font-weight: 600;
+      margin-top: 2px;
+      text-transform: uppercase;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-title {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text-white);
+      letter-spacing: 0.5px;
+      line-height: 1.1;
+    }
+
+    .brand-sub {
+      font-family: var(--font-sans);
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--gold-primary);
+      letter-spacing: 3.5px;
+      text-transform: uppercase;
+      margin-top: 3px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-item a {
+      color: var(--text-cream);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      position: relative;
+      padding: 6px 0;
+    }
+
+    .nav-item a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--gold-primary);
+      transition: width 0.25s ease;
+    }
+
+    .nav-item a:hover::after,
+    .nav-item a.active::after {
+      width: 100%;
+    }
+
+    .nav-item a.active {
+      color: var(--gold-light);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .btn-gold-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 20px;
+      border: 1px solid var(--gold-primary);
+      background-color: transparent;
+      color: var(--gold-primary);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      border-radius: var(--radius-sm);
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .btn-gold-outline:hover {
+      background-color: var(--gold-primary);
+      color: #000000;
+      box-shadow: 0 4px 15px rgba(197, 160, 89, 0.25);
+    }
+
+    .mobile-toggle {
+      display: none;
+      background: none;
+      border: 1px solid var(--border-dark);
+      border-radius: var(--radius-sm);
+      padding: 8px 10px;
+      cursor: pointer;
+      color: var(--text-cream);
+    }
+
+    /* Sub-Banner */
+    .sub-banner {
+      background-color: #0E0E10;
+      border-bottom: 1px solid var(--border-dark);
+      padding: 8px 24px;
+      text-align: center;
+    }
+
+    .sub-banner-text {
+      color: var(--gold-primary);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    /* ==========================================================================
+       HERO / HEADER SECTION
+       ========================================================================== */
+    .terms-hero {
+      background: linear-gradient(180deg, #121216 0%, #0B0B0C 100%);
+      border-bottom: 1px solid var(--border-dark);
+      padding: 64px 24px 48px;
+      position: relative;
+    }
+
+    .hero-container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .legal-badge-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .legal-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background-color: rgba(197, 160, 89, 0.1);
+      border: 1px solid var(--border-gold-subtle);
+      color: var(--gold-light);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+
+    .version-tag {
+      font-size: 12px;
+      color: var(--text-dim);
+      font-weight: 500;
+    }
+
+    .terms-hero h1 {
+      font-family: var(--font-serif);
+      font-size: 40px;
+      line-height: 1.2;
+      color: var(--text-white);
+      max-width: 850px;
+    }
+
+    .terms-hero p.hero-summary {
+      font-size: 16px;
+      color: var(--text-muted);
+      max-width: 820px;
+      line-height: 1.7;
+    }
+
+    .hero-controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 16px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-dark);
+    }
+
+    .search-box-wrap {
+      position: relative;
+      min-width: 300px;
+      flex: 1;
+      max-width: 440px;
+    }
+
+    .search-box-wrap svg {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 16px;
+      stroke: var(--text-dim);
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 10px 14px 10px 40px;
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-dark);
+      border-radius: var(--radius-sm);
+      color: var(--text-white);
+      font-size: 13px;
+      font-family: var(--font-sans);
+      outline: none;
+      transition: var(--transition);
+    }
+
+    .search-input:focus {
+      border-color: var(--gold-primary);
+      background-color: var(--bg-surface);
+      box-shadow: 0 0 10px rgba(197, 160, 89, 0.15);
+    }
+
+    .btn-action-small {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-dark);
+      color: var(--text-cream);
+      padding: 9px 16px;
+      border-radius: var(--radius-sm);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .btn-action-small:hover {
+      border-color: var(--gold-primary);
+      color: var(--gold-light);
+    }
+
+    /* ==========================================================================
+       MAIN LEGAL LAYOUT (TOC & CONTENT GRID)
+       ========================================================================== */
+    .terms-layout {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+      display: grid;
+      grid-template-columns: 290px 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    /* Sticky Sidebar Navigation */
+    .toc-sidebar {
+      position: sticky;
+      top: 100px;
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-dark);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      max-height: calc(100vh - 120px);
+      overflow-y: auto;
+    }
+
+    .toc-sidebar::-webkit-scrollbar {
+      width: 4px;
+    }
+    .toc-sidebar::-webkit-scrollbar-thumb {
+      background-color: var(--border-dark);
+      border-radius: 4px;
+    }
+
+    .toc-title {
+      font-family: var(--font-serif);
+      font-size: 17px;
+      color: var(--text-white);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border-dark);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .toc-title span {
+      font-family: var(--font-sans);
+      font-size: 10px;
+      color: var(--gold-primary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .toc-item a {
+      display: block;
+      padding: 8px 10px;
+      font-size: 13px;
+      color: var(--text-muted);
+      border-radius: var(--radius-sm);
+      line-height: 1.4;
+      border-left: 2px solid transparent;
+      transition: var(--transition);
+    }
+
+    .toc-item a:hover {
+      color: var(--gold-light);
+      background-color: var(--bg-surface);
+    }
+
+    .toc-item a.active {
+      color: var(--gold-light);
+      background-color: rgba(197, 160, 89, 0.08);
+      border-left-color: var(--gold-primary);
+      font-weight: 600;
+    }
+
+    .toc-quick-box {
+      margin-top: 24px;
+      padding: 16px;
+      background-color: #0E0E10;
+      border: 1px solid var(--border-dark);
+      border-radius: var(--radius-sm);
+    }
+
+    .toc-quick-box h4 {
+      font-size: 12px;
+      color: var(--gold-primary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    .toc-quick-box p {
+      font-size: 12px;
+      color: var(--text-dim);
+      line-height: 1.5;
+    }
+
+    .toc-quick-box a {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--gold-light);
+      text-decoration: underline;
+    }
+
+    /* Main Legal Content */
+    .legal-content {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .terms-section {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-dark);
+      border-radius: var(--radius-md);
+      padding: 36px;
+      position: relative;
+      scroll-margin-top: 110px;
+      transition: var(--transition);
+    }
+
+    .terms-section:hover {
+      border-color: rgba(197, 160, 89, 0.35);
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border-dark);
+    }
+
+    .section-num {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background-color: rgba(197, 160, 89, 0.12);
+      border: 1px solid var(--gold-primary);
+      color: var(--gold-light);
+      font-size: 13px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-family: var(--font-sans);
+    }
+
+    .terms-section h2 {
+      font-family: var(--font-serif);
+      font-size: 24px;
+      color: var(--text-white);
+      line-height: 1.3;
+    }
+
+    .terms-section p {
+      font-size: 14.5px;
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin-bottom: 16px;
+    }
+
+    .terms-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .terms-section ul, .terms-section ol {
+      margin: 16px 0 20px 20px;
+      color: var(--text-muted);
+      font-size: 14.5px;
+      line-height: 1.75;
+    }
+
+    .terms-section li {
+      margin-bottom: 8px;
+      padding-left: 6px;
+    }
+
+    .terms-section li strong {
+      color: var(--text-cream);
+    }
+
+    /* Highlight Callout Boxes */
+    .callout-box {
+      margin: 20px 0;
+      padding: 20px 24px;
+      border-radius: var(--radius-sm);
+      background-color: #0E0E12;
+      border-left: 3px solid var(--gold-primary);
+      border-top: 1px solid var(--border-dark);
+      border-right: 1px solid var(--border-dark);
+      border-bottom: 1px solid var(--border-dark);
+    }
+
+    .callout-box.warning {
+      border-left-color: #DFBE7F;
+      background: linear-gradient(90deg, rgba(223, 190, 127, 0.05), transparent);
+    }
+
+    .callout-box.info {
+      border-left-color: var(--gold-dark);
+    }
+
+    .callout-box h4 {
+      font-family: var(--font-serif);
+      font-size: 16px;
+      color: var(--gold-light);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .callout-box p {
+      font-size: 13.5px;
+      color: var(--text-cream);
+      margin-bottom: 0;
+      line-height: 1.65;
+    }
+
+    /* Clause Grid / Key Points */
+    .clause-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin: 20px 0;
+    }
+
+    .clause-card {
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-dark);
+      border-radius: var(--radius-sm);
+      padding: 18px;
+    }
+
+    .clause-card h5 {
+      font-family: var(--font-sans);
+      font-size: 13px;
+      color: var(--gold-light);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 6px;
+    }
+
+    .clause-card p {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.55;
+      margin-bottom: 0;
+    }
+
+    /* Search highlight styling */
+    mark.highlight {
+      background-color: rgba(197, 160, 89, 0.35);
+      color: var(--text-white);
+      padding: 1px 4px;
+      border-radius: 2px;
+    }
+
+    /* ==========================================================================
+       BOTTOM CTA / ADVISORY QUESTIONS
+       ========================================================================== */
+    .legal-cta {
+      background: linear-gradient(135deg, #18181F, #0E0E12);
+      border: 1px solid var(--border-gold-subtle);
+      border-radius: var(--radius-md);
+      padding: 40px;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .legal-cta h3 {
+      font-family: var(--font-serif);
+      font-size: 26px;
+      color: var(--text-white);
+      margin-bottom: 12px;
+    }
+
+    .legal-cta p {
+      font-size: 15px;
+      color: var(--text-muted);
+      max-width: 650px;
+      margin: 0 auto 24px;
+    }
+
+    .cta-buttons-group {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-gold-solid {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 28px;
+      background-color: var(--gold-primary);
+      color: #000000;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      border-radius: var(--radius-sm);
+      transition: var(--transition);
+      border: 1px solid var(--gold-primary);
+      cursor: pointer;
+    }
+
+    .btn-gold-solid:hover {
+      background-color: var(--gold-light);
+      border-color: var(--gold-light);
+      box-shadow: 0 4px 18px rgba(197, 160, 89, 0.35);
+      color: #000000;
+    }
+
+    /* ==========================================================================
+       FOOTER
+       ========================================================================== */
+    .site-footer {
+      background-color: #070708;
+      border-top: 1px solid var(--border-dark);
+      padding: 60px 24px 30px;
+    }
+
+    .footer-container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.2fr;
+      gap: 40px;
+      margin-bottom: 48px;
+    }
+
+    .footer-brand p {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      margin-top: 16px;
+      line-height: 1.65;
+      max-width: 320px;
+    }
+
+    .footer-col h4 {
+      font-family: var(--font-serif);
+      font-size: 15px;
+      color: var(--gold-primary);
+      margin-bottom: 18px;
+      letter-spacing: 0.5px;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-links a {
+      font-size: 13px;
+      color: var(--text-muted);
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--gold-light);
+      padding-left: 4px;
+    }
+
+    .footer-contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 12px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .footer-contact-item svg {
+      width: 16px;
+      height: 16px;
+      stroke: var(--gold-primary);
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+
+    .email-note {
+      font-size: 11px;
+      color: var(--text-dim);
+      display: block;
+      margin-top: 2px;
+    }
+
+    .footer-bottom {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding-top: 24px;
+      border-top: 1px solid #18181E;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 12px;
+      color: var(--text-dim);
+    }
+
+    .footer-legal-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-legal-links a {
+      color: var(--text-dim);
+      font-size: 12px;
+    }
+
+    .footer-legal-links a:hover {
+      color: var(--gold-primary);
+    }
+
+    /* ==========================================================================
+       MOBILE RESPONSIVENESS & PRINT STYLES
+       ========================================================================== */
+    @media (max-width: 992px) {
+      .terms-layout {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .toc-sidebar {
+        position: relative;
+        top: 0;
+        max-height: none;
+      }
+
+      .footer-container {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links, .header-actions {
+        display: none;
+      }
+
+      .mobile-toggle {
+        display: flex;
+      }
+
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #0E0E12;
+        border-bottom: 1px solid var(--border-dark);
+        padding: 24px;
+        gap: 16px;
+        z-index: 999;
+      }
+
+      .terms-hero h1 {
+        font-size: 30px;
+      }
+
+      .terms-section {
+        padding: 24px 20px;
+      }
+
+      .footer-container {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-controls {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .search-box-wrap {
+        max-width: 100%;
+      }
+    }
+
+    @media print {
+      .top-header, .sub-banner, .toc-sidebar, .hero-controls, .legal-cta, .site-footer {
+        display: none !important;
+      }
+
+      body, html {
+        background: #ffffff !important;
+        color: #000000 !important;
+      }
+
+      .terms-hero {
+        background: none !important;
+        padding: 20px 0 !important;
+      }
+
+      .terms-hero h1 {
+        color: #000000 !important;
+      }
+
+      .terms-layout {
+        display: block !important;
+        padding: 0 !important;
+      }
+
+      .terms-section {
+        background: none !important;
+        border: none !important;
+        border-bottom: 1px solid #ccc !important;
+        padding: 20px 0 !important;
+        page-break-inside: avoid;
+      }
+
+      .terms-section h2, .section-num {
+        color: #000000 !important;
+      }
+
+      .terms-section p, .terms-section li {
+        color: #333333 !important;
+      }
+
+      .callout-box {
+        background: #f8f8f8 !important;
+        border: 1px solid #ddd !important;
+        border-left: 3px solid #666 !important;
+      }
+
+      .callout-box p, .callout-box h4 {
+        color: #000000 !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================================================
+       TOP HEADER (Screenshot Specification Exact Match)
+       ======================================================================== -->
+  <header class="top-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-group" aria-label="GTO Literary Marketing Home">
+        <div class="logo-box">
+          <img src="logo.jpg" alt="GTO Literary Logo" class="logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <div class="logo-fallback" style="display: none;">
+            <span>G</span>
+            <span class="fallback-sub">LOGO.JPG</span>
+          </div>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">GTO Literary</span>
+          <span class="brand-sub">MARKETING</span>
+        </div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links" id="primary-nav">
+          <li class="nav-item"><a href="index.html">HOME</a></li>
+          <li class="nav-item"><a href="about.html">ABOUT</a></li>
+          <li class="nav-item"><a href="services.html">SERVICES</a></li>
+          <li class="nav-item"><a href="blog.html">BLOG</a></li>
+          <li class="nav-item"><a href="faq.html">FAQ</a></li>
+          <li class="nav-item"><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="contact.html" class="btn-gold-outline">FREE CONSULTATION</a>
+      </div>
+
+      <button class="mobile-toggle" id="menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- SUB-BANNER -->
+  <aside class="sub-banner">
+    <div class="sub-banner-text">FOR AUTHORS, PUBLISHERS &amp; LITERARY PROFESSIONALS</div>
+  </aside>
+
+  <!-- ========================================================================
+       HERO HEADER SECTION
+       ======================================================================== -->
+  <section class="terms-hero">
+    <div class="hero-container">
+      <div class="legal-badge-group">
+        <span class="legal-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+          Legal &amp; Operational Framework
+        </span>
+        <span class="version-tag">Version 2.4 &bull; Effective: January 1, 2025</span>
+      </div>
+
+      <h1>Terms &amp; Conditions</h1>
+      <p class="hero-summary">
+        These Terms &amp; Conditions govern all strategic advisory, marketing consultancy, launch campaign execution, reader discovery services, and website interactions provided by <strong>GTO Literary Marketing</strong> (founded by Gideon). Please read these terms carefully before engaging our services.
+      </p>
+
+      <div class="hero-controls">
+        <div class="search-box-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="terms-search" class="search-input" placeholder="Search terms (e.g. 'refund', 'Amazon', 'ownership')...">
+        </div>
+
+        <div style="display: flex; gap: 10px;">
+          <button class="btn-action-small" onclick="window.print()">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 6 2 18 2 18 9"></polyline>
+              <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+              <rect x="6" y="14" width="12" height="8"></rect>
+            </svg>
+            Print Terms
+          </button>
+          <a href="contact.html" class="btn-action-small">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+            Ask a Legal Question
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       MAIN TERMS CONTENT & INTERACTIVE SIDEBAR
+       ======================================================================== -->
+  <main class="terms-layout">
+
+    <!-- Sticky Table of Contents -->
+    <aside class="toc-sidebar" aria-label="Terms of Service Index">
+      <div class="toc-title">
+        Table of Contents
+        <span>13 Sections</span>
+      </div>
+      <ul class="toc-list" id="toc-list">
+        <li class="toc-item"><a href="#section-1" class="toc-link active">1. Acceptance of Terms</a></li>
+        <li class="toc-item"><a href="#section-2" class="toc-link">2. Scope of Advisory Services</a></li>
+        <li class="toc-item"><a href="#section-3" class="toc-link">3. Intellectual Property Rights</a></li>
+        <li class="toc-item"><a href="#section-4" class="toc-link">4. No Sales or Ranking Guarantees</a></li>
+        <li class="toc-item"><a href="#section-5" class="toc-link">5. Client Responsibilities</a></li>
+        <li class="toc-item"><a href="#section-6" class="toc-link">6. Engagement Proposals &amp; Payments</a></li>
+        <li class="toc-item"><a href="#section-7" class="toc-link">7. Cancellation &amp; Refund Policy</a></li>
+        <li class="toc-item"><a href="#section-8" class="toc-link">8. Third-Party Platforms &amp; Algorithms</a></li>
+        <li class="toc-item"><a href="#section-9" class="toc-link">9. Confidentiality &amp; Non-Disclosure</a></li>
+        <li class="toc-item"><a href="#section-10" class="toc-link">10. Limitation of Liability</a></li>
+        <li class="toc-item"><a href="#section-11" class="toc-link">11. Ethical Standards &amp; Review Policy</a></li>
+        <li class="toc-item"><a href="#section-12" class="toc-link">12. Governing Law &amp; Disputes</a></li>
+        <li class="toc-item"><a href="#section-13" class="toc-link">13. Contact &amp; Notices</a></li>
+      </ul>
+
+      <div class="toc-quick-box">
+        <h4>Author Ownership Guarantee</h4>
+        <p>You retain 100% of your book copyright, manuscript ownership, publishing royalties, and creative control throughout all marketing engagements.</p>
+        <a href="#section-3">Read Section 3 &rarr;</a>
+      </div>
+    </aside>
+
+    <!-- Main Legal Text Sections -->
+    <section class="legal-content" id="legal-content">
+
+      <!-- SECTION 1 -->
+      <article class="terms-section" id="section-1">
+        <div class="section-header">
+          <div class="section-num">01</div>
+          <h2>Acceptance of Terms</h2>
+        </div>
+        <p>
+          Welcome to GTO Literary Marketing. By browsing our website (<code>gtoliterary.com</code>), scheduling an initial consultation, accepting a service proposal, or executing a custom client agreement, you ("Client," "Author," "Publisher," or "User") agree to be legally bound by these Terms &amp; Conditions, together with our <a href="privacy.html">Privacy Policy</a>.
+        </p>
+        <p>
+          If you are entering into this agreement on behalf of a publishing house, literary agency, or corporate organization, you represent that you possess full legal authority to bind that entity to these Terms. If you do not agree with any provision of these Terms, you must refrain from utilizing our website and contracting our advisory services.
+        </p>
+      </article>
+
+      <!-- SECTION 2 -->
+      <article class="terms-section" id="section-2">
+        <div class="section-header">
+          <div class="section-num">02</div>
+          <h2>Scope of Advisory &amp; Consultancy Services</h2>
+        </div>
+        <p>
+          GTO Literary Marketing, founded by Gideon, operates as a boutique literary consultancy and book marketing advisory firm. We provide tailored strategic marketing, discoverability enhancement, reader engagement guidance, and campaign execution across ten core disciplines:
+        </p>
+        <div class="clause-grid">
+          <div class="clause-card">
+            <h5>01. Amazon Optimization</h5>
+            <p>Metadata, BISAC/Amazon category mapping, keyword alignment, and KDP merchandising strategy.</p>
+          </div>
+          <div class="clause-card">
+            <h5>02. BookBub Promotion</h5>
+            <p>Featured Deal application strategy, Featured Deal alerts, and precision PPC reader targeting.</p>
+          </div>
+          <div class="clause-card">
+            <h5>03. AI Book Discoverability</h5>
+            <p>Optimizing manuscript metadata and web authority for conversational AI tools and search engines.</p>
+          </div>
+          <div class="clause-card">
+            <h5>04. Book Club Outreach</h5>
+            <p>Curated reading group pitch packages, author discussion guides, and community outreach.</p>
+          </div>
+          <div class="clause-card">
+            <h5>05. Email Marketing</h5>
+            <p>Author newsletter architecture, reader magnet funnels, onboarding sequences, and subscriber retention.</p>
+          </div>
+          <div class="clause-card">
+            <h5>06. Author Branding</h5>
+            <p>Visual positioning, bio formulation, cross-platform media alignment, and press readiness.</p>
+          </div>
+          <div class="clause-card">
+            <h5>07. Social Media Strategy</h5>
+            <p>Organic BookTok/Bookstagram positioning, high-intent reader targeting, and content frameworks.</p>
+          </div>
+          <div class="clause-card">
+            <h5>08. Book Launch Campaigns</h5>
+            <p>Multi-phase launch timelines, street team coordination, pre-order build-up, and release momentum.</p>
+          </div>
+          <div class="clause-card">
+            <h5>09. Reader Funnels</h5>
+            <p>Back-matter optimization, cross-series promotions, and lifetime reader conversion paths.</p>
+          </div>
+          <div class="clause-card">
+            <h5>10. ARC &amp; Review Outreach</h5>
+            <p>Ethical Advance Reader Copy distribution, editorial reviewer outreach, and reader list building.</p>
+          </div>
+        </div>
+        <p>
+          Specific project deliverables, milestones, timetables, and resource allocations are formally defined in individual written Service Proposals or Statements of Work (SOW) executed between GTO Literary Marketing and the Client.
+        </p>
+      </article>
+
+      <!-- SECTION 3 -->
+      <article class="terms-section" id="section-3">
+        <div class="section-header">
+          <div class="section-num">03</div>
+          <h2>Intellectual Property Rights &amp; Author Ownership</h2>
+        </div>
+        
+        <div class="callout-box info">
+          <h4>Author Royalty &amp; Copyright Preservation</h4>
+          <p>GTO Literary Marketing claims zero ownership, zero copyright share, and zero percentage of your publishing royalties, distributor payouts, or licensing revenues. Your intellectual property remains exclusively yours forever.</p>
+        </div>
+
+        <p>
+          <strong>Client IP:</strong> The author or publisher retains all title, copyright, trademark, and intellectual property rights in their manuscripts, book covers, brand names, fictional worlds, excerpts, illustrations, and proprietary materials provided to us for marketing purposes.
+        </p>
+        <p>
+          <strong>Limited Marketing License:</strong> For the sole duration and purpose of fulfilling marketing and promotional services, the Client grants GTO Literary Marketing a non-exclusive, worldwide, royalty-free license to use, display, reproduce, and reference book covers, blurbs, excerpt samples, author likenesses, and promotional assets across advertising channels, media releases, review packages, and case studies (unless explicitly requested otherwise under written NDA).
+        </p>
+        <p>
+          <strong>Agency IP:</strong> Strategic proprietary frameworks, analysis templates, internal algorithmic playbooks, audit rubrics, and automated workflow scripts developed independently by GTO Literary Marketing remain the exclusive property of GTO Literary Marketing.
+        </p>
+      </article>
+
+      <!-- SECTION 4 -->
+      <article class="terms-section" id="section-4">
+        <div class="section-header">
+          <div class="section-num">04</div>
+          <h2>No Guarantee of Sales, Best-Seller Status, or Platform Rankings</h2>
+        </div>
+        
+        <div class="callout-box warning">
+          <h4>Crucial Disclaimer Regarding Commercial Outcomes</h4>
+          <p>Book publishing success depends on numerous subjective and external factors outside any marketing agency's direct control—including reader tastes, book cover appeal, pricing elasticity, editorial quality, market timing, seasonal competition, and third-party algorithmic shifts. GTO Literary Marketing does not make misleading or fraudulent sales promises.</p>
+        </div>
+
+        <p>
+          While GTO Literary Marketing employs industry-leading methodologies, proven data analysis, and bespoke positioning strategies, <strong>we explicitly do not guarantee:</strong>
+        </p>
+        <ul>
+          <li>Specific unit sales volumes, revenue benchmarks, or financial return on investment (ROI).</li>
+          <li>Inclusion on curated bestseller lists (such as <em>The New York Times</em>, <em>USA Today</em>, or Amazon #1 Best Seller Banners).</li>
+          <li>Guaranteed acceptance for editorial selection programs (such as BookBub Featured Deals, Amazon First Reads, or traditional media features), which remain entirely at the discretion of those third-party editorial boards.</li>
+          <li>Permanent search ranking positions on retail marketplaces or search engines.</li>
+        </ul>
+        <p>
+          Our obligation is to provide rigorous, professional, honest, and ethical advisory, strategic development, and promotional execution in accordance with industry best practices.
+        </p>
+      </article>
+
+      <!-- SECTION 5 -->
+      <article class="terms-section" id="section-5">
+        <div class="section-header">
+          <div class="section-num">05</div>
+          <h2>Client Responsibilities &amp; Materials Submission</h2>
+        </div>
+        <p>
+          The efficacy and timeliness of any literary campaign rely heavily on client collaboration. By contracting our services, the Client agrees to:
+        </p>
+        <ul>
+          <li><strong>Timely Asset Delivery:</strong> Supply high-resolution book cover files (JPG/PNG/PSD), final proofread manuscript files (EPUB/PDF), author headshots, retail links, and biographical details by the deadlines specified in the campaign timeline.</li>
+          <li><strong>Content Legality &amp; Accuracy:</strong> Warrant that all materials submitted for marketing do not infringe on any third-party copyrights, trademarks, privacy rights, and do not contain defamatory or unlawful content.</li>
+          <li><strong>Prompt Approvals:</strong> Review and provide timely feedback or approvals for advertising copy, pitch decks, graphics, and email campaigns within three (3) business days to avoid launch schedule delays.</li>
+          <li><strong>Account Access &amp; Permissions:</strong> When necessary for advertising execution (e.g., Amazon Ads, Meta Business Manager, BookBub Partner Dashboard), supply appropriate guest or collaborator permissions in a secure manner.</li>
+        </ul>
+      </article>
+
+      <!-- SECTION 6 -->
+      <article class="terms-section" id="section-6">
+        <div class="section-header">
+          <div class="section-num">06</div>
+          <h2>Engagement Proposals, Invoicing &amp; Payment Terms</h2>
+        </div>
+        <p>
+          <strong>Custom Proposals:</strong> Prior to commencing paid consultancy, GTO Literary Marketing issues a detailed proposal outlining the scope of work, timeline, and associated fee structure.
+        </p>
+        <p>
+          <strong>Payment Schedules:</strong>
+        </p>
+        <ul>
+          <li><strong>Fixed-Scope Advisory / Audits:</strong> 100% upfront prior to delivery of the comprehensive audit report and strategy session.</li>
+          <li><strong>Multi-Month Launch Campaigns:</strong> 50% deposit upon contract signing to secure scheduling and calendar reservations; remainder billed in milestone installments as agreed.</li>
+          <li><strong>Monthly Retainers:</strong> Invoiced on a 30-day recurring basis, payable on or before the first day of the respective billing cycle.</li>
+        </ul>
+        <p>
+          <strong>Ad Spend Exclusion:</strong> Direct advertising budgets (paid directly to Amazon Advertising, BookBub, Facebook/Instagram, or Google Ads) are funded directly by the client and are separate from GTO Literary Marketing's management and consultancy fees.
+        </p>
+        <p>
+          <strong>Late Payments:</strong> Invoices outstanding past fourteen (14) calendar days may result in immediate suspension of active campaigns, ad management, and outreach efforts until accounts are brought current.
+        </p>
+      </article>
+
+      <!-- SECTION 7 -->
+      <article class="terms-section" id="section-7">
+        <div class="section-header">
+          <div class="section-num">07</div>
+          <h2>Cancellation, Rescheduling &amp; Refund Policy</h2>
+        </div>
+        <p>
+          <strong>Advisory Sessions &amp; Strategy Calls:</strong> Consultations may be rescheduled without penalty with at least twenty-four (24) hours' written notice. Cancellations made with less than 24 hours' notice may be subject to a forfeiture of the session fee.
+        </p>
+        <p>
+          <strong>Multi-Phase Campaigns:</strong> Because our team reserves dedicated calendar capacity and commits upfront strategic labor, deposits for launch campaigns are non-refundable once campaign planning and audit production have commenced.
+        </p>
+        <p>
+          <strong>Early Termination:</strong> Either party may terminate an ongoing retainer agreement by giving thirty (30) days' written notice. The Client remains responsible for payment of all work completed and expenses incurred up to the effective termination date.
+        </p>
+        <p>
+          <strong>Completed Services:</strong> Once written strategy dossiers, Amazon audits, AI discoverability analyses, or outreach lists have been compiled and delivered to the client, fees for those completed deliverables are non-refundable.
+        </p>
+      </article>
+
+      <!-- SECTION 8 -->
+      <article class="terms-section" id="section-8">
+        <div class="section-header">
+          <div class="section-num">08</div>
+          <h2>Third-Party Platforms, Algorithms &amp; Advertising Networks</h2>
+        </div>
+        <p>
+          Our services interface with various independent platforms, including Amazon KDP, Amazon Advertising, BookBub, Goodreads, Meta (Facebook/Instagram), TikTok, Google, and Artificial Intelligence engines (OpenAI ChatGPT, Anthropic Claude, Perplexity AI, Microsoft Copilot, SearchGPT).
+        </p>
+        <p>
+          The Client acknowledges and agrees that:
+        </p>
+        <ul>
+          <li>GTO Literary Marketing is an independent consultancy and is not affiliated with, endorsed by, or sponsored by Amazon, BookBub, Meta, OpenAI, or any of their parent companies.</li>
+          <li>These platforms operate proprietary, evolving algorithms, review policies, pricing structures, and terms of service that change without prior notice. GTO Literary Marketing is not liable for platform-wide algorithmic changes, account restrictions, review purging, ad account disapprovals, or technical platform outages beyond our direct control.</li>
+          <li>All marketing strategies executed on behalf of the client strictly adhere to each platform's published terms of service.</li>
+        </ul>
+      </article>
+
+      <!-- SECTION 9 -->
+      <article class="terms-section" id="section-9">
+        <div class="section-header">
+          <div class="section-num">09</div>
+          <h2>Confidentiality &amp; Non-Disclosure</h2>
+        </div>
+        <p>
+          Both GTO Literary Marketing and the Client agree to treat all non-public information exchanged during the engagement with strict confidentiality. This includes, without limitation:
+        </p>
+        <ul>
+          <li>Unpublished manuscripts, plot outlines, story arcs, and character bibles.</li>
+          <li>Client financial data, historical sales figures, royalty statements, and subscriber lists.</li>
+          <li>Custom promotional proposals, internal agency pricing schedules, and proprietary analytics blueprints.</li>
+        </ul>
+        <p>
+          Neither party shall disclose confidential information to any third party without prior written consent, except as required by law or necessary for the execution of campaign deliverables (such as sending review copies to vetted literary reviewers).
+        </p>
+      </article>
+
+      <!-- SECTION 10 -->
+      <article class="terms-section" id="section-10">
+        <div class="section-header">
+          <div class="section-num">10</div>
+          <h2>Limitation of Liability &amp; Indemnification</h2>
+        </div>
+        <p>
+          To the maximum extent permitted by applicable law:
+        </p>
+        <ul>
+          <li><strong>No Consequential Damages:</strong> In no event shall GTO Literary Marketing, its founder Gideon, consultants, or affiliates be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of profits, commercial opportunities, goodwill, or data.</li>
+          <li><strong>Cap on Liability:</strong> The total aggregate liability of GTO Literary Marketing arising out of or related to our services, whether in contract, tort (including negligence), or otherwise, shall not exceed the total fees paid by the Client to GTO Literary Marketing for the specific service giving rise to the claim in the three (3) months preceding the incident.</li>
+          <li><strong>Client Indemnification:</strong> The Client agrees to defend, indemnify, and hold harmless GTO Literary Marketing from and against any third-party claims, liabilities, damages, or costs (including reasonable legal fees) resulting from any manuscript content, copyright disputes, trademark infringements, or unauthorized claims originated by the Client.</li>
+        </ul>
+      </article>
+
+      <!-- SECTION 11 -->
+      <article class="terms-section" id="section-11">
+        <div class="section-header">
+          <div class="section-num">11</div>
+          <h2>Ethical Standards &amp; Review Policy</h2>
+        </div>
+        <p>
+          GTO Literary Marketing maintains an uncompromising commitment to literary integrity and white-hat marketing practices:
+        </p>
+        <ul>
+          <li>We <strong>never</strong> purchase fake reader reviews, fabricate testimonials, orchestrate click farms, or engage in deceptive review circles.</li>
+          <li>All ARC (Advance Reader Copy) and book club outreach efforts comply strictly with the Federal Trade Commission (FTC) guidelines and Amazon Community Guidelines regarding honest, voluntary, and uncompensated reader reviews.</li>
+          <li>We reserve the immediate right to terminate services without refund if a client insists on deceptive practices, black-hat rank manipulation, or the distribution of plagiarized content.</li>
+        </ul>
+      </article>
+
+      <!-- SECTION 12 -->
+      <article class="terms-section" id="section-12">
+        <div class="section-header">
+          <div class="section-num">12</div>
+          <h2>Modifications, Governing Law &amp; Dispute Resolution</h2>
+        </div>
+        <p>
+          <strong>Modifications:</strong> We reserve the right to modify these Terms &amp; Conditions periodically. Changes become effective immediately upon posting to this URL, with an updated "Effective Date." Continued use of our site and services after updates represents acceptance of the revised terms.
+        </p>
+        <p>
+          <strong>Governing Law:</strong> These Terms and any dispute arising out of or relating to our business relationship shall be governed by and construed in accordance with standard commercial contract law principles, without regard to conflict of law provisions.
+        </p>
+        <p>
+          <strong>Amicable Resolution:</strong> In the event of any disagreement or dispute, both parties commit to engaging in good-faith negotiations for a minimum of thirty (30) days before pursuing formal arbitration or legal proceedings.
+        </p>
+      </article>
+
+      <!-- SECTION 13 -->
+      <article class="terms-section" id="section-13">
+        <div class="section-header">
+          <div class="section-num">13</div>
+          <h2>Contact &amp; Legal Notices</h2>
+        </div>
+        <p>
+          If you have questions regarding these Terms &amp; Conditions, require clarification on service policies, or wish to submit formal legal correspondence, please reach out through our official channels:
+        </p>
+        <div class="clause-grid">
+          <div class="clause-card">
+            <h5>General &amp; Legal Inquiries</h5>
+            <p><strong>GTO Literary Marketing</strong></p>
+            <p>Founder &amp; Lead Consultant: Gideon</p>
+            <p>Email: <a href="mailto:hello@gtoliterary.com">hello@gtoliterary.com</a> <span class="email-note">(Planned Business Email)</span></p>
+          </div>
+          <div class="clause-card">
+            <h5>Direct Contact Form</h5>
+            <p>For confidential campaign inquiries, schedule a consultation via our verified contact portal:</p>
+            <p style="margin-top: 10px;"><a href="contact.html" class="btn-gold-outline" style="padding: 6px 14px; font-size: 11px;">Go to Contact Form &rarr;</a></p>
+          </div>
+        </div>
+      </article>
+
+      <!-- BOTTOM CALLOUT CTA -->
+      <div class="legal-cta">
+        <h3>Ready to Build Your Book Marketing Strategy?</h3>
+        <p>Let's discuss how our transparent, ethical, and author-centric consultancy can elevate your titles to the right readership.</p>
+        <div class="cta-buttons-group">
+          <a href="contact.html" class="btn-gold-solid">Request Free Consultation</a>
+          <a href="services.html" class="btn-gold-outline">Explore All 10 Services</a>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       FOOTER (Consistent Across All Pages)
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      
+      <!-- Brand & Summary -->
+      <div class="footer-brand">
+        <a href="index.html" class="brand-group" aria-label="GTO Literary Marketing">
+          <div class="logo-box" style="width: 44px; height: 44px;">
+            <img src="logo.jpg" alt="GTO Logo" class="logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+            <div class="logo-fallback" style="display: none;">
+              <span style="font-size: 18px;">G</span>
+            </div>
+          </div>
+          <div class="brand-text">
+            <span class="brand-title" style="font-size: 19px;">GTO Literary</span>
+            <span class="brand-sub" style="font-size: 8px;">MARKETING</span>
+          </div>
+        </a>
+        <p>
+          Strategic book marketing and discovery consultancy founded by Gideon. Helping authors, publishers, and literary professionals reach the readers their books deserve.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Gideon</a></li>
+          <li><a href="services.html">Services &amp; Advisory</a></li>
+          <li><a href="blog.html">Editorial &amp; Insights</a></li>
+          <li><a href="faq.html">Frequently Asked Questions</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Featured Services -->
+      <div class="footer-col">
+        <h4>Core Capabilities</h4>
+        <ul class="footer-links">
+          <li><a href="services.html#amazon">Amazon Discoverability</a></li>
+          <li><a href="services.html#bookbub">BookBub Promotions</a></li>
+          <li><a href="services.html#ai">AI Book Search Optimization</a></li>
+          <li><a href="services.html#bookclubs">Book Club Outreach</a></li>
+          <li><a href="services.html#launches">Full Launch Campaigns</a></li>
+          <li><a href="services.html#branding">Author Branding</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-col">
+        <h4>Direct Contact</h4>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          <div>
+            <a href="mailto:hello@gtoliterary.com">hello@gtoliterary.com</a>
+            <span class="email-note">(Planned Business Email)</span>
+          </div>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+          <div>
+            <span>Consultations by Appointment</span>
+            <span class="email-note">Mon &ndash; Fri &bull; Global Remote Advisory</span>
+          </div>
+        </div>
+        <div style="margin-top: 14px;">
+          <a href="contact.html" class="btn-gold-outline" style="font-size: 11px; padding: 7px 14px;">Book Initial Call</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Copyright & Legal -->
+    <div class="footer-bottom">
+      <div>
+        &copy; <span id="current-year">2025</span> GTO Literary Marketing. All rights reserved.
+      </div>
+      <div class="footer-legal-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html" style="color: var(--gold-light);">Terms &amp; Conditions</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       INTERNAL JAVASCRIPT (Zero Dependencies)
+       - Dynamic Table of Contents Scrollspy
+       - Live Keyword Search / Highlighting
+       - Mobile Menu Toggle
+       - Automatic Fallback & Year Detection
+       ======================================================================== -->
+  <script>
+    (function() {
+      'use strict';
+
+      // 1. Current Year
+      const yearEl = document.getElementById('current-year');
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
+
+      // 2. Mobile Nav Toggle
+      const menuBtn = document.getElementById('menu-btn');
+      const primaryNav = document.getElementById('primary-nav');
+
+      if (menuBtn && primaryNav) {
+        menuBtn.addEventListener('click', function() {
+          const isOpen = primaryNav.classList.toggle('open');
+          menuBtn.setAttribute('aria-expanded', isOpen);
+          menuBtn.innerHTML = isOpen 
+            ? '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>'
+            : '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>';
+        });
+      }
+
+      // 3. Scrollspy for Table of Contents
+      const sections = document.querySelectorAll('.terms-section');
+      const tocLinks = document.querySelectorAll('.toc-link');
+
+      function updateActiveToc() {
+        let currentId = '';
+        const scrollPos = window.scrollY + 160;
+
+        sections.forEach(function(sec) {
+          const top = sec.offsetTop;
+          const height = sec.offsetHeight;
+          if (scrollPos >= top && scrollPos < top + height) {
+            currentId = sec.getAttribute('id');
+          }
+        });
+
+        if (currentId) {
+          tocLinks.forEach(function(link) {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + currentId) {
+              link.classList.add('active');
+            }
+          });
+        }
+      }
+
+      window.addEventListener('scroll', updateActiveToc, { passive: true });
+
+      // 4. In-Page Terms Search & Filter
+      const searchInput = document.getElementById('terms-search');
+      if (searchInput) {
+        searchInput.addEventListener('input', function(e) {
+          const query = e.target.value.toLowerCase().trim();
+          
+          sections.forEach(function(section) {
+            const text = section.textContent.toLowerCase();
+            if (query === '' || text.includes(query)) {
+              section.style.display = 'block';
+            } else {
+              section.style.display = 'none';
+            }
+          });
+        });
+      }
+
+    })();
+  </script>
+</body>
+</html>

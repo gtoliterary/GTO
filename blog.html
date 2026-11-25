@@ -1,0 +1,1872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Literary Marketing Articles &amp; Author Guides | GTO Literary Marketing</title>
+  <meta name="description" content="Comprehensive book marketing, Amazon discoverability, author branding, book club outreach, and launch strategy articles curated by GTO Literary Marketing." />
+  <meta name="keywords" content="Book Marketing Agency, Literary Marketing Consultant, Book Promotion Services, Amazon Book Marketing, Author Marketing Services, Book Discoverability, Book Launch Marketing, Author Branding, Book Club Outreach, AI Book Discoverability" />
+  <meta name="author" content="Gideon - Founder &amp; Literary Marketing Consultant" />
+  <meta name="robots" content="index, follow" />
+
+  <style>
+    /* ==========================================================================
+       1. CSS VARIABLES & LUXURY BRAND PALETTE
+       ========================================================================== */
+    :root {
+      --color-black: #0B0B0C;
+      --color-black-surface: #121215;
+      --color-black-card: #18181C;
+      --color-black-border: #26262B;
+      --color-gold: #C5A059;
+      --color-gold-light: #DFBE7F;
+      --color-gold-dark: #9E7B36;
+      --color-gold-muted: rgba(197, 160, 89, 0.15);
+      --color-cream: #F9F6F0;
+      --color-cream-deep: #EFEAE0;
+      --color-cream-card: #FFFFFF;
+      --color-white: #FFFFFF;
+      --color-text-dark: #161618;
+      --color-text-muted-dark: #58575C;
+      --color-text-muted-light: #B8B5AD;
+      --color-border-gold: rgba(197, 160, 89, 0.35);
+      --color-border-light: rgba(22, 22, 24, 0.12);
+
+      --font-serif: "Playfair Display", "Didot", "Bodoni MT", "Georgia", serif;
+      --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+      --container-max: 1240px;
+      --container-article: 820px;
+      --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      --shadow-luxury: 0 16px 40px rgba(0, 0, 0, 0.08);
+      --shadow-elevated: 0 24px 50px rgba(0, 0, 0, 0.22);
+    }
+
+    /* ==========================================================================
+       2. RESET & BASE STYLES
+       ========================================================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--color-black);
+      color: var(--color-cream);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    img, svg {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    ul, ol {
+      list-style: none;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 1rem;
+      background: var(--color-gold);
+      color: var(--color-black);
+      padding: 0.75rem 1.25rem;
+      font-weight: 700;
+      z-index: 10000;
+    }
+    .skip-link:focus {
+      top: 1rem;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 1.75rem;
+    }
+
+    .container-article {
+      width: 100%;
+      max-width: var(--container-article);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* ==========================================================================
+       3. EXACT HEADER & SUB-BAR (FROM SCREENSHOT SPECIFICATION)
+       ========================================================================== */
+    .site-header {
+      background-color: var(--color-black);
+      border-bottom: 1px solid rgba(197, 160, 89, 0.15);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 90px;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      gap: 1.5rem;
+    }
+
+    /* LOGO HOLDER (Matches Screenshot) */
+    .brand-link {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+
+    .logo-box {
+      width: 54px;
+      height: 54px;
+      border: 1px solid var(--color-gold);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #0B0B0C;
+      position: relative;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .logo-box .logo-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: none; /* Becomes visible via JS when logo.jpg exists */
+    }
+
+    .logo-box .logo-placeholder-letter {
+      font-family: var(--font-serif);
+      color: var(--color-gold);
+      font-size: 1.4rem;
+      font-style: italic;
+      line-height: 1;
+      margin-top: 2px;
+    }
+
+    .logo-box .logo-placeholder-text {
+      font-size: 0.45rem;
+      font-family: var(--font-sans);
+      color: var(--color-gold);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    .brand-text-block {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-title {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      color: var(--color-white);
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      line-height: 1.15;
+    }
+
+    .brand-subtitle {
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      color: var(--color-gold);
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-top: 0.2rem;
+    }
+
+    /* NAV LINKS (Matches Screenshot) */
+    .nav-menu-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .nav-links-list {
+      display: flex;
+      align-items: center;
+      gap: 2.2rem;
+    }
+
+    .nav-links-list a {
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--color-text-muted-light);
+      padding: 0.45rem 0;
+      position: relative;
+    }
+
+    .nav-links-list a:hover {
+      color: var(--color-gold);
+    }
+
+    .nav-links-list a.active {
+      color: var(--color-gold);
+    }
+
+    .nav-links-list a.active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 100%;
+      height: 1.5px;
+      background-color: var(--color-gold);
+    }
+
+    /* HEADER CTA BUTTON (Matches Screenshot) */
+    .header-cta-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--color-gold);
+      background: transparent;
+      color: var(--color-gold);
+      font-family: var(--font-sans);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 0.85rem 1.65rem;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+
+    .header-cta-btn:hover {
+      background: var(--color-gold);
+      color: var(--color-black);
+      box-shadow: 0 0 20px rgba(197, 160, 89, 0.25);
+    }
+
+    /* SUB-BAR BANNER (Matches Screenshot) */
+    .header-sub-banner {
+      background-color: #0E0E10;
+      border-bottom: 1px solid rgba(197, 160, 89, 0.12);
+      padding: 0.75rem 0;
+      text-align: center;
+    }
+
+    .sub-banner-text {
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--color-gold);
+    }
+
+    /* Mobile Menu Toggle */
+    .mobile-toggle {
+      display: none;
+      background: none;
+      border: 1px solid var(--color-gold);
+      color: var(--color-gold);
+      padding: 0.5rem;
+      cursor: pointer;
+    }
+
+    /* ==========================================================================
+       4. HERO BANNER
+       ========================================================================== */
+    .blog-hero {
+      padding: 5rem 0 3.5rem;
+      background: radial-gradient(circle at top right, rgba(197, 160, 89, 0.08) 0%, rgba(11, 11, 12, 1) 70%);
+      border-bottom: 1px solid var(--color-black-border);
+      text-align: center;
+    }
+
+    .section-eyebrow {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--color-gold);
+      margin-bottom: 1rem;
+    }
+
+    .blog-hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+      color: var(--color-white);
+      margin-bottom: 1.25rem;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    .blog-hero h1 span {
+      color: var(--color-gold);
+      font-style: italic;
+    }
+
+    .blog-hero p {
+      max-width: 700px;
+      margin: 0 auto;
+      color: var(--color-text-muted-light);
+      font-size: 1.05rem;
+      line-height: 1.75;
+    }
+
+    /* ==========================================================================
+       5. CONTROLS TOOLBAR (FILTER & SEARCH)
+       ========================================================================== */
+    .content-area {
+      background-color: var(--color-cream);
+      color: var(--color-text-dark);
+      padding: 4.5rem 0 6rem;
+      min-height: 700px;
+    }
+
+    .toolbar-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+      margin-bottom: 3rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--color-border-light);
+    }
+
+    .filter-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .filter-pill {
+      background: #FFFFFF;
+      border: 1px solid var(--color-border-light);
+      color: var(--color-text-dark);
+      padding: 0.55rem 1.15rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+      transition: var(--transition);
+      text-transform: uppercase;
+    }
+
+    .filter-pill:hover,
+    .filter-pill.active {
+      background: var(--color-black);
+      color: var(--color-gold);
+      border-color: var(--color-black);
+    }
+
+    .search-container {
+      position: relative;
+      min-width: 280px;
+    }
+
+    .search-container input {
+      width: 100%;
+      padding: 0.65rem 1rem 0.65rem 2.4rem;
+      border: 1px solid var(--color-border-light);
+      background: #FFFFFF;
+      font-family: var(--font-sans);
+      font-size: 0.88rem;
+      color: var(--color-text-dark);
+      outline: none;
+      transition: var(--transition);
+    }
+
+    .search-container input:focus {
+      border-color: var(--color-gold-dark);
+      box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.15);
+    }
+
+    .search-container svg {
+      position: absolute;
+      left: 0.85rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 16px;
+      color: var(--color-text-muted-dark);
+    }
+
+    /* ==========================================================================
+       6. ARTICLES DIRECTORY GRID
+       ========================================================================== */
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.25rem;
+    }
+
+    .article-summary-card {
+      background: var(--color-white);
+      border: 1px solid var(--color-border-light);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition);
+      box-shadow: var(--shadow-luxury);
+      position: relative;
+    }
+
+    .article-summary-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+      border-color: var(--color-gold);
+    }
+
+    .card-top {
+      background: var(--color-black);
+      color: var(--color-white);
+      padding: 1.5rem 1.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--color-border-gold);
+    }
+
+    .card-num {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      color: var(--color-gold);
+      font-style: italic;
+    }
+
+    .card-badge {
+      font-size: 0.68rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-gold);
+      background: var(--color-gold-muted);
+      padding: 0.25rem 0.6rem;
+      border: 1px solid rgba(197, 160, 89, 0.3);
+    }
+
+    .card-content {
+      padding: 2rem 1.75rem;
+      flex-grow: 1;
+    }
+
+    .card-content .article-time {
+      font-size: 0.75rem;
+      color: var(--color-text-muted-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+
+    .card-content h2 {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      color: var(--color-text-dark);
+      line-height: 1.35;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .card-content p {
+      font-size: 0.94rem;
+      color: var(--color-text-muted-dark);
+      line-height: 1.7;
+      margin-bottom: 1.25rem;
+    }
+
+    .card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .tag-item {
+      font-size: 0.72rem;
+      background: var(--color-cream);
+      padding: 0.2rem 0.55rem;
+      border: 1px solid var(--color-border-light);
+      color: var(--color-text-dark);
+    }
+
+    .card-action {
+      padding: 1.25rem 1.75rem;
+      border-top: 1px solid var(--color-border-light);
+      background: #FAF8F5;
+    }
+
+    .open-article-btn {
+      background: none;
+      border: none;
+      font-family: var(--font-sans);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-text-dark);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0;
+    }
+
+    .open-article-btn svg {
+      width: 15px;
+      height: 15px;
+      color: var(--color-gold-dark);
+      transition: transform 0.2s ease;
+    }
+
+    .open-article-btn:hover {
+      color: var(--color-gold-dark);
+    }
+
+    .open-article-btn:hover svg {
+      transform: translateX(4px);
+    }
+
+    .no-results {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 4rem 2rem;
+      background: var(--color-white);
+      border: 1px solid var(--color-border-light);
+      display: none;
+    }
+
+    /* ==========================================================================
+       7. FULL-LENGTH IN-PAGE READING PANELS (ALL 5 COMPLETE ARTICLES)
+       ========================================================================== */
+    .article-full-view {
+      display: none;
+      background: var(--color-white);
+      border: 1px solid var(--color-border-light);
+      box-shadow: var(--shadow-luxury);
+      margin-top: 1.5rem;
+      padding: 3.5rem 3rem;
+      animation: fadeIn 0.35s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .article-full-view.active {
+      display: block;
+    }
+
+    .article-back-bar {
+      margin-bottom: 2.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--color-border-light);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .back-to-grid-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: var(--color-black);
+      color: var(--color-gold);
+      border: 1px solid var(--color-black);
+      padding: 0.65rem 1.35rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .back-to-grid-btn:hover {
+      background: var(--color-gold);
+      color: var(--color-black);
+      border-color: var(--color-gold);
+    }
+
+    .article-header {
+      margin-bottom: 2.5rem;
+    }
+
+    .article-header .category-badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--color-gold-dark);
+      margin-bottom: 0.75rem;
+    }
+
+    .article-header h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 3.8vw, 2.85rem);
+      color: var(--color-text-dark);
+      line-height: 1.25;
+      margin-bottom: 1.25rem;
+      font-weight: 600;
+    }
+
+    .article-meta-line {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1.25rem;
+      font-size: 0.85rem;
+      color: var(--color-text-muted-dark);
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--color-border-light);
+    }
+
+    .article-body {
+      color: #2B2A2E;
+      font-size: 1.08rem;
+      line-height: 1.85;
+    }
+
+    .article-body p {
+      margin-bottom: 1.65rem;
+    }
+
+    .article-body h2 {
+      font-family: var(--font-serif);
+      font-size: 1.65rem;
+      color: var(--color-text-dark);
+      margin: 2.75rem 0 1rem;
+      line-height: 1.3;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--color-border-light);
+    }
+
+    .article-body h3 {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      color: var(--color-text-dark);
+      margin: 1.85rem 0 0.75rem;
+    }
+
+    .article-body ul, .article-body ol {
+      margin: 1.25rem 0 1.75rem 1.5rem;
+    }
+
+    .article-body ul li {
+      list-style-type: disc;
+      margin-bottom: 0.65rem;
+    }
+
+    .article-body ol li {
+      list-style-type: decimal;
+      margin-bottom: 0.65rem;
+    }
+
+    .callout-box {
+      background: var(--color-cream);
+      border-left: 3px solid var(--color-gold);
+      padding: 1.65rem 1.85rem;
+      margin: 2.25rem 0;
+    }
+
+    .callout-box h4 {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      color: var(--color-text-dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .callout-box p {
+      margin-bottom: 0;
+      font-size: 0.98rem;
+      color: var(--color-text-muted-dark);
+    }
+
+    .article-author-card {
+      margin-top: 3.5rem;
+      padding: 2.25rem;
+      background: #0B0B0C;
+      color: var(--color-white);
+      border: 1px solid var(--color-border-gold);
+      display: flex;
+      gap: 1.75rem;
+      align-items: center;
+    }
+
+    .author-avatar {
+      width: 70px;
+      height: 70px;
+      border: 1px solid var(--color-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      color: var(--color-gold);
+      flex-shrink: 0;
+      background: #141417;
+    }
+
+    .author-info h4 {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      color: var(--color-gold);
+      margin-bottom: 0.25rem;
+    }
+
+    .author-info .author-title {
+      font-size: 0.75rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-text-muted-light);
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .author-info p {
+      font-size: 0.9rem;
+      color: var(--color-text-muted-light);
+      margin-bottom: 0;
+      line-height: 1.6;
+    }
+
+    .article-cta-footer {
+      margin-top: 3rem;
+      text-align: center;
+      padding: 2.5rem;
+      background: var(--color-cream);
+      border: 1px solid var(--color-border-light);
+    }
+
+    .article-cta-footer h3 {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      margin-bottom: 0.65rem;
+      color: var(--color-text-dark);
+    }
+
+    .article-cta-footer p {
+      color: var(--color-text-muted-dark);
+      font-size: 0.98rem;
+      margin-bottom: 1.5rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ==========================================================================
+       8. BOTTOM CALL TO ACTION
+       ========================================================================== */
+    .cta-section {
+      background-color: var(--color-black);
+      padding: 5.5rem 0;
+      text-align: center;
+      border-top: 1px solid var(--color-border-gold);
+    }
+
+    .cta-box {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .cta-box h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 3.6vw, 2.75rem);
+      color: var(--color-white);
+      margin-bottom: 1.25rem;
+      font-weight: 500;
+    }
+
+    .cta-box p {
+      color: var(--color-text-muted-light);
+      font-size: 1.05rem;
+      line-height: 1.75;
+      margin-bottom: 2.25rem;
+    }
+
+    .btn-gold-solid {
+      background: var(--color-gold);
+      color: var(--color-black);
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 1rem 2.25rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--color-gold);
+      transition: var(--transition);
+    }
+
+    .btn-gold-solid:hover {
+      background: var(--color-gold-light);
+      border-color: var(--color-gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(197, 160, 89, 0.28);
+    }
+
+    /* ==========================================================================
+       9. FOOTER
+       ========================================================================== */
+    .site-footer {
+      background-color: #080809;
+      color: var(--color-text-muted-light);
+      padding: 4.5rem 0 2rem;
+      border-top: 1px solid rgba(197, 160, 89, 0.12);
+      font-size: 0.9rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 0.8fr 1fr 1.1fr;
+      gap: 2.5rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid rgba(197, 160, 89, 0.12);
+    }
+
+    .footer-brand p {
+      margin-top: 1.15rem;
+      font-size: 0.88rem;
+      line-height: 1.7;
+    }
+
+    .footer-quote {
+      font-family: var(--font-serif);
+      font-style: italic;
+      color: var(--color-gold);
+      margin-top: 0.6rem;
+      font-size: 0.95rem;
+    }
+
+    .footer-col h4 {
+      font-family: var(--font-serif);
+      color: var(--color-white);
+      font-size: 1.05rem;
+      margin-bottom: 1.25rem;
+      font-weight: 500;
+    }
+
+    .footer-links li {
+      margin-bottom: 0.65rem;
+    }
+
+    .footer-links a {
+      color: var(--color-text-muted-light);
+      font-size: 0.86rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--color-gold);
+      padding-left: 4px;
+    }
+
+    .placeholder-badge {
+      display: inline-block;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      background: rgba(197, 160, 89, 0.15);
+      color: var(--color-gold);
+      border: 1px solid rgba(197, 160, 89, 0.35);
+      padding: 0.15rem 0.5rem;
+      margin-top: 0.35rem;
+    }
+
+    .footer-bottom {
+      padding-top: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      font-size: 0.82rem;
+    }
+
+    .footer-legal a {
+      margin-left: 1.25rem;
+      color: var(--color-text-muted-light);
+    }
+
+    .footer-legal a:hover {
+      color: var(--color-gold);
+    }
+
+    /* ==========================================================================
+       10. RESPONSIVE BREAKPOINTS
+       ========================================================================== */
+    @media (max-width: 1024px) {
+      .articles-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 860px) {
+      .mobile-toggle {
+        display: block;
+      }
+      .nav-menu-wrapper {
+        position: fixed;
+        top: 90px;
+        left: 0;
+        right: 0;
+        background: #0B0B0C;
+        border-bottom: 1px solid var(--color-border-gold);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2rem;
+        gap: 1.5rem;
+        transform: translateY(-130%);
+        opacity: 0;
+        visibility: hidden;
+        transition: var(--transition);
+      }
+      .nav-menu-wrapper.open {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+      }
+      .nav-links-list {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.2rem;
+        width: 100%;
+      }
+      .header-cta-btn {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .articles-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .article-full-view {
+        padding: 2rem 1.25rem;
+      }
+      .article-author-card {
+        flex-direction: column;
+        text-align: center;
+      }
+      .toolbar-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .search-container {
+        width: 100%;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+      .footer-legal a {
+        margin: 0 0.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ========================================================================
+       TOP HEADER (Matches Attached Pattern Exactly)
+       ======================================================================== -->
+  <header class="site-header" role="banner">
+    <div class="container nav-container">
+
+      <!-- LOGO PART (With placeholder support for logo.jpg) -->
+      <a href="index.html" class="brand-link" aria-label="GTO Literary Marketing Home">
+        <div class="logo-box" id="logoBoxContainer">
+          <!-- Fallback initial & placeholder text if logo.jpg is not present -->
+          <span class="logo-placeholder-letter" id="fallbackLetter">G</span>
+          <span class="logo-placeholder-text" id="fallbackSubtext">LOGO.JPG</span>
+          <!-- Actual image asset support -->
+          <img src="Gilded Literary Marketing Emblem.png" alt="GTO Literary Logo" class="logo-img" id="actualLogoImg" onerror="this.style.display='none';" onload="this.style.display='block'; document.getElementById('fallbackLetter').style.display='none'; document.getElementById('fallbackSubtext').style.display='none';" />
+        </div>
+        <div class="brand-text-block">
+          <span class="brand-title">GTO Literary</span>
+          <span class="brand-subtitle">MARKETING</span>
+        </div>
+      </a>
+
+      <!-- MOBILE TOGGLE BUTTON -->
+      <button class="mobile-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <!-- NAVIGATION MENU -->
+      <nav class="nav-menu-wrapper" id="navMenuWrapper" role="navigation" aria-label="Main Navigation">
+        <ul class="nav-links-list">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="services.html">SERVICES</a></li>
+          <li><a href="blog.html" class="active" aria-current="page">BLOG</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+        <a href="contact.html" class="header-cta-btn">FREE CONSULTATION</a>
+      </nav>
+
+    </div>
+
+    <!-- SUB-BAR BANNER (Matches Screenshot) -->
+    <div class="header-sub-banner">
+      <div class="container">
+        <p class="sub-banner-text">FOR AUTHORS, PUBLISHERS &amp; LITERARY PROFESSIONALS</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       MAIN PAGE CONTENT
+       ======================================================================== -->
+  <main id="main-content">
+
+    <!-- HERO SECTION -->
+    <section class="blog-hero">
+      <div class="container">
+        <span class="section-eyebrow">Literary Marketing Journal &amp; Resources</span>
+        <h1>Strategic Perspectives for <span>Thoughtful Authors</span></h1>
+        <p>
+          In-depth guides on Amazon discoverability, digital author branding, reading group advocacy, launch management, and modern search visibility.
+        </p>
+      </div>
+    </section>
+
+    <!-- MAIN INTERACTIVE ARTICLES SECTION (ALL 5 ARTICLES INCLUDED) -->
+    <section class="content-area">
+      <div class="container">
+
+        <!-- CONTROLS TOOLBAR (Filters + Search) -->
+        <div class="toolbar-wrapper" id="articlesToolbar">
+          <div class="filter-group" role="tablist" aria-label="Article categories">
+            <button type="button" class="filter-pill active" data-filter="all">All Articles (5)</button>
+            <button type="button" class="filter-pill" data-filter="amazon">Amazon &amp; Retail</button>
+            <button type="button" class="filter-pill" data-filter="branding">Author Platform</button>
+            <button type="button" class="filter-pill" data-filter="launch">Launch &amp; Outreach</button>
+            <button type="button" class="filter-pill" data-filter="ai">AI Discoverability</button>
+          </div>
+
+          <div class="search-container">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="search" id="articleSearchInput" placeholder="Search insights by topic..." aria-label="Search articles" />
+          </div>
+        </div>
+
+        <!-- 1. ARTICLES DIRECTORY GRID -->
+        <div class="articles-grid" id="articlesCatalogGrid">
+
+          <!-- CARD 1 -->
+          <article class="article-summary-card" data-category="amazon" data-article-id="article-amazon">
+            <div>
+              <div class="card-top">
+                <span class="card-num">01</span>
+                <span class="card-badge">Amazon Strategy</span>
+              </div>
+              <div class="card-content">
+                <span class="article-time">8 Min Read &bull; By Gideon</span>
+                <h2>How to Improve Your Book's Discoverability on Amazon</h2>
+                <p>
+                  A deep dive into backend keyword architecture, category taxonomy, compelling book blurbs, and editorial positioning that connects with actual reader searches.
+                </p>
+                <div class="card-tags">
+                  <span class="tag-item">Keywords</span>
+                  <span class="tag-item">Metadata</span>
+                  <span class="tag-item">A+ Content</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-action">
+              <button type="button" class="open-article-btn" data-target="article-amazon">
+                Read Full Article
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- CARD 2 -->
+          <article class="article-summary-card" data-category="branding" data-article-id="article-branding">
+            <div>
+              <div class="card-top">
+                <span class="card-num">02</span>
+                <span class="card-badge">Author Platform</span>
+              </div>
+              <div class="card-content">
+                <span class="article-time">7 Min Read &bull; By Gideon</span>
+                <h2>Why Every Author Needs a Strong Online Presence</h2>
+                <p>
+                  Why readers buy the author, not just the book. Discover how owned digital assets, newsletters, and clear positioning build compound momentum across every future release.
+                </p>
+                <div class="card-tags">
+                  <span class="tag-item">Brand Identity</span>
+                  <span class="tag-item">Email Lists</span>
+                  <span class="tag-item">Longevity</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-action">
+              <button type="button" class="open-article-btn" data-target="article-branding">
+                Read Full Article
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- CARD 3 -->
+          <article class="article-summary-card" data-category="launch" data-article-id="article-launch">
+            <div>
+              <div class="card-top">
+                <span class="card-num">03</span>
+                <span class="card-badge">Campaign Planning</span>
+              </div>
+              <div class="card-content">
+                <span class="article-time">9 Min Read &bull; By Gideon</span>
+                <h2>Building a Book Launch Strategy That Reaches the Right Readers</h2>
+                <p>
+                  The structured 3-phase framework for pre-launch runways, launch week momentum, ARC team organization, and sustaining post-launch sales vitality.
+                </p>
+                <div class="card-tags">
+                  <span class="tag-item">Launch Timeline</span>
+                  <span class="tag-item">ARC Teams</span>
+                  <span class="tag-item">Review Velocity</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-action">
+              <button type="button" class="open-article-btn" data-target="article-launch">
+                Read Full Article
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- CARD 4 -->
+          <article class="article-summary-card" data-category="launch" data-article-id="article-bookclubs">
+            <div>
+              <div class="card-top">
+                <span class="card-num">04</span>
+                <span class="card-badge">Reader Outreach</span>
+              </div>
+              <div class="card-content">
+                <span class="article-time">7 Min Read &bull; By Gideon</span>
+                <h2>How Book Clubs Can Help Readers Discover Independent Books</h2>
+                <p>
+                  Reading groups are the purest engine of literary word-of-mouth. Learn how to craft conversation-ready discussion guides and position your book for group adoption.
+                </p>
+                <div class="card-tags">
+                  <span class="tag-item">Reading Groups</span>
+                  <span class="tag-item">Discussion Guides</span>
+                  <span class="tag-item">Advocacy</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-action">
+              <button type="button" class="open-article-btn" data-target="article-bookclubs">
+                Read Full Article
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- CARD 5 -->
+          <article class="article-summary-card" data-category="ai" data-article-id="article-ai">
+            <div>
+              <div class="card-top">
+                <span class="card-num">05</span>
+                <span class="card-badge">Modern Discoverability</span>
+              </div>
+              <div class="card-content">
+                <span class="article-time">8 Min Read &bull; By Gideon</span>
+                <h2>Understanding AI Book Discoverability</h2>
+                <p>
+                  As readers consult AI conversational search for recommendations, clear web footprints, entity clarity, and consistent metadata matter more than ever.
+                </p>
+                <div class="card-tags">
+                  <span class="tag-item">AI Search</span>
+                  <span class="tag-item">Entity Authority</span>
+                  <span class="tag-item">Future Proofing</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-action">
+              <button type="button" class="open-article-btn" data-target="article-ai">
+                Read Full Article
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- EMPTY SEARCH STATE -->
+          <div class="no-results" id="noArticlesAlert">
+            <h3 style="font-family: var(--font-serif); font-size: 1.4rem; margin-bottom: 0.5rem;">No matching articles found</h3>
+            <p style="color: var(--color-text-muted-dark); margin-bottom: 1.5rem;">Try adjusting your keyword or reset to browse all resources.</p>
+            <button type="button" class="back-to-grid-btn" id="resetSearchBtn">View All Articles</button>
+          </div>
+
+        </div>
+
+
+        <!-- ====================================================================
+             FULL ARTICLE 1: AMAZON DISCOVERABILITY
+             ==================================================================== -->
+        <article class="article-full-view" id="article-amazon" aria-labelledby="art1-title">
+          <div class="article-back-bar">
+            <button type="button" class="back-to-grid-btn close-article-view">
+              &larr; Back to All Articles
+            </button>
+            <span style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--color-gold-dark); font-weight: 600;">Resource No. 01</span>
+          </div>
+
+          <div class="article-header">
+            <span class="category-badge">Amazon &amp; Retail Discoverability</span>
+            <h1 id="art1-title">How to Improve Your Book's Discoverability on Amazon</h1>
+            <div class="article-meta-line">
+              <span><strong>Author:</strong> Gideon (Founder &amp; Literary Marketing Consultant)</span>
+              <span><strong>Reading Time:</strong> 8 Minutes</span>
+              <span><strong>Core Focus:</strong> Amazon SEO, Blurb Architecture, Category Selection</span>
+            </div>
+          </div>
+
+          <div class="article-body">
+            <p>
+              Amazon is not merely an online bookstore; it is the world’s most powerful commercial search engine dedicated to books. Every single day, hundreds of thousands of avid readers type nuanced queries into its search bar—seeking specific tropes, emotional hooks, niche historical settings, or solutions to pressing professional challenges.
+            </p>
+            <p>
+              Yet, countless exceptional books languish unseen. The reason is rarely the quality of the writing; it is a fundamental misalignment between how the book is cataloged and how readers actively search. Optimizing your book’s discoverability is the art and science of ensuring your book speaks the exact algorithmic and psychological language of your target reader.
+            </p>
+
+            <h2>1. Intentional Keyword Architecture Beyond Buzzwords</h2>
+            <p>
+              When authors publish through Kindle Direct Publishing (KDP), they are provided with seven backend keyword slots. Too often, authors fill these with single generic words like <em>"thriller"</em>, <em>"romance"</em>, or <em>"novel"</em>. These terms are fiercely saturated and provide zero algorithmic context.
+            </p>
+            <p>
+              High-converting Amazon discoverability relies on <strong>long-tail customer search intent</strong>. Think in phrases that describe reader desire:
+            </p>
+            <ul>
+              <li><strong>Sub-genre specific identifiers:</strong> e.g., <em>"psychological domestic suspense with female protagonist"</em> rather than simply <em>"mystery"</em>.</li>
+              <li><strong>Thematic tropes and reader moods:</strong> e.g., <em>"enemies to lovers small town fantasy"</em> or <em>"practical leadership manual for new managers"</em>.</li>
+              <li><strong>Comparable author aesthetics:</strong> Phrases that capture the mood or style of established genre leaders without deceptively violating Amazon’s trademark guidelines.</li>
+            </ul>
+
+            <div class="callout-box">
+              <h4>Consultant’s Practical Rule</h4>
+              <p>Amazon’s indexing algorithm reads individual phrases and combines related words. Utilize full character counts in your backend fields with distinct, high-relevance search terms that have demonstrable reader search traffic.</p>
+            </div>
+
+            <h2>2. Category Precision: Moving Away From Oversaturated Generalities</h2>
+            <p>
+              Selecting the right categories does not simply determine where your book appears in browsing hierarchies; it dictates which titles Amazon considers "similar" to yours for recommendation carousels (<em>"Customers who viewed this item also viewed..."</em>).
+            </p>
+            <p>
+              Rather than burying your book in a broad top-level category like <em>Fiction &gt; General</em>, research precise subcategories where your ideal readers browse and where your book can achieve healthy category ranking velocity. Consistent sales in a tightly targeted niche signal the algorithm to push your book into broader recommendation feeds.
+            </p>
+
+            <h2>3. The Blurb: Writing for Conversion, Not Plot Summaries</h2>
+            <p>
+              Discoverability brings eyeballs to your product page; <strong>conversion</strong> is what keeps Amazon recommending you. Amazon measures your page's conversion rate (the percentage of visitors who click "Buy Now" or "Read for Free" via Kindle Unlimited). If thousands see your page but few buy, the algorithm quietly downranks your visibility.
+            </p>
+            <p>
+              A high-converting book description requires three distinct elements:
+            </p>
+            <ol>
+              <li><strong>The Editorial Headline Hook:</strong> A bold, one-to-two line opening that instantly establishes the emotional stakes or core premise.</li>
+              <li><strong>The Character-Driven Tension (Fiction) or Clear Value Proposition (Non-Fiction):</strong> A crisp narrative summary focusing on conflict, stakes, and unique voice—avoiding sprawling summaries of minor characters.</li>
+              <li><strong>The Social Proof &amp; Call to Action:</strong> Editorial blurbs, target reader comps, and an explicit invitation to begin reading today.</li>
+            </ol>
+
+            <h2>4. Elevating Trust Through Amazon A+ Content</h2>
+            <p>
+              Amazon A+ Content allows authors to showcase enhanced visual graphics, character aesthetics, thematic quotes, and publisher-grade banners directly on their book detail page. For independent authors, professional A+ Content bridges the credibility gap, presenting your title with the visual authority of a major publishing house.
+            </p>
+
+            <div class="article-cta-footer">
+              <h3>Need a Structured Review of Your Amazon Page?</h3>
+              <p>GTO Literary Marketing conducts thorough metadata, keyword, and retail page evaluations to help your titles gain true discoverability.</p>
+              <a href="contact.html" class="btn-gold-solid">Request an Amazon Marketing Consultation</a>
+            </div>
+          </div>
+
+          <div class="article-author-card">
+            <div class="author-avatar">G</div>
+            <div class="author-info">
+              <h4>Written by Gideon</h4>
+              <span class="author-title">Founder &amp; Literary Marketing Consultant</span>
+              <p>Gideon founded GTO Literary Marketing to provide authors and publishers with strategic, grounded, and ethical book promotion solutions that respect the creative process.</p>
+            </div>
+          </div>
+        </article>
+
+
+        <!-- ====================================================================
+             FULL ARTICLE 2: AUTHOR ONLINE PRESENCE
+             ==================================================================== -->
+        <article class="article-full-view" id="article-branding" aria-labelledby="art2-title">
+          <div class="article-back-bar">
+            <button type="button" class="back-to-grid-btn close-article-view">
+              &larr; Back to All Articles
+            </button>
+            <span style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--color-gold-dark); font-weight: 600;">Resource No. 02</span>
+          </div>
+
+          <div class="article-header">
+            <span class="category-badge">Author Branding &amp; Platform</span>
+            <h1 id="art2-title">Why Every Author Needs a Strong Online Presence</h1>
+            <div class="article-meta-line">
+              <span><strong>Author:</strong> Gideon (Founder &amp; Literary Marketing Consultant)</span>
+              <span><strong>Reading Time:</strong> 7 Minutes</span>
+              <span><strong>Core Focus:</strong> Author Platform, Digital Real Estate, Reader Lifetime Value</span>
+            </div>
+          </div>
+
+          <div class="article-body">
+            <p>
+              In modern publishing, a book is rarely an isolated product. When a reader reaches the final page of a novel or non-fiction title that moved them, their immediate reaction is curiosity about the creator: <em>Who wrote this? What else have they published? Where can I follow their work?</em>
+            </p>
+            <p>
+              If a search for your name leads to broken links, an outdated social media profile, or silence, that precious bridge of reader loyalty collapses. A strong, cohesive online presence transforms casual readers into lifelong advocates.
+            </p>
+
+            <h2>1. Owned Media vs. Rented Land</h2>
+            <p>
+              Many authors make the mistake of building their entire marketing presence on third-party social media platforms. While social platforms offer reach, you do not own that audience. Algorithmic changes can slash your visibility overnight.
+            </p>
+            <p>
+              A durable literary platform is built around two foundational pillars of <strong>owned media</strong>:
+            </p>
+            <ul>
+              <li><strong>An Elegant Author Website:</strong> Your central digital home base. It should showcase your full bibliography, clear buy links, press materials, speaking information, and an unmistakable newsletter sign-up.</li>
+              <li><strong>A Direct Reader Email Newsletter:</strong> The single highest-converting promotional asset in publishing. An email inbox is a private, direct line to readers who have explicitly asked to hear from you.</li>
+            </ul>
+
+            <div class="callout-box">
+              <h4>The Reader Connection Principle</h4>
+              <p>Social media is for discovery; email is for retention. Authors who build an email list of 1,000 engaged readers hold greater release-day power than those with 20,000 passive social followers.</p>
+            </div>
+
+            <h2>2. Defining Your Core Author Identity</h2>
+            <p>
+              Author branding is not about inventing an artificial persona; it is about distilling your authentic literary values, genre tone, and aesthetic into a consistent presentation.
+            </p>
+            <p>
+              Consider the visual and tonal coherence of your online footprint:
+            </p>
+            <ul>
+              <li>Do your website colors and typography reflect the mood of your books?</li>
+              <li>Is your author bio written with clarity, confidence, and warmth?</li>
+              <li>Is your professional author headshot clear and welcoming?</li>
+            </ul>
+
+            <h2>3. Compound Growth Across Your Entire Bibliography</h2>
+            <p>
+              When you market a single book without an author platform, your marketing investment ends the moment the promotional budget runs out. When you market a book with a strong author platform, every new reader is invited into your ecosystem—discovering your backlist and eagerly anticipating your next release.
+            </p>
+
+            <div class="article-cta-footer">
+              <h3>Ready to Elevate Your Author Platform?</h3>
+              <p>We work with authors to develop cohesive brand identities, reader funnels, and websites that command respect.</p>
+              <a href="contact.html" class="btn-gold-solid">Explore Author Branding Solutions</a>
+            </div>
+          </div>
+
+          <div class="article-author-card">
+            <div class="author-avatar">G</div>
+            <div class="author-info">
+              <h4>Written by Gideon</h4>
+              <span class="author-title">Founder &amp; Literary Marketing Consultant</span>
+              <p>Gideon advises authors internationally on establishing authoritative, aesthetically refined author platforms that endure across multi-book careers.</p>
+            </div>
+          </div>
+        </article>
+
+
+        <!-- ====================================================================
+             FULL ARTICLE 3: BOOK LAUNCH STRATEGY
+             ==================================================================== -->
+        <article class="article-full-view" id="article-launch" aria-labelledby="art3-title">
+          <div class="article-back-bar">
+            <button type="button" class="back-to-grid-btn close-article-view">
+              &larr; Back to All Articles
+            </button>
+            <span style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--color-gold-dark); font-weight: 600;">Resource No. 03</span>
+          </div>
+
+          <div class="article-header">
+            <span class="category-badge">Launch Strategy &amp; Execution</span>
+            <h1 id="art3-title">Building a Book Launch Strategy That Reaches the Right Readers</h1>
+            <div class="article-meta-line">
+              <span><strong>Author:</strong> Gideon (Founder &amp; Literary Marketing Consultant)</span>
+              <span><strong>Reading Time:</strong> 9 Minutes</span>
+              <span><strong>Core Focus:</strong> Pre-Launch Runways, ARC Management, Launch Week Velocity</span>
+            </div>
+          </div>
+
+          <div class="article-body">
+            <p>
+              A book launch is not a single 24-hour event; it is a coordinated campaign that unfolds across months. When an author simply uploads a book and tweets <em>"My book is out now!"</em>, they are met with the harsh reality of an indifferent marketplace.
+            </p>
+            <p>
+              A successful book launch creates an accumulation of anticipation, early validation, and synchronized visibility that signals to retail algorithms and reader communities that something important has arrived.
+            </p>
+
+            <h2>Phase 1: The Pre-Launch Foundation (60 to 90 Days Out)</h2>
+            <p>
+              The most critical work of a launch happens well before publication day. During this window, your priorities are:
+            </p>
+            <ul>
+              <li><strong>Advanced Reader Copy (ARC) Distribution:</strong> Placing digital review copies into the hands of dedicated genre readers who will post honest reviews on launch day.</li>
+              <li><strong>Retail Page Pre-Order Optimization:</strong> Finalizing cover art, blurb copy, and categorization so early traffic converts immediately.</li>
+              <li><strong>Influencer &amp; Media Pitching:</strong> Reaching out to literary bloggers, Bookstagrammers, and podcasters with tailored, polite review queries.</li>
+            </ul>
+
+            <div class="callout-box">
+              <h4>Why Early Reviews Matter</h4>
+              <p>Early reviews provide social proof. When cold traffic lands on your Amazon or retail page during launch week, having 15 to 30 authentic reviews dramatically increases conversion rates.</p>
+            </div>
+
+            <h2>Phase 2: Launch Week Synchronization (Day 1 to Day 7)</h2>
+            <p>
+              Launch week is about concentrated velocity. You want to concentrate all marketing energy into a tight window to trigger retail bestseller ranks and algorithm visibility:
+            </p>
+            <ol>
+              <li><strong>Mobilize Your ARC Team:</strong> Send a celebratory email reminding advance readers that the book is live and inviting them to post their honest reviews.</li>
+              <li><strong>Email Newsletter Announcement:</strong> Send a dedicated, beautifully crafted launch broadcast to your subscriber list.</li>
+              <li><strong>Paid Promotional Stacks:</strong> Coordinate newsletter features (such as BookBub, Freebooksy, or genre-specific newsletters) in consecutive days to maintain sustained download momentum.</li>
+            </ol>
+
+            <h2>Phase 3: The Post-Launch Sustainment (Day 14 and Beyond)</h2>
+            <p>
+              Many authors stop marketing two weeks after launch. In reality, a book’s commercial life is just beginning. Sustained visibility requires transitioning from launch hype to steady discoverability: ongoing book club outreach, podcast interviews, and backlist cross-promotions.
+            </p>
+
+            <div class="article-cta-footer">
+              <h3>Planning an Upcoming Book Release?</h3>
+              <p>Let GTO Literary Marketing design a comprehensive, stress-free launch campaign tailored specifically to your book.</p>
+              <a href="contact.html" class="btn-gold-solid">Schedule a Launch Strategy Consultation</a>
+            </div>
+          </div>
+
+          <div class="article-author-card">
+            <div class="author-avatar">G</div>
+            <div class="author-info">
+              <h4>Written by Gideon</h4>
+              <span class="author-title">Founder &amp; Literary Marketing Consultant</span>
+              <p>Gideon works closely with authors to structure thoughtful, executable launch campaigns that turn creative milestones into commercial momentum.</p>
+            </div>
+          </div>
+        </article>
+
+
+        <!-- ====================================================================
+             FULL ARTICLE 4: BOOK CLUBS & INDEPENDENT BOOKS
+             ==================================================================== -->
+        <article class="article-full-view" id="article-bookclubs" aria-labelledby="art4-title">
+          <div class="article-back-bar">
+            <button type="button" class="back-to-grid-btn close-article-view">
+              &larr; Back to All Articles
+            </button>
+            <span style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--color-gold-dark); font-weight: 600;">Resource No. 04</span>
+          </div>
+
+          <div class="article-header">
+            <span class="category-badge">Community &amp; Word-of-Mouth</span>
+            <h1 id="art4-title">How Book Clubs Can Help Readers Discover Independent Books</h1>
+            <div class="article-meta-line">
+              <span><strong>Author:</strong> Gideon (Founder &amp; Literary Marketing Consultant)</span>
+              <span><strong>Reading Time:</strong> 7 Minutes</span>
+              <span><strong>Core Focus:</strong> Reading Groups, Discussion Guides, Word-of-Mouth Advocacy</span>
+            </div>
+          </div>
+
+          <div class="article-body">
+            <p>
+              Book clubs are among the most passionate and influential micro-communities in the literary world. When a reading group selects a title, it does not mean just one book sale—it means ten, twelve, or twenty individuals purchasing, reading, and rigorously debating your story over an evening.
+            </p>
+            <p>
+              More importantly, book club members are active literary evangelists. If a book sparks an electrifying discussion, members recommend it to friends, family members, and colleagues. For independent and boutique authors, book club adoption is a formidable word-of-mouth engine.
+            </p>
+
+            <h2>1. What Reading Groups Actually Look For</h2>
+            <p>
+              Book clubs do not choose books merely because they are entertaining; they choose books that foster <strong>spirited discussion</strong>. The ideal book club selection features:
+            </p>
+            <ul>
+              <li><strong>Moral Complexity:</strong> Characters faced with difficult choices where right and wrong are not cleanly divided.</li>
+              <li><strong>Rich Thematic Underpinnings:</strong> Societal questions, familial dynamics, cultural heritage, or philosophical dilemmas.</li>
+              <li><strong>Compelling Pacing:</strong> Stories that keep busy club members engaged until the final meeting date.</li>
+            </ul>
+
+            <div class="callout-box">
+              <h4>The Essential Asset: The Reader Discussion Guide</h4>
+              <p>Include 10 to 12 thought-provoking discussion questions at the back of your book and make a beautifully formatted PDF guide freely downloadable from your author website.</p>
+            </div>
+
+            <h2>2. The Power of Author Virtual Appearances</h2>
+            <p>
+              One of the greatest competitive advantages independent authors have over celebrity writers is <strong>accessibility</strong>. Offering to join a book club's meeting for a 15-minute virtual Q&amp;A via Zoom creates an unforgettable personal memory that turns an entire reading group into passionate brand champions.
+            </p>
+
+            <h2>3. Respectful, Value-Driven Outreach</h2>
+            <p>
+              Never spam book club moderators with aggressive sales pitches. Approach reading communities with value: provide sample chapters, discuss thematic alignment, and offer group discounts where feasible.
+            </p>
+
+            <div class="article-cta-footer">
+              <h3>Want to Position Your Title for Book Clubs?</h3>
+              <p>We help authors develop discussion collateral, target relevant reading groups, and facilitate community outreach.</p>
+              <a href="contact.html" class="btn-gold-solid">Learn About Book Club Outreach</a>
+            </div>
+          </div>
+
+          <div class="article-author-card">
+            <div class="author-avatar">G</div>
+            <div class="author-info">
+              <h4>Written by Gideon</h4>
+              <span class="author-title">Founder &amp; Literary Marketing Consultant</span>
+              <p>Gideon helps authors create authentic connections with grassroots reader communities and discussion circles across the globe.</p>
+            </div>
+          </div>
+        </article>
+
+
+        <!-- ====================================================================
+             FULL ARTICLE 5: AI BOOK DISCOVERABILITY
+             ==================================================================== -->
+        <article class="article-full-view" id="article-ai" aria-labelledby="art5-title">
+          <div class="article-back-bar">
+            <button type="button" class="back-to-grid-btn close-article-view">
+              &larr; Back to All Articles
+            </button>
+            <span style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--color-gold-dark); font-weight: 600;">Resource No. 05</span>
+          </div>
+
+          <div class="article-header">
+            <span class="category-badge">Modern Discoverability &amp; Search</span>
+            <h1 id="art5-title">Understanding AI Book Discoverability</h1>
+            <div class="article-meta-line">
+              <span><strong>Author:</strong> Gideon (Founder &amp; Literary Marketing Consultant)</span>
+              <span><strong>Reading Time:</strong> 8 Minutes</span>
+              <span><strong>Core Focus:</strong> Large Language Models, Entity Authority, Digital Citations</span>
+            </div>
+          </div>
+
+          <div class="article-body">
+            <p>
+              The way readers discover books is undergoing a profound structural shift. While traditional search engines and retail catalogs remain vital, millions of readers now prompt conversational AI tools—such as ChatGPT, Perplexity, Claude, and Gemini—with detailed recommendation inquiries:
+            </p>
+            <p style="font-style: italic; color: var(--color-gold-dark); padding-left: 1rem; border-left: 2px solid var(--color-gold);">
+              "Recommend five atmospheric historical mysteries set in 1920s Edinburgh with strong female detectives and intricate puzzles."
+            </p>
+            <p>
+              How do these AI models decide which books to recommend? They do not read physical pages; they synthesize the structured, authoritative digital footprint an author and their books have left across the web.
+            </p>
+
+            <h2>1. How AI Recommendation Engines Evaluate Books</h2>
+            <p>
+              Generative AI systems rely on <strong>entity recognition</strong> and <strong>semantic associations</strong>. When evaluating whether a book fits a reader's request, the model analyzes:
+            </p>
+            <ul>
+              <li><strong>Consistency of Digital Metadata:</strong> Clear, unambiguous pairings of the author's name, book title, genre classifications, and release date across multiple respected literary platforms.</li>
+              <li><strong>Contextual Third-Party Mentions:</strong> Editorial reviews, literary blog interviews, Goodreads discussion threads, and podcast show notes that contextualize the book's themes.</li>
+              <li><strong>Author Platform Authority:</strong> A well-structured official website with semantic HTML that clearly declares who the author is and what genres they represent.</li>
+            </ul>
+
+            <div class="callout-box">
+              <h4>The Future of Search: Entity Authority</h4>
+              <p>AI search models favor clarity over ambiguity. If your book is clearly classified across multiple public sources with rich thematic descriptions, AI engines can confidently present it as an answer to reader queries.</p>
+            </div>
+
+            <h2>2. Actionable Steps to Future-Proof Your Literary Footprint</h2>
+            <p>
+              Authors can strengthen their AI discoverability through disciplined digital housekeeping:
+            </p>
+            <ol>
+              <li><strong>Standardize Your Author Bio:</strong> Ensure your core bio and book summaries are identical across Amazon Author Central, BookBub, Goodreads, and your personal website.</li>
+              <li><strong>Enrich Your Online Content:</strong> Include thematic keywords, character summaries, and genre identifiers on your web pages so search engines index the full depth of your work.</li>
+              <li><strong>Earn Quality Citations:</strong> Seek interviews on niche book blogs and literary podcasts; AI models heavily weight cross-referenced mentions from established web destinations.</li>
+            </ol>
+
+            <div class="article-cta-footer">
+              <h3>Ensure Your Books Are Ready for Modern Search</h3>
+              <p>GTO Literary Marketing helps authors build structured, authoritative online profiles that maximize visibility in modern discovery tools.</p>
+              <a href="contact.html" class="btn-gold-solid">Consult on AI Book Discoverability</a>
+            </div>
+          </div>
+
+          <div class="article-author-card">
+            <div class="author-avatar">G</div>
+            <div class="author-info">
+              <h4>Written by Gideon</h4>
+              <span class="author-title">Founder &amp; Literary Marketing Consultant</span>
+              <p>Gideon analyzes emerging digital discovery shifts to provide authors with practical, forward-looking promotional positioning.</p>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- CONSULTATION BANNER -->
+    <section class="cta-section">
+      <div class="container cta-box">
+        <span class="section-eyebrow">Personalized Strategy</span>
+        <h2>Every Great Book Deserves an Audience</h2>
+        <p>
+          Book marketing is not one-size-fits-all. Connect directly with Gideon to discuss your title’s unique potential, target demographic, and customized roadmap.
+        </p>
+        <a href="contact.html" class="btn-gold-solid">Request a Free Book Marketing Consultation</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <a href="index.html" class="brand-link">
+            <div class="logo-box" style="width: 44px; height: 44px;">
+              <span class="logo-placeholder-letter" style="font-size: 1.1rem;">G</span>
+              <span class="logo-placeholder-text" style="font-size: 0.4rem;">LOGO</span>
+            </div>
+            <div class="brand-text-block">
+              <span class="brand-title" style="font-size: 1.15rem;">GTO Literary</span>
+              <span class="brand-subtitle" style="font-size: 0.65rem;">MARKETING</span>
+            </div>
+          </a>
+          <p class="footer-quote">"Helping Great Books Reach More Readers."</p>
+          <p>
+            An international literary marketing consultancy dedicated to helping authors, publishers, and literary professionals achieve sustainable visibility and reader engagement.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="blog.html">Blog &amp; Resources</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Featured In This Guide</h4>
+          <ul class="footer-links">
+            <li><a href="javascript:void(0)" class="footer-art-link" data-target="article-amazon">Amazon Discoverability</a></li>
+            <li><a href="javascript:void(0)" class="footer-art-link" data-target="article-branding">Author Online Presence</a></li>
+            <li><a href="javascript:void(0)" class="footer-art-link" data-target="article-launch">Book Launch Strategy</a></li>
+            <li><a href="javascript:void(0)" class="footer-art-link" data-target="article-bookclubs">Book Club Outreach</a></li>
+            <li><a href="javascript:void(0)" class="footer-art-link" data-target="article-ai">AI Book Discoverability</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Consultancy Inquiries</h4>
+          <div style="margin-bottom: 0.85rem;">
+            <strong style="color: var(--color-white); display: block;">Founder &amp; Consultant</strong>
+            <span>Gideon</span>
+          </div>
+          <div style="margin-bottom: 0.85rem;">
+            <strong style="color: var(--color-white); display: block;">Planned Business Email</strong>
+            <span>hello@gtoliterary.com</span><br />
+          </div>
+          <div>
+            <strong style="color: var(--color-white); display: block;">Client Scope</strong>
+            <span>Serving Authors Worldwide</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="yearEl">2025</span> GTO Literary Marketing. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       INTERNAL JAVASCRIPT (Navigation, In-Page Reader & Live Search)
+       ======================================================================== -->
+  <script>
+    (function () {
+      // 1. Current Year
+      var yr = document.getElementById('yearEl');
+      if (yr) yr.textContent = new Date().getFullYear();
+
+      // 2. Mobile Nav Toggle
+      var toggle = document.getElementById('mobileNavToggle');
+      var menu = document.getElementById('navMenuWrapper');
+      if (toggle && menu) {
+        toggle.addEventListener('click', function () {
+          var open = menu.classList.toggle('open');
+          toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+      }
+
+      // 3. In-Page Article Reader Management
+      var catalogGrid = document.getElementById('articlesCatalogGrid');
+      var toolbar = document.getElementById('articlesToolbar');
+      var allFullViews = document.querySelectorAll('.article-full-view');
+      var openButtons = document.querySelectorAll('.open-article-btn, .footer-art-link');
+      var closeButtons = document.querySelectorAll('.close-article-view');
+
+      function showArticle(targetId) {
+        var targetEl = document.getElementById(targetId);
+        if (!targetEl) return;
+
+        // Hide catalog and toolbar
+        if (catalogGrid) catalogGrid.style.display = 'none';
+        if (toolbar) toolbar.style.display = 'none';
+
+        // Hide all views, show targeted view
+        allFullViews.forEach(function (v) { v.classList.remove('active'); });
+        targetEl.classList.add('active');
+
+        // Scroll to top of article
+        targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        history.pushState(null, '', '#' + targetId);
+      }
+
+      function closeArticle() {
+        allFullViews.forEach(function (v) { v.classList.remove('active'); });
+        if (catalogGrid) catalogGrid.style.display = 'grid';
+        if (toolbar) toolbar.style.display = 'flex';
+        history.pushState(null, '', window.location.pathname);
+        if (toolbar) toolbar.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      openButtons.forEach(function (btn) {
+        btn.addEventListener('click', function (e) {
+          e.preventDefault();
+          var target = btn.getAttribute('data-target');
+          if (target) showArticle(target);
+        });
+      });
+
+      closeButtons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          closeArticle();
+        });
+      });
+
+      // Support direct hash URLs (e.g. blog.html#article-amazon)
+      if (window.location.hash) {
+        var hashId = window.location.hash.substring(1);
+        if (document.getElementById(hashId) && document.getElementById(hashId).classList.contains('article-full-view')) {
+          showArticle(hashId);
+        }
+      }
+
+      // 4. Category Filtering and Live Search
+      var filterPills = document.querySelectorAll('.filter-pill');
+      var searchInput = document.getElementById('articleSearchInput');
+      var cards = document.querySelectorAll('.article-summary-card');
+      var noResults = document.getElementById('noArticlesAlert');
+      var resetBtn = document.getElementById('resetSearchBtn');
+
+      var currentFilter = 'all';
+      var currentQuery = '';
+
+      function runFilter() {
+        var visibleCount = 0;
+        cards.forEach(function (card) {
+          var cat = card.getAttribute('data-category');
+          var text = card.textContent.toLowerCase();
+
+          var matchCat = (currentFilter === 'all') || (cat === currentFilter);
+          var matchQuery = (currentQuery === '') || (text.indexOf(currentQuery) !== -1);
+
+          if (matchCat && matchQuery) {
+            card.style.display = 'flex';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        if (noResults) {
+          noResults.style.display = (visibleCount === 0) ? 'block' : 'none';
+        }
+      }
+
+      filterPills.forEach(function (pill) {
+        pill.addEventListener('click', function () {
+          filterPills.forEach(function (p) { p.classList.remove('active'); });
+          pill.classList.add('active');
+          currentFilter = pill.getAttribute('data-filter');
+          runFilter();
+        });
+      });
+
+      if (searchInput) {
+        searchInput.addEventListener('input', function (e) {
+          currentQuery = e.target.value.trim().toLowerCase();
+          runFilter();
+        });
+      }
+
+      if (resetBtn) {
+        resetBtn.addEventListener('click', function () {
+          currentFilter = 'all';
+          currentQuery = '';
+          if (searchInput) searchInput.value = '';
+          filterPills.forEach(function (p) {
+            p.classList.toggle('active', p.getAttribute('data-filter') === 'all');
+          });
+          runFilter();
+        });
+      }
+
+    })();
+  </script>
+</body>
+</html>

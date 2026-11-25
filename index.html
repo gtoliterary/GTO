@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0e0d0b">
+  <title>GTO Literary Marketing | Book Marketing Agency &amp; Author Promotion Services</title>
+  <meta name="description" content="GTO Literary Marketing is a book marketing agency and literary marketing consultancy helping authors and publishers improve book discoverability, reader engagement, and promotional reach. Book a free consultation.">
+  <meta property="og:title" content="GTO Literary Marketing | Helping Great Books Reach More Readers">
+  <meta property="og:description" content="Book marketing and author promotion services: Amazon book marketing, book launch campaigns, BookBub promotion, author branding, reader funnels, and book club outreach.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+
+  <!-- Enable JS-dependent reveal animations gracefully (site fully works without JS) -->
+  <script>document.documentElement.classList.remove('no-js');</script>
+
+  <style>
+    /* ============================================================
+       GTO LITERARY MARKETING : DESIGN SYSTEM
+       Editorial / luxury. Black, gold, cream, white.
+       Self-contained: no external CSS, no frameworks, no CDNs.
+       ============================================================ */
+
+    :root {
+      /* Palette */
+      --black:        #0e0d0b;
+      --black-soft:   #16140f;
+      --cream:        #f4eee1;
+      --cream-deep:   #eae2cf;
+      --white:        #ffffff;
+      --ink:          #241f18;
+
+      --gold:        #c2a14d;  /* primary gold on dark backgrounds */
+      --gold-bright: #ddc07a;  /* hover / emphasis gold on dark */
+      --gold-deep:   #7a5d18;  /* accessible gold text on cream */
+
+      --text-dark-bg:       #f4eee1;                 /* cream text on black */
+      --text-dark-muted:    rgba(244, 238, 225, .68);
+      --text-light-bg:      #241f18;                 /* ink text on cream */
+      --text-light-muted:   rgba(36, 31, 24, .72);
+
+      --hairline-dark:  rgba(244, 238, 225, .16);    /* hairlines on black */
+      --hairline-light: rgba(36, 31, 24, .18);       /* hairlines on cream */
+
+      /* Typography */
+      --serif: 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', Georgia, 'Times New Roman', serif;
+      --sans:  'Helvetica Neue', 'Segoe UI', 'Helvetica', Arial, sans-serif;
+    }
+
+    /* ---------- Reset & base ---------- */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+    body {
+      font-family: var(--serif);
+      font-size: 1.02rem;
+      line-height: 1.75;
+      color: var(--text-dark-bg);
+      background: var(--black);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    img { max-width: 100%; display: block; }
+    ul { list-style: none; }
+    a { color: inherit; }
+
+    ::selection { background: var(--gold); color: var(--black); }
+
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid var(--gold-bright);
+      outline-offset: 3px;
+    }
+
+    section[id] { scroll-margin-top: 92px; }
+
+    .container {
+      max-width: 1180px;
+      margin-inline: auto;
+      padding-inline: clamp(1.25rem, 4vw, 2.5rem);
+    }
+
+    /* Skip link for accessibility */
+    .skip-link {
+      position: absolute; top: -60px; left: 1rem;
+      background: var(--gold); color: var(--black);
+      font-family: var(--sans); font-size: .8rem; letter-spacing: .1em;
+      padding: .7rem 1.2rem; text-decoration: none; z-index: 100;
+      transition: top .25s ease;
+    }
+    .skip-link:focus { top: 1rem; }
+
+    /* ---------- Shared components ---------- */
+
+    /* Eyebrow label */
+    .eyebrow {
+      display: flex; align-items: center; gap: .9rem;
+      font-family: var(--sans); font-size: .72rem; font-weight: 600;
+      letter-spacing: .32em; text-transform: uppercase;
+      color: var(--gold);
+    }
+    .eyebrow::before {
+      content: ''; width: 36px; height: 1px;
+      background: var(--gold); flex: none;
+    }
+    .section-light .eyebrow { color: var(--gold-deep); }
+
+    /* Headings */
+    h1, h2, h3 { font-family: var(--serif); font-weight: 400; line-height: 1.14; }
+    h1 { font-size: clamp(2.7rem, 6.2vw, 4.9rem); letter-spacing: -.01em; }
+    h2 { font-size: clamp(1.9rem, 4vw, 3.05rem); letter-spacing: -.005em; }
+    h3 { font-size: 1.32rem; }
+    h1 em, h2 em { font-style: italic; }
+    .section-dark  h1, .section-dark  h2, .hero h1 { color: var(--text-dark-bg); }
+    .hero h1 em, .section-dark h2 em { color: var(--gold-bright); }
+    .section-light h2 { color: var(--text-light-bg); }
+    .section-light h2 em { color: var(--gold-deep); }
+
+    /* Ornament: line, diamond, line */
+    .orn { display: flex; align-items: center; gap: 14px; }
+    .orn span { display: block; width: clamp(42px, 7vw, 88px); height: 1px; background: var(--hairline-dark); }
+    .orn i {
+      display: block; width: 7px; height: 7px; flex: none;
+      background: var(--gold); transform: rotate(45deg);
+    }
+    .section-light .orn span { background: var(--hairline-light); }
+
+    /* Buttons: sharp, print-like, premium */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: .7rem;
+      font-family: var(--sans); font-size: .78rem; font-weight: 600;
+      letter-spacing: .18em; text-transform: uppercase;
+      padding: 1.05rem 2.1rem; border: 1px solid var(--gold);
+      text-decoration: none; cursor: pointer; white-space: nowrap;
+      transition: background-color .32s ease, color .32s ease,
+                  transform .32s ease, box-shadow .32s ease;
+    }
+    .btn-solid {
+      background: var(--gold); color: var(--black);
+    }
+    .btn-solid:hover {
+      background: var(--gold-bright); transform: translateY(-2px);
+      box-shadow: 0 18px 34px -22px rgba(0, 0, 0, .85);
+    }
+    .btn-outline {
+      background: transparent; color: var(--gold-bright);
+    }
+    .btn-outline:hover {
+      background: var(--gold); color: var(--black); transform: translateY(-2px);
+    }
+    .section-light .btn-outline { color: var(--gold-deep); border-color: var(--gold-deep); }
+    .section-light .btn-outline:hover { background: var(--gold); border-color: var(--gold); color: var(--black); }
+    .btn .arrow { transition: transform .32s ease; }
+    .btn:hover .arrow { transform: translateX(5px); }
+
+    /* Text link with animated underline */
+    .link-more {
+      display: inline-flex; align-items: center; gap: .6rem;
+      font-family: var(--sans); font-size: .78rem; font-weight: 600;
+      letter-spacing: .16em; text-transform: uppercase;
+      color: var(--gold-bright); text-decoration: none;
+      position: relative; padding-bottom: .45rem;
+    }
+    .link-more::after {
+      content: ''; position: absolute; left: 0; bottom: 0;
+      width: 100%; height: 1px; background: currentColor;
+      transform: scaleX(.38); transform-origin: left;
+      transition: transform .45s cubic-bezier(.22, .61, .36, 1);
+    }
+    .link-more:hover::after { transform: scaleX(1); }
+    .link-more .arrow { transition: transform .35s ease; }
+    .link-more:hover .arrow { transform: translateX(5px); }
+    .section-light .link-more { color: var(--gold-deep); }
+
+    /* Small print */
+    .fine {
+      font-family: var(--sans); font-size: .72rem;
+      letter-spacing: .06em; line-height: 1.6;
+      color: var(--text-dark-muted);
+    }
+    .section-light .fine { color: var(--text-light-muted); }
+
+    /* ---------- Header / navigation ---------- */
+    .site-header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 60;
+      background: rgba(14, 13, 11, .35);
+      transition: background-color .35s ease, border-color .35s ease;
+      border-bottom: 1px solid transparent;
+    }
+    .site-header.scrolled {
+      background: rgba(14, 13, 11, .92);
+      -webkit-backdrop-filter: blur(14px);
+      backdrop-filter: blur(14px);
+      border-bottom-color: var(--hairline-dark);
+    }
+    .nav-row {
+      display: flex; align-items: center; gap: 2.2rem;
+      height: 76px;
+    }
+    .brand { display: inline-flex; align-items: center; gap: .85rem; text-decoration: none; }
+
+    /* Logo image placeholder (.jpg) beside GTO Literary Marketing */
+    .brand-logo {
+      width: 46px; height: 46px; flex: none;
+      border: 1px solid var(--gold);
+      background: var(--black-soft);
+      display: inline-flex; align-items: center; justify-content: center;
+      position: relative; overflow: hidden;
+      transition: border-color .3s ease, background-color .3s ease;
+    }
+    .brand-logo img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+    }
+    .brand-logo .logo-fallback {
+      display: none; flex-direction: column; align-items: center; justify-content: center;
+      line-height: 1; text-align: center; padding: 2px;
+    }
+    .brand-logo.logo-missing img { display: none; }
+    .brand-logo.logo-missing .logo-fallback { display: flex; }
+    .logo-fallback-mark {
+      font-family: var(--serif); font-style: italic;
+      font-size: 1.15rem; color: var(--gold);
+    }
+    .logo-fallback-tag {
+      font-family: var(--sans); font-size: .42rem; font-weight: 600;
+      letter-spacing: .14em; text-transform: uppercase;
+      color: var(--text-dark-muted); margin-top: 3px;
+    }
+    .brand:hover .brand-logo { border-color: var(--gold-bright); }
+
+    .brand-text { line-height: 1.2; }
+    .brand-text .bt-name {
+      display: block; font-family: var(--serif);
+      font-size: 1.06rem; color: var(--cream); letter-spacing: .02em;
+    }
+    .brand-text .bt-sub {
+      display: block; font-family: var(--sans);
+      font-size: .56rem; font-weight: 600; letter-spacing: .42em;
+      text-transform: uppercase; color: var(--gold); margin-top: 2px;
+    }
+
+    .site-nav ul { display: flex; gap: 1.9rem; }
+    .nav-link {
+      position: relative; text-decoration: none;
+      font-family: var(--sans); font-size: .78rem; font-weight: 500;
+      letter-spacing: .18em; text-transform: uppercase;
+      color: var(--text-dark-muted);
+      padding: .4rem 0;
+      transition: color .3s ease;
+    }
+    .nav-link::after {
+      content: ''; position: absolute; left: 0; bottom: 0;
+      width: 100%; height: 1px; background: var(--gold);
+      transform: scaleX(0); transform-origin: left;
+      transition: transform .38s cubic-bezier(.22, .61, .36, 1);
+    }
+    .nav-link:hover { color: var(--cream); }
+    .nav-link:hover::after,
+    .nav-link[aria-current="page"]::after { transform: scaleX(1); }
+    .nav-link[aria-current="page"] { color: var(--gold-bright); }
+
+    .nav-cta { margin-left: auto; padding: .8rem 1.5rem; }
+
+    /* Burger (mobile) */
+    .menu-toggle {
+      display: none; background: none; border: 0; cursor: pointer;
+      width: 30px; height: 20px; position: relative; padding: 0;
+    }
+    .menu-toggle span {
+      position: absolute; left: 0; width: 100%; height: 2px;
+      background: var(--cream); transition: top .32s ease, transform .32s ease, background-color .32s ease;
+    }
+    .menu-toggle span:nth-child(1) { top: 1px; }
+    .menu-toggle span:nth-child(2) { top: 17px; }
+    .menu-toggle.active span { background: var(--gold-bright); }
+    .menu-toggle.active span:nth-child(1) { top: 9px; transform: rotate(45deg); }
+    .menu-toggle.active span:nth-child(2) { top: 9px; transform: rotate(-45deg); }
+
+    /* Full-screen mobile menu */
+    .menu-overlay {
+      position: fixed; inset: 0; z-index: 55;
+      background: var(--black);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; visibility: hidden;
+      transition: opacity .4s ease, visibility .4s ease;
+    }
+    .menu-overlay.open { opacity: 1; visibility: visible; }
+    .menu-nav { width: min(420px, 86vw); }
+    .menu-nav ul { margin-bottom: 2.6rem; }
+    .menu-nav li { border-bottom: 1px solid var(--hairline-dark); }
+    .menu-nav li:first-child { border-top: 1px solid var(--hairline-dark); }
+    .menu-nav a {
+      display: flex; align-items: baseline; gap: 1.1rem;
+      padding: 1.05rem .4rem; text-decoration: none;
+      font-family: var(--serif); font-size: 1.7rem; color: var(--cream);
+      opacity: 0; transform: translateY(16px);
+      transition: opacity .5s ease, transform .5s cubic-bezier(.22, .61, .36, 1), color .3s ease;
+      transition-delay: 0s;
+    }
+    .menu-overlay.open .menu-nav a {
+      opacity: 1; transform: none;
+      transition-delay: calc(var(--i, 0) * 60ms + 140ms);
+    }
+    .menu-nav a:hover { color: var(--gold-bright); }
+    .menu-nav a span {
+      font-family: var(--sans); font-size: .68rem; font-weight: 600;
+      letter-spacing: .22em; color: var(--gold);
+    }
+    .menu-cta { width: 100%; }
+    .menu-note {
+      margin-top: 1.6rem; text-align: center;
+      font-family: var(--sans); font-size: .74rem;
+      letter-spacing: .08em; color: var(--text-dark-muted);
+    }
+    .menu-note em { color: var(--gold); font-style: normal; }
+    body.menu-open { overflow: hidden; }
+
+    /* ---------- Gold bookmark ribbon (scroll progress) ---------- */
+    .ribbon {
+      position: fixed; top: 0; right: 20px; z-index: 58;
+      width: 5px; height: 0; background: var(--gold);
+      /* Forked end, like a real bookmark ribbon */
+      clip-path: polygon(0 0, 100% 0, 100% calc(100% - 7px), 50% 100%, 0 calc(100% - 7px));
+      will-change: height;
+    }
+
+    /* ---------- Hero: set like the title page of a fine book ---------- */
+    .hero {
+      position: relative; overflow: hidden;
+      min-height: 100svh;
+      display: flex; flex-direction: column;
+      padding-top: 76px;
+      background: var(--black);
+    }
+    .hero-mark {
+      position: absolute; right: -3vw; top: 50%;
+      transform: translateY(-50%);
+      font-family: var(--serif); font-style: italic;
+      font-size: min(44vw, 540px); line-height: 1;
+      color: var(--gold); opacity: .05;
+      user-select: none; pointer-events: none;
+    }
+    .hero-inner {
+      position: relative; z-index: 1;
+      margin-block: auto;
+      display: flex; flex-direction: column; align-items: center;
+      text-align: center; padding-block: clamp(3rem, 8vh, 6rem);
+    }
+    .hero-eyebrow {
+      font-family: var(--sans); font-size: .72rem; font-weight: 600;
+      letter-spacing: .34em; text-transform: uppercase;
+      color: var(--gold);
+    }
+    .hero-orn { margin: 2rem 0 2.6rem; }
+    .hero h1 { color: var(--cream); }
+    .hero h1 em { color: var(--gold-bright); }
+    .hero-lede {
+      margin-top: 2.1rem; max-width: 620px;
+      font-size: 1.18rem; line-height: 1.8;
+      color: var(--text-dark-muted);
+    }
+    .hero-actions {
+      margin-top: 3rem; display: flex; flex-wrap: wrap;
+      justify-content: center; gap: 1.1rem;
+    }
+    .hero-foot {
+      position: relative; z-index: 1;
+      display: flex; align-items: flex-end; justify-content: space-between;
+      gap: 2rem; padding-bottom: 2.4rem;
+    }
+    .hero-tags {
+      font-family: var(--sans); font-size: .7rem; font-weight: 500;
+      letter-spacing: .26em; text-transform: uppercase;
+      color: var(--text-dark-muted);
+    }
+    .hero-tags b { color: var(--gold); font-weight: 600; }
+    .hero-scroll {
+      display: flex; flex-direction: column; align-items: center; gap: .8rem;
+    }
+    .hero-scroll > span:first-child {
+      font-family: var(--sans); font-size: .62rem; font-weight: 600;
+      letter-spacing: .3em; text-transform: uppercase; color: var(--text-dark-muted);
+    }
+    .scroll-line {
+      position: relative; width: 1px; height: 54px;
+      background: var(--hairline-dark); overflow: hidden;
+    }
+    .scroll-line::after {
+      content: ''; position: absolute; left: 0; width: 100%; height: 34%;
+      top: -34%; background: var(--gold);
+      animation: drop 2.6s cubic-bezier(.65, 0, .35, 1) infinite;
+    }
+    @keyframes drop {
+      0%   { top: -34%; }
+      62%  { top: 100%; }
+      100% { top: 100%; }
+    }
+
+    /* Hero entrance */
+    .hero .anim { opacity: 0; animation: rise .95s cubic-bezier(.22, .61, .36, 1) forwards; }
+    .anim-1 { animation-delay: .12s; }
+    .anim-2 { animation-delay: .28s; }
+    .anim-3 { animation-delay: .42s; }
+    .anim-4 { animation-delay: .58s; }
+    .anim-5 { animation-delay: .74s; }
+    .anim-6 { animation-delay: .92s; }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(26px); }
+      to   { opacity: 1; transform: none; }
+    }
+
+    /* ---------- Sections ---------- */
+    .section { padding: clamp(4.5rem, 9vw, 8rem) 0; }
+    .section-dark  { background: var(--black); color: var(--text-dark-bg); }
+    .section-light { background: var(--cream); color: var(--text-light-bg); }
+
+    .section-head {
+      display: flex; align-items: flex-end; justify-content: space-between;
+      gap: 2rem; margin-bottom: clamp(2.6rem, 5vw, 4.2rem);
+    }
+    .section-head .eyebrow { margin-bottom: 1.2rem; }
+    .section-head .head-link { flex: none; margin-bottom: .5rem; }
+
+    /* ---- Intro (cream, editorial two-column with drop cap) ---- */
+    .intro-grid {
+      display: grid; grid-template-columns: 5fr 7fr;
+      gap: clamp(2.5rem, 6vw, 5.5rem); align-items: start;
+    }
+    .intro-copy h2 { margin-top: 1.4rem; }
+    .intro-copy .orn { margin-top: 2.2rem; }
+    .intro-copy .fine { margin-top: 1.6rem; }
+    .intro-body p { margin-bottom: 1.5rem; }
+    .intro-body .dropcap::first-letter {
+      float: left; font-size: 3.6em; line-height: .82;
+      padding: .06em .14em 0 0; color: var(--gold-deep);
+    }
+    .intro-body .link-more { margin-top: .8rem; }
+
+    /* ---- Services index (black): an editorial table of contents ---- */
+    .svc-list { border-top: 1px solid var(--hairline-dark); }
+    .svc-row {
+      position: relative;
+      border-bottom: 1px solid var(--hairline-dark);
+      transition: background-color .35s ease;
+    }
+    .svc-row:hover { background: rgba(244, 238, 225, .035); }
+    .svc-row::before {
+      content: ''; position: absolute; left: 0; top: 0; bottom: 0;
+      width: 2px; background: var(--gold);
+      transform: scaleY(0); transform-origin: top;
+      transition: transform .38s cubic-bezier(.22, .61, .36, 1);
+    }
+    .svc-row:hover::before { transform: scaleY(1); }
+    .svc-row a {
+      position: absolute; inset: 0; z-index: 1;
+    }
+    .svc-row a:focus-visible { outline-offset: -2px; }
+    .svc-grid {
+      position: relative;
+      display: grid; align-items: center;
+      grid-template-columns: 3.4rem minmax(0, 1.05fr) minmax(0, 1fr) 2.2rem;
+      gap: 1.6rem; padding: 1.5rem 1.2rem;
+    }
+    .svc-num {
+      font-family: var(--serif); font-style: italic;
+      font-size: .95rem; color: var(--gold);
+      transition: color .3s ease;
+    }
+    .svc-name {
+      font-family: var(--serif); font-size: clamp(1.25rem, 2.4vw, 1.62rem);
+      color: var(--cream); line-height: 1.25;
+      transition: color .3s ease;
+    }
+    .svc-desc {
+      font-size: .93rem; line-height: 1.65;
+      color: var(--text-dark-muted);
+      transition: color .3s ease;
+    }
+    .svc-arrow { color: var(--text-dark-muted); transition: color .3s ease, transform .3s ease; }
+    .svc-row:hover .svc-name { color: var(--gold-bright); }
+    .svc-row:hover .svc-desc { color: var(--cream); }
+    .svc-row:hover .svc-arrow { color: var(--gold-bright); transform: translateX(6px); }
+
+    .svc-all { text-align: center; border-bottom: 1px solid var(--hairline-dark); }
+    .svc-all .svc-grid { padding: 1.7rem 1.2rem; grid-template-columns: 1fr; }
+    .svc-all .link-more { justify-content: center; }
+
+    /* ---- Why GTO (cream): statement + numbered reasons ---- */
+    .why-grid {
+      display: grid; grid-template-columns: 6fr 6fr;
+      gap: clamp(2.5rem, 6vw, 5.5rem); align-items: start;
+    }
+    .why-copy { position: sticky; top: 110px; }
+    .why-copy h2 { margin-top: 1.4rem; }
+    .why-copy .orn { margin-top: 2.2rem; }
+    .why-copy .fine { margin-top: 1.6rem; max-width: 40ch; }
+    .why-list { border-top: 1px solid var(--hairline-light); }
+    .why-item {
+      display: grid; grid-template-columns: 3.2rem 1fr; gap: 1.4rem;
+      padding: 1.7rem .2rem; border-bottom: 1px solid var(--hairline-light);
+    }
+    .why-item .roman {
+      font-family: var(--serif); font-style: italic;
+      font-size: 1.05rem; color: var(--gold-deep); padding-top: .2rem;
+    }
+    .why-item h3 { color: var(--ink); margin-bottom: .5rem; }
+    .why-item p { color: var(--text-light-muted); font-size: .98rem; line-height: 1.7; }
+
+    /* ---- Founder (black): framed portrait + introduction ---- */
+    .founder-grid {
+      display: grid; grid-template-columns: 5fr 7fr;
+      gap: clamp(2.6rem, 6vw, 5.5rem); align-items: center;
+    }
+    .portrait { padding: 1.1rem; border: 1px solid rgba(194, 161, 77, .55); }
+    .portrait-inner {
+      position: relative; aspect-ratio: 4 / 5; overflow: hidden;
+      background: var(--black-soft);
+    }
+    .portrait-inner img {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; filter: saturate(.9);
+    }
+    .portrait-fallback {
+      position: absolute; inset: 0; display: none;
+      flex-direction: column; align-items: center; justify-content: center;
+      gap: 1.1rem; background: var(--black-soft);
+    }
+    .portrait-inner.no-photo .portrait-fallback { display: flex; }
+    .portrait-inner.no-photo img { display: none; }
+    .pf-mark {
+      font-family: var(--serif); font-style: italic;
+      font-size: 5.4rem; line-height: 1; color: var(--gold);
+    }
+    .pf-note {
+      font-family: var(--sans); font-size: .62rem; font-weight: 600;
+      letter-spacing: .3em; text-transform: uppercase;
+      color: var(--text-dark-muted); text-align: center;
+    }
+    .portrait figcaption {
+      margin-top: 1.1rem; text-align: center;
+      font-family: var(--serif); font-size: 1.08rem; color: var(--cream);
+    }
+    .portrait figcaption span {
+      display: block; margin-top: .3rem;
+      font-family: var(--sans); font-size: .62rem; font-weight: 600;
+      letter-spacing: .26em; text-transform: uppercase; color: var(--gold);
+    }
+    .founder-copy .eyebrow { margin-bottom: 1.2rem; }
+    .founder-copy blockquote {
+      margin: 2rem 0; padding: .3rem 0 .3rem 1.6rem;
+      border-left: 2px solid var(--gold);
+      font-style: italic; font-size: 1.22rem; line-height: 1.65;
+      color: var(--cream);
+    }
+    .founder-copy p { color: var(--text-dark-muted); margin-bottom: 1.4rem; }
+    .founder-copy .link-more { margin-top: .6rem; }
+
+    /* ---- Process (cream): timeline ---- */
+    .process-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 2rem; margin-bottom: clamp(2.6rem, 5vw, 4rem); }
+    .process-head h2 { margin-top: 1.4rem; }
+    .steps {
+      position: relative;
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: clamp(1.6rem, 3vw, 2.8rem);
+    }
+    .steps::before {
+      content: ''; position: absolute; top: 4px; left: 0; right: 0;
+      height: 1px; background: var(--hairline-light);
+    }
+    .step { position: relative; padding-top: 2.3rem; }
+    .step::before {
+      content: ''; position: absolute; top: 0; left: 0;
+      width: 9px; height: 9px; background: var(--gold);
+      transform: rotate(45deg);
+    }
+    .step-tag {
+      font-family: var(--sans); font-size: .64rem; font-weight: 600;
+      letter-spacing: .3em; text-transform: uppercase;
+      color: var(--gold-deep); display: block; margin-bottom: .7rem;
+    }
+    .step h3 { color: var(--ink); margin-bottom: .6rem; }
+    .step p { color: var(--text-light-muted); font-size: .95rem; line-height: 1.7; }
+    .process-note {
+      margin-top: clamp(2.4rem, 4vw, 3.4rem);
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .process-note .diamond { width: 7px; height: 7px; background: var(--gold); transform: rotate(45deg); flex: none; }
+    .process-note p { font-style: italic; color: var(--text-light-muted); font-size: 1.02rem; }
+
+    /* ---- Final CTA (black) ---- */
+    .cta-final { text-align: center; }
+    .cta-final .orn { justify-content: center; margin-bottom: 2.4rem; }
+    .cta-final h2 { max-width: 15ch; margin-inline: auto; }
+    .cta-final .cta-lede {
+      margin: 1.8rem auto 0; max-width: 560px;
+      color: var(--text-dark-muted); font-size: 1.08rem;
+    }
+    .cta-actions {
+      margin-top: 3rem; display: flex; flex-wrap: wrap;
+      justify-content: center; gap: 1.1rem;
+    }
+    .cta-alt { margin-top: 2rem; }
+
+    /* ---------- Footer ---------- */
+    .site-footer {
+      background: var(--black);
+      border-top: 1px solid rgba(194, 161, 77, .35);
+      padding-top: clamp(3.5rem, 7vw, 5.5rem);
+    }
+    .footer-grid {
+      display: grid; grid-template-columns: 4fr 2fr 3fr 3fr;
+      gap: clamp(2rem, 5vw, 4rem);
+      padding-bottom: clamp(2.8rem, 5vw, 4rem);
+    }
+    .footer-brand .brand { margin-bottom: 1.4rem; }
+    .footer-brand .fb-tag {
+      font-family: var(--serif); font-style: italic;
+      color: var(--gold-bright); margin-bottom: 1rem;
+    }
+    .footer-brand p { font-size: .93rem; line-height: 1.7; color: var(--text-dark-muted); max-width: 34ch; }
+    .footer-col h4 {
+      font-family: var(--sans); font-size: .66rem; font-weight: 600;
+      letter-spacing: .3em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 1.2rem;
+    }
+    .footer-col li { margin-bottom: .55rem; }
+    .footer-col a {
+      text-decoration: none; font-family: var(--sans);
+      font-size: .82rem; letter-spacing: .04em;
+      color: var(--text-dark-muted); transition: color .3s ease;
+    }
+    .footer-col a:hover { color: var(--gold-bright); }
+    .footer-email {
+      display: block; font-family: var(--serif) !important;
+      font-size: 1.05rem !important; color: var(--cream) !important;
+      margin-bottom: .3rem;
+    }
+    .footer-email:hover { color: var(--gold-bright) !important; }
+    .footer-bottom {
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 1rem; padding-block: 1.6rem;
+      border-top: 1px solid var(--hairline-dark);
+    }
+    .footer-bottom p, .footer-bottom a {
+      font-family: var(--sans); font-size: .74rem; letter-spacing: .06em;
+      color: var(--text-dark-muted); text-decoration: none;
+    }
+    .footer-bottom a:hover { color: var(--gold-bright); }
+    .footer-legal { display: flex; gap: 1.4rem; }
+    .to-top { display: inline-flex; align-items: center; gap: .5rem; }
+
+    /* ---------- Scroll reveal ---------- */
+    html:not(.no-js) .reveal {
+      opacity: 0; transform: translateY(24px);
+      transition: opacity .75s ease, transform .75s cubic-bezier(.22, .61, .36, 1);
+      transition-delay: var(--d, 0s);
+    }
+    html:not(.no-js) .reveal.in { opacity: 1; transform: none; }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 1100px) {
+      .site-nav, .nav-cta { display: none; }
+      .menu-toggle { display: block; margin-left: auto; }
+      .nav-row { height: 68px; }
+      .hero { padding-top: 68px; }
+    }
+    @media (max-width: 900px) {
+      .hero-mark { display: none; }
+      .intro-grid, .why-grid, .founder-grid { grid-template-columns: 1fr; }
+      .why-copy { position: static; }
+      .founder-grid .portrait { max-width: 440px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .footer-brand { grid-column: 1 / -1; }
+    }
+    @media (max-width: 760px) {
+      .steps { grid-template-columns: 1fr; gap: 0; }
+      .steps::before { top: 4px; bottom: 4px; left: 4px; right: auto; width: 1px; height: auto; }
+      .step { padding: 0 0 2.2rem 2.1rem; }
+      .step:last-child { padding-bottom: 0; }
+      .step::before { top: 1px; left: 0; }
+      .svc-grid {
+        grid-template-columns: 2.6rem 1fr 1.6rem;
+        grid-template-areas: "num name arrow" "desc desc desc";
+        gap: .5rem 1rem; padding: 1.3rem .8rem;
+      }
+      .svc-num   { grid-area: num; }
+      .svc-name  { grid-area: name; }
+      .svc-desc  { grid-area: desc; }
+      .svc-arrow { grid-area: arrow; }
+      .section-head { flex-direction: column; align-items: flex-start; }
+      .hero-foot { flex-direction: column; align-items: center; gap: 1.8rem; }
+      .hero-scroll { flex-direction: column; }
+    }
+    @media (max-width: 640px) {
+      .ribbon { display: none; }
+      .hero-actions .btn, .cta-actions .btn { width: 100%; }
+      .hero-lede { font-size: 1.08rem; }
+      .why-item { grid-template-columns: 2.4rem 1fr; gap: 1rem; }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ---------- Reduced motion ---------- */
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .hero .anim { opacity: 1; animation: none; }
+      .scroll-line::after { animation: none; top: 0; }
+      html:not(.no-js) .reveal { opacity: 1; transform: none; transition: none; }
+      * { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Gold bookmark ribbon: fills as you read -->
+  <div class="ribbon" aria-hidden="true"></div>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-row">
+      <!-- LOGO PLACEHOLDER: Place your logo file at GTO-LITERARY-MARKETING/logo.jpg -->
+      <a class="brand" href="index.html" aria-label="GTO Literary Marketing Home">
+        <span class="brand-logo">
+          <img src="Gilded Literary Marketing Emblem.png"
+               alt="GTO Literary Marketing Logo"
+               onerror="this.parentElement.classList.add('logo-missing')">
+          <span class="logo-fallback" aria-hidden="true">
+            <span class="logo-fallback-mark">G</span>
+            <span class="logo-fallback-tag">LOGO.JPG</span>
+          </span>
+        </span>
+        <span class="brand-text">
+          <span class="bt-name">GTO Literary</span>
+          <span class="bt-sub">Marketing</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a class="nav-link" href="index.html" aria-current="page">Home</a></li>
+          <li><a class="nav-link" href="about.html">About</a></li>
+          <li><a class="nav-link" href="services.html">Services</a></li>
+          <li><a class="nav-link" href="blog.html">Blog</a></li>
+          <li><a class="nav-link" href="faq.html">FAQ</a></li>
+          <li><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a class="btn btn-outline nav-cta" href="contact.html">Free Consultation</a>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="menu-overlay">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile menu overlay -->
+  <div class="menu-overlay" id="menu-overlay" aria-hidden="true">
+    <nav class="menu-nav" aria-label="Mobile navigation">
+      <ul>
+        <li><a href="index.html"    style="--i:0"><span>01</span>Home</a></li>
+        <li><a href="about.html"    style="--i:1"><span>02</span>About</a></li>
+        <li><a href="services.html" style="--i:2"><span>03</span>Services</a></li>
+        <li><a href="blog.html"     style="--i:3"><span>04</span>Blog</a></li>
+        <li><a href="faq.html"      style="--i:4"><span>05</span>FAQ</a></li>
+        <li><a href="contact.html"  style="--i:5"><span>06</span>Contact</a></li>
+      </ul>
+      <a class="btn btn-solid menu-cta" href="contact.html">Free Consultation</a>
+      <p class="menu-note">hello@gtoliterary.com</p>
+    </nav>
+  </div>
+
+  <main id="main">
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" aria-label="Introduction">
+      <div class="hero-mark" aria-hidden="true">&amp;</div>
+
+      <div class="container hero-inner">
+        <p class="hero-eyebrow anim anim-1">For Authors, Publishers &amp; Literary Professionals</p>
+
+        <div class="orn hero-orn anim anim-2" aria-hidden="true"><span></span><i></i><span></span></div>
+
+        <h1 class="anim anim-3">Helping <em>Great Books</em><br>Reach More Readers.</h1>
+
+        <p class="hero-lede anim anim-4">
+          A literary marketing consultancy for authors, publishers, and literary professionals.
+          We strengthen book visibility, improve discoverability, and build reader engagement,
+          pairing honest counsel with practical promotion from launch week to long after it.
+        </p>
+
+        <div class="hero-actions anim anim-5">
+          <a class="btn btn-solid" href="contact.html">
+            Get a Free Book Marketing Consultation
+            <svg class="arrow" width="18" height="12" viewBox="0 0 18 12" fill="none" aria-hidden="true">
+              <path d="M1 6h15M11.5 1.5 16 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </a>
+          <a class="btn btn-outline" href="services.html">Explore Our Services</a>
+        </div>
+      </div>
+
+      <div class="container hero-foot anim anim-6">
+        <p class="hero-tags">
+          Fiction <b>&middot;</b> Non-Fiction <b>&middot;</b> Poetry <b>&middot;</b> Memoir
+          <b>&middot;</b> Serving Authors Internationally
+        </p>
+        <div class="hero-scroll" aria-hidden="true">
+          <span>Scroll</span>
+          <span class="scroll-line"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= INTRODUCTION ================= -->
+    <section class="section section-light" id="introduction" aria-labelledby="intro-heading">
+      <div class="container intro-grid">
+        <div class="intro-copy reveal">
+          <p class="eyebrow">The Consultancy</p>
+          <h2 id="intro-heading">Where books meet <em>their readers.</em></h2>
+          <div class="orn" aria-hidden="true"><span></span><i></i><span></span></div>
+          <p class="fine">GTO Literary Marketing: book promotion services for authors and publishers, worldwide.</p>
+        </div>
+        <div class="intro-body reveal" style="--d:.12s">
+          <p class="dropcap">
+            A finished manuscript is an achievement. A published book is a milestone. Yet for most
+            authors, the hardest stretch of the journey begins after publication, when a good
+            book meets the quiet, crowded reality of the modern book market, where thousands of new
+            titles appear every day and the right readers must somehow find theirs.
+          </p>
+          <p>
+            GTO Literary Marketing exists for that moment. We are a professional literary marketing
+            consultancy helping authors, publishers, and literary professionals improve their books&rsquo;
+            visibility, discoverability, reader engagement, and promotional reach, with strategies
+            built around each book&rsquo;s identity, audience, and potential. Never around a template.
+          </p>
+          <a class="link-more" href="about.html">
+            More about our approach
+            <svg class="arrow" width="18" height="12" viewBox="0 0 18 12" fill="none" aria-hidden="true">
+              <path d="M1 6h15M11.5 1.5 16 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SERVICES INDEX ================= -->
+    <section class="section section-dark" id="services" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <p class="eyebrow">Our Services</p>
+            <h2 id="services-heading">Strategy for every stage<br>of a book&rsquo;s <em>life.</em></h2>
+          </div>
+          <a class="link-more head-link" href="services.html">
+            View all ten services
+            <svg class="arrow" width="18" height="12" viewBox="0 0 18 12" fill="none" aria-hidden="true">
+              <path d="M1 6h15M11.5 1.5 16 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </a>
+        </div>
+
+        <ul class="svc-list">
+          <li class="svc-row reveal">
+            <div class="svc-grid">
+              <span class="svc-num">01</span>
+              <span class="svc-name">Amazon Book Marketing</span>
+              <span class="svc-desc">Position your book where readers are already searching.</span>
+              <svg class="svc-arrow" width="18" height="12" viewBox="0 0 18 12" fill="none" aria-hidden="true"><path d="M1 6h15M11.5 1.5 16 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5"/></svg>
+            </div>
+            <a href="services.html#amazon-book-marketing" aria-label="Amazon Book Marketing: read the full service description"></a>
+          </li>
+          <li class="svc-row reveal" style="--d:.06s">
+            <div class="svc-grid">
+              <span class="svc-num">02</span>
+              <span class="svc-name">Book Launch Campaigns</span>
+              <span class="svc-desc">Build momentum from announcement to release week and beyond.</span>
+              <svg class="svc-arrow" width="18" height="12" viewBox="0 0 18 12" fill="none" aria-hidden="true"><path d="M1 6h15M11.5 1.5 16 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5"/></svg>
+            </div>
+            <a href="services.html#book-launch-campaigns" aria-label="Book Launch Campaigns: read the full service description"></a>
+          </li>
+          <li class="svc-row reveal" style="--d:.12s">
+            <div class="svc-grid">
+              <span class="svc-num">03</span>
+              <span class="svc-name">BookBub Promotion</span>
+              <span class="svc-desc">Plan and prepare campaigns for one of publishing&rsquo;s most influential platforms.</span>
+              <svg class="svc-arrow" width="18" height="12" viewBox="0 0 18 12" fill="none" aria-hidden="true"><path d="M1 6h15M11.5 1.5 16 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5"/></svg>
+            </div>
+            <a href="services.html#bookbub-promotion" aria-label="BookBub Promotion: read the full service description"></a>
+          </li>
+          <li class="svc-row reveal" style="--d:.18s">
+            <div class="svc-grid">
+              <span class="svc-num">04</span>
+              <span class="svc-name">Author Branding</span>
+              <span class="svc-desc">Define the voice and presence readers remember.</span>
+              <svg class="svc-arrow" width="18" height="12" viewBox="0 0 18 12" fill="none" aria-hidden="true"><path d="M1 6h15M11.5 1.5 16 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5"/></svg>
+            </div>
+            <a href="services.html#author-branding" aria-label="Author Branding: read the full service description"></a>
+          </li>
+          <li class="svc-row reveal" style="--d:.24s">
+            <div class="svc-grid">
+              <span class="svc-num">05</span>
+              <span class="svc-name">Reader Funnel Development</span>
+              <span class="svc-desc">Turn casual visitors into long-term readers and returning fans.</span>
+              <svg class="svc-arrow" width="18" height="12" viewBox="0 0 18 12" fill="none" aria-hidden="true"><path d="M1 6h15M11.5 1.5 16 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5"/></svg>
+            </div>
+            <a href="services.html#reader-funnel-development" aria-label="Reader Funnel Development: read the full service description"></a>
+          </li>
+          <li class="svc-row reveal" style="--d:.3s">
+            <div class="svc-grid">
+              <span class="svc-num">06</span>
+              <span class="svc-name">Book Club Outreach</span>
+              <span class="svc-desc">Bring your book to the tables where readers talk.</span>
+              <svg class="svc-arrow" width="18" height="12" viewBox="0 0 18 12" fill="none" aria-hidden="true"><path d="M1 6h15M11.5 1.5 16 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5"/></svg>
+            </div>
+            <a href="services.html#book-club-outreach" aria-label="Book Club Outreach: read the full service description"></a>
+          </li>
+          <li class="svc-row svc-all reveal" style="--d:.36s">
+            <div class="svc-grid">
+              <a class="link-more" href="services.html">
+                Plus four more: view all services
+                <svg class="arrow" width="18" height="12" viewBox="0 0 18 12" fill="none" aria-hidden="true">
+                  <path d="M1 6h15M11.5 1.5 16 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= WHY GTO ================= -->
+    <section class="section section-light" id="why-gto" aria-labelledby="why-heading">
+      <div class="container why-grid">
+        <div class="why-copy reveal">
+          <p class="eyebrow">Why GTO</p>
+          <h2 id="why-heading">Books don&rsquo;t fail for lack of quality. They fail for lack of <em>discovery.</em></h2>
+          <div class="orn" aria-hidden="true"><span></span><i></i><span></span></div>
+          <p class="fine">The gap between a good book and its readers is where we work.</p>
+        </div>
+        <div class="why-list">
+          <div class="why-item reveal">
+            <span class="roman">i.</span>
+            <div>
+              <h3>Strategy before tactics</h3>
+              <p>We begin with the book itself, including its genre, its audience, and its identity, before recommending a single promotional channel.</p>
+            </div>
+          </div>
+          <div class="why-item reveal" style="--d:.08s">
+            <span class="roman">ii.</span>
+            <div>
+              <h3>Readers, not just traffic</h3>
+              <p>Visibility only matters when it reaches people who will actually read, review, and recommend your book.</p>
+            </div>
+          </div>
+          <div class="why-item reveal" style="--d:.16s">
+            <span class="roman">iii.</span>
+            <div>
+              <h3>Honest counsel</h3>
+              <p>We would rather tell you what won&rsquo;t work than sell you what you don&rsquo;t need. No inflated promises, no jargon.</p>
+            </div>
+          </div>
+          <div class="why-item reveal" style="--d:.24s">
+            <span class="roman">iv.</span>
+            <div>
+              <h3>Long-term thinking</h3>
+              <p>Marketing that compounds: launch momentum that settles into durable, lasting discoverability.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FOUNDER ================= -->
+    <section class="section section-dark" id="founder" aria-labelledby="founder-heading">
+      <div class="container founder-grid">
+
+        <!-- FOUNDER PHOTO PLACEHOLDER: Place your photo at GTO-LITERARY-MARKETING/founder.jpg -->
+        <figure class="portrait reveal">
+          <div class="portrait-inner">
+            <img src="Gideon.jpg"
+                 alt="Portrait photograph of Gideon, Founder and Literary Marketing Consultant at GTO Literary Marketing"
+                 onerror="this.closest('.portrait-inner').classList.add('no-photo')">
+            <div class="portrait-fallback" aria-hidden="true">
+              <span class="pf-mark">G</span>
+              <span class="pf-note">Founder photograph<br>placeholder (founder.jpg)</span>
+            </div>
+          </div>
+          <figcaption>
+            Gideon
+            <span>Founder &amp; Literary Marketing Consultant</span>
+          </figcaption>
+        </figure>
+
+        <div class="founder-copy reveal" style="--d:.12s">
+          <p class="eyebrow">The Founder</p>
+          <h2 id="founder-heading">Marketing that begins with the <em>book.</em></h2>
+          <blockquote>
+            &ldquo;Every great book deserves an opportunity to be discovered by the readers
+            who will appreciate it.&rdquo;
+          </blockquote>
+          <p>
+            Gideon is the Founder and Literary Marketing Consultant at GTO Literary Marketing.
+            He advises authors and publishers on positioning, discoverability, and reader outreach,
+            approaching every engagement the same way: by starting with the book, its readers,
+            and its potential, never with a template.
+          </p>
+          <a class="link-more" href="about.html">
+            Read Gideon&rsquo;s story
+            <svg class="arrow" width="18" height="12" viewBox="0 0 18 12" fill="none" aria-hidden="true">
+              <path d="M1 6h15M11.5 1.5 16 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROCESS ================= -->
+    <section class="section section-light" id="process" aria-labelledby="process-heading">
+      <div class="container">
+        <div class="process-head reveal">
+          <div>
+            <p class="eyebrow">The Process</p>
+            <h2 id="process-heading">How we <em>work.</em></h2>
+          </div>
+        </div>
+
+        <div class="steps">
+          <div class="step reveal">
+            <span class="step-tag">Step 01</span>
+            <h3>Consultation</h3>
+            <p>A free, no-obligation conversation about your book, your goals, and the readers you want to reach.</p>
+          </div>
+          <div class="step reveal" style="--d:.1s">
+            <span class="step-tag">Step 02</span>
+            <h3>Strategy</h3>
+            <p>A tailored marketing plan built around the book&rsquo;s identity, category, and audience.</p>
+          </div>
+          <div class="step reveal" style="--d:.2s">
+            <span class="step-tag">Step 03</span>
+            <h3>Execution</h3>
+            <p>Focused campaigns across the channels that fit, from Amazon to book clubs to email.</p>
+          </div>
+          <div class="step reveal" style="--d:.3s">
+            <span class="step-tag">Step 04</span>
+            <h3>Refinement</h3>
+            <p>We review what the results tell us, refine the approach, and protect long-term visibility.</p>
+          </div>
+        </div>
+
+        <div class="process-note reveal">
+          <span class="diamond" aria-hidden="true"></span>
+          <p>Every engagement begins with a free consultation. You will know exactly what is recommended, and why, before anything begins.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FINAL CTA ================= -->
+    <section class="section section-dark cta-final" id="consultation" aria-labelledby="cta-heading">
+      <div class="container">
+        <div class="orn reveal" aria-hidden="true"><span></span><i></i><span></span></div>
+        <h2 id="cta-heading" class="reveal" style="--d:.08s">Let&rsquo;s talk about <em>your book.</em></h2>
+        <p class="cta-lede reveal" style="--d:.16s">
+          Every engagement begins with a free consultation: a genuine conversation about your book,
+          its readers, and what thoughtful marketing could accomplish for it. No obligation.
+          No pressure. No inflated promises.
+        </p>
+        <div class="cta-actions reveal" style="--d:.24s">
+          <a class="btn btn-solid" href="contact.html">
+            Get a Free Book Marketing Consultation
+            <svg class="arrow" width="18" height="12" viewBox="0 0 18 12" fill="none" aria-hidden="true">
+              <path d="M1 6h15M11.5 1.5 16 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </a>
+          <a class="btn btn-outline" href="services.html">Explore Our Services</a>
+        </div>
+        <p class="cta-alt fine reveal" style="--d:.3s">Prefer to write first? Visit the <a href="contact.html" style="color:var(--gold-bright); text-decoration:underline;">contact page</a> for details.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" aria-label="GTO Literary Marketing Home">
+          <span class="brand-logo">
+            <img src="Gilded Literary Marketing Emblem.png"
+                 alt="GTO Literary Marketing Logo"
+                 onerror="this.parentElement.classList.add('logo-missing')">
+            <span class="logo-fallback" aria-hidden="true">
+              <span class="logo-fallback-mark">G</span>
+              <span class="logo-fallback-tag">LOGO.JPG</span>
+            </span>
+          </span>
+          <span class="brand-text">
+            <span class="bt-name">GTO Literary</span>
+            <span class="bt-sub">Marketing</span>
+          </span>
+        </a>
+        <p class="fb-tag">Helping Great Books Reach More Readers.</p>
+        <p>
+          A literary marketing consultancy providing book promotion services to authors,
+          publishers, and literary professionals worldwide.
+        </p>
+      </div>
+
+      <nav class="footer-col" aria-label="Footer navigation">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#amazon-book-marketing">Amazon Book Marketing</a></li>
+          <li><a href="services.html#book-launch-campaigns">Book Launch Campaigns</a></li>
+          <li><a href="services.html#bookbub-promotion">BookBub Promotion</a></li>
+          <li><a href="services.html#author-branding">Author Branding</a></li>
+          <li><a href="services.html">All services&hellip;</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <span class="footer-email">hello@gtoliterary.com</span>
+        <a class="link-more" href="contact.html">
+          Request a consultation
+          <svg class="arrow" width="18" height="12" viewBox="0 0 18 12" fill="none" aria-hidden="true">
+            <path d="M1 6h15M11.5 1.5 16 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; <span id="year">2025</span> GTO Literary Marketing. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+      </div>
+      <a class="to-top" href="#main" aria-label="Back to top">
+        Back to top
+        <svg width="12" height="14" viewBox="0 0 12 14" fill="none" aria-hidden="true">
+          <path d="M6 13V1M1.5 5.5 6 1l4.5 4.5" stroke="currentColor" stroke-width="1.5"/>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    /* ============================================================
+       GTO Literary Marketing: page behaviour
+       (Self-contained; no external JS, no dependencies.)
+       ============================================================ */
+    (function () {
+      'use strict';
+
+      /* ---- Current year in footer ---- */
+      var yearEl = document.getElementById('year');
+      if (yearEl) { yearEl.textContent = new Date().getFullYear(); }
+
+      /* ---- Header: solid background once scrolled ---- */
+      var header = document.getElementById('site-header');
+      function onScrollHeader() {
+        if (header) {
+          header.classList.toggle('scrolled',
+            (window.scrollY || document.documentElement.scrollTop) > 8);
+        }
+      }
+
+      /* ---- Mobile menu ---- */
+      var toggle = document.getElementById('menu-toggle');
+      var overlay = document.getElementById('menu-overlay');
+
+      function setMenu(open) {
+        if (!toggle || !overlay) { return; }
+        toggle.classList.toggle('active', open);
+        overlay.classList.toggle('open', open);
+        document.body.classList.toggle('menu-open', open);
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        overlay.setAttribute('aria-hidden', open ? 'false' : 'true');
+      }
+
+      if (toggle && overlay) {
+        toggle.addEventListener('click', function () {
+          setMenu(!overlay.classList.contains('open'));
+        });
+        overlay.addEventListener('click', function (e) {
+          if (e.target.closest('a')) { setMenu(false); }
+        });
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && overlay.classList.contains('open')) {
+            setMenu(false);
+            toggle.focus();
+          }
+        });
+      }
+
+      /* ---- Scroll reveal (IntersectionObserver, graceful fallback) ---- */
+      var revealEls = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('in');
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+        revealEls.forEach(function (el) { io.observe(el); });
+      } else {
+        revealEls.forEach(function (el) { el.classList.add('in'); });
+      }
+
+      /* ---- Gold bookmark ribbon (reading progress) ---- */
+      var ribbon = document.querySelector('.ribbon');
+      var maxRibbon = 420;
+      function updateRibbon() {
+        if (!ribbon) { return; }
+        var doc = document.documentElement;
+        var max = doc.scrollHeight - window.innerHeight;
+        var p = max > 0 ? Math.min(1, (window.scrollY || doc.scrollTop) / max) : 0;
+        ribbon.style.height = (p * maxRibbon) + 'px';
+      }
+
+      /* ---- Single rAF-throttled scroll handler ---- */
+      var ticking = false;
+      function onScroll() {
+        if (!ticking) {
+          window.requestAnimationFrame(function () {
+            onScrollHeader();
+            updateRibbon();
+            ticking = false;
+          });
+          ticking = true;
+        }
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', function () {
+        maxRibbon = Math.min(window.innerHeight * 0.55, 440);
+        updateRibbon();
+      });
+
+      /* ---- Initial state ---- */
+      maxRibbon = Math.min(window.innerHeight * 0.55, 440);
+      onScrollHeader();
+      updateRibbon();
+    })();
+  </script>
+</body>
+</html>

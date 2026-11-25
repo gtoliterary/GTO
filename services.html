@@ -1,0 +1,1487 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0e0d0b">
+  <title>Book Promotion Services &amp; Author Marketing | GTO Literary Marketing</title>
+  <meta name="description" content="Explore ten specialized book promotion services from GTO Literary Marketing: Amazon book marketing, BookBub promotion, AI book discoverability, book club outreach, email marketing, author branding, and launch campaigns.">
+  <meta property="og:title" content="Book Promotion Services &amp; Author Marketing | GTO Literary Marketing">
+  <meta property="og:description" content="Strategic book marketing services tailored to your book's identity, audience, and long-term visibility.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+
+  <script>document.documentElement.classList.remove('no-js');</script>
+
+  <style>
+    /* ============================================================
+       GTO LITERARY MARKETING : SERVICES PAGE
+       Self-contained HTML, CSS, and JS. Zero external dependencies.
+       ============================================================ */
+
+    :root {
+      --black:        #0e0d0b;
+      --black-soft:   #16140f;
+      --cream:        #f4eee1;
+      --cream-deep:   #eae2cf;
+      --white:        #ffffff;
+      --ink:          #241f18;
+
+      --gold:        #c2a14d;
+      --gold-bright: #ddc07a;
+      --gold-deep:   #7a5d18;
+
+      --text-dark-bg:       #f4eee1;
+      --text-dark-muted:    rgba(244, 238, 225, .68);
+      --text-light-bg:      #241f18;
+      --text-light-muted:   rgba(36, 31, 24, .72);
+
+      --hairline-dark:  rgba(244, 238, 225, .16);
+      --hairline-light: rgba(36, 31, 24, .18);
+
+      --serif: 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', Georgia, 'Times New Roman', serif;
+      --sans:  'Helvetica Neue', 'Segoe UI', 'Helvetica', Arial, sans-serif;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+    body {
+      font-family: var(--serif);
+      font-size: 1.02rem;
+      line-height: 1.75;
+      color: var(--text-dark-bg);
+      background: var(--black);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    img { max-width: 100%; display: block; }
+    ul { list-style: none; }
+    a { color: inherit; }
+
+    ::selection { background: var(--gold); color: var(--black); }
+
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid var(--gold-bright);
+      outline-offset: 3px;
+    }
+
+    article[id], section[id] { scroll-margin-top: 96px; }
+
+    .container {
+      max-width: 1180px;
+      margin-inline: auto;
+      padding-inline: clamp(1.25rem, 4vw, 2.5rem);
+    }
+
+    .skip-link {
+      position: absolute; top: -60px; left: 1rem;
+      background: var(--gold); color: var(--black);
+      font-family: var(--sans); font-size: .8rem; letter-spacing: .1em;
+      padding: .7rem 1.2rem; text-decoration: none; z-index: 100;
+      transition: top .25s ease;
+    }
+    .skip-link:focus { top: 1rem; }
+
+    /* ---------- Shared typography & elements ---------- */
+    .eyebrow {
+      display: flex; align-items: center; gap: .9rem;
+      font-family: var(--sans); font-size: .72rem; font-weight: 600;
+      letter-spacing: .32em; text-transform: uppercase;
+      color: var(--gold);
+    }
+    .eyebrow::before {
+      content: ''; width: 36px; height: 1px;
+      background: var(--gold); flex: none;
+    }
+    .section-light .eyebrow { color: var(--gold-deep); }
+    .section-light .eyebrow::before { background: var(--gold-deep); }
+
+    h1, h2, h3, h4 { font-family: var(--serif); font-weight: 400; line-height: 1.15; }
+    h1 { font-size: clamp(2.5rem, 5.6vw, 4.4rem); letter-spacing: -.01em; }
+    h2 { font-size: clamp(1.85rem, 3.8vw, 2.85rem); letter-spacing: -.005em; }
+    h3 { font-size: 1.28rem; }
+    h1 em, h2 em { font-style: italic; }
+    .section-dark h1, .section-dark h2, .page-hero h1 { color: var(--text-dark-bg); }
+    .page-hero h1 em, .section-dark h2 em { color: var(--gold-bright); }
+    .section-light h2 { color: var(--text-light-bg); }
+    .section-light h2 em { color: var(--gold-deep); }
+
+    .orn { display: flex; align-items: center; gap: 14px; }
+    .orn span { display: block; width: clamp(42px, 7vw, 88px); height: 1px; background: var(--hairline-dark); }
+    .orn i {
+      display: block; width: 7px; height: 7px; flex: none;
+      background: var(--gold); transform: rotate(45deg);
+    }
+    .section-light .orn span { background: var(--hairline-light); }
+
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: .7rem;
+      font-family: var(--sans); font-size: .78rem; font-weight: 600;
+      letter-spacing: .18em; text-transform: uppercase;
+      padding: 1.05rem 2.1rem; border: 1px solid var(--gold);
+      text-decoration: none; cursor: pointer; white-space: nowrap;
+      transition: background-color .32s ease, color .32s ease,
+                  transform .32s ease, box-shadow .32s ease;
+    }
+    .btn-solid { background: var(--gold); color: var(--black); }
+    .btn-solid:hover {
+      background: var(--gold-bright); transform: translateY(-2px);
+      box-shadow: 0 18px 34px -22px rgba(0, 0, 0, .85);
+    }
+    .btn-outline { background: transparent; color: var(--gold-bright); }
+    .btn-outline:hover { background: var(--gold); color: var(--black); transform: translateY(-2px); }
+    .section-light .btn-outline { color: var(--gold-deep); border-color: var(--gold-deep); }
+    .section-light .btn-outline:hover { background: var(--gold); border-color: var(--gold); color: var(--black); }
+    .btn .arrow { transition: transform .32s ease; }
+    .btn:hover .arrow { transform: translateX(5px); }
+
+    .link-more {
+      display: inline-flex; align-items: center; gap: .6rem;
+      font-family: var(--sans); font-size: .78rem; font-weight: 600;
+      letter-spacing: .16em; text-transform: uppercase;
+      color: var(--gold-bright); text-decoration: none;
+      position: relative; padding-bottom: .45rem;
+    }
+    .link-more::after {
+      content: ''; position: absolute; left: 0; bottom: 0;
+      width: 100%; height: 1px; background: currentColor;
+      transform: scaleX(.38); transform-origin: left;
+      transition: transform .45s cubic-bezier(.22, .61, .36, 1);
+    }
+    .link-more:hover::after { transform: scaleX(1); }
+    .link-more .arrow { transition: transform .35s ease; }
+    .link-more:hover .arrow { transform: translateX(5px); }
+    .section-light .link-more { color: var(--gold-deep); }
+
+    .fine {
+      font-family: var(--sans); font-size: .72rem;
+      letter-spacing: .06em; line-height: 1.6;
+      color: var(--text-dark-muted);
+    }
+    .section-light .fine { color: var(--text-light-muted); }
+
+    /* ---------- Header / navigation ---------- */
+    .site-header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 60;
+      background: rgba(14, 13, 11, .35);
+      transition: background-color .35s ease, border-color .35s ease;
+      border-bottom: 1px solid transparent;
+    }
+    .site-header.scrolled {
+      background: rgba(14, 13, 11, .92);
+      -webkit-backdrop-filter: blur(14px);
+      backdrop-filter: blur(14px);
+      border-bottom-color: var(--hairline-dark);
+    }
+    .nav-row {
+      display: flex; align-items: center; gap: 2.2rem;
+      height: 76px;
+    }
+    .brand { display: inline-flex; align-items: center; gap: .85rem; text-decoration: none; }
+
+    /* Logo image placeholder (.jpg) beside GTO Literary Marketing */
+    .brand-logo {
+      width: 46px; height: 46px; flex: none;
+      border: 1px solid var(--gold);
+      background: var(--black-soft);
+      display: inline-flex; align-items: center; justify-content: center;
+      position: relative; overflow: hidden;
+      transition: border-color .3s ease, background-color .3s ease;
+    }
+    .brand-logo img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+    }
+    .brand-logo .logo-fallback {
+      display: none; flex-direction: column; align-items: center; justify-content: center;
+      line-height: 1; text-align: center; padding: 2px;
+    }
+    .brand-logo.logo-missing img { display: none; }
+    .brand-logo.logo-missing .logo-fallback { display: flex; }
+    .logo-fallback-mark {
+      font-family: var(--serif); font-style: italic;
+      font-size: 1.15rem; color: var(--gold);
+    }
+    .logo-fallback-tag {
+      font-family: var(--sans); font-size: .42rem; font-weight: 600;
+      letter-spacing: .14em; text-transform: uppercase;
+      color: var(--text-dark-muted); margin-top: 3px;
+    }
+    .brand:hover .brand-logo { border-color: var(--gold-bright); }
+
+    .brand-text { line-height: 1.2; }
+    .brand-text .bt-name {
+      display: block; font-family: var(--serif);
+      font-size: 1.06rem; color: var(--cream); letter-spacing: .02em;
+    }
+    .brand-text .bt-sub {
+      display: block; font-family: var(--sans);
+      font-size: .56rem; font-weight: 600; letter-spacing: .42em;
+      text-transform: uppercase; color: var(--gold); margin-top: 2px;
+    }
+
+    .site-nav ul { display: flex; gap: 1.9rem; }
+    .nav-link {
+      position: relative; text-decoration: none;
+      font-family: var(--sans); font-size: .78rem; font-weight: 500;
+      letter-spacing: .18em; text-transform: uppercase;
+      color: var(--text-dark-muted);
+      padding: .4rem 0;
+      transition: color .3s ease;
+    }
+    .nav-link::after {
+      content: ''; position: absolute; left: 0; bottom: 0;
+      width: 100%; height: 1px; background: var(--gold);
+      transform: scaleX(0); transform-origin: left;
+      transition: transform .38s cubic-bezier(.22, .61, .36, 1);
+    }
+    .nav-link:hover { color: var(--cream); }
+    .nav-link:hover::after,
+    .nav-link[aria-current="page"]::after { transform: scaleX(1); }
+    .nav-link[aria-current="page"] { color: var(--gold-bright); }
+
+    .nav-cta { margin-left: auto; padding: .8rem 1.5rem; }
+
+    .menu-toggle {
+      display: none; background: none; border: 0; cursor: pointer;
+      width: 30px; height: 20px; position: relative; padding: 0;
+    }
+    .menu-toggle span {
+      position: absolute; left: 0; width: 100%; height: 2px;
+      background: var(--cream); transition: top .32s ease, transform .32s ease, background-color .32s ease;
+    }
+    .menu-toggle span:nth-child(1) { top: 1px; }
+    .menu-toggle span:nth-child(2) { top: 17px; }
+    .menu-toggle.active span { background: var(--gold-bright); }
+    .menu-toggle.active span:nth-child(1) { top: 9px; transform: rotate(45deg); }
+    .menu-toggle.active span:nth-child(2) { top: 9px; transform: rotate(-45deg); }
+
+    .menu-overlay {
+      position: fixed; inset: 0; z-index: 55;
+      background: var(--black);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; visibility: hidden;
+      transition: opacity .4s ease, visibility .4s ease;
+    }
+    .menu-overlay.open { opacity: 1; visibility: visible; }
+    .menu-nav { width: min(420px, 86vw); }
+    .menu-nav ul { margin-bottom: 2.6rem; }
+    .menu-nav li { border-bottom: 1px solid var(--hairline-dark); }
+    .menu-nav li:first-child { border-top: 1px solid var(--hairline-dark); }
+    .menu-nav a {
+      display: flex; align-items: baseline; gap: 1.1rem;
+      padding: 1.05rem .4rem; text-decoration: none;
+      font-family: var(--serif); font-size: 1.7rem; color: var(--cream);
+      opacity: 0; transform: translateY(16px);
+      transition: opacity .5s ease, transform .5s cubic-bezier(.22, .61, .36, 1), color .3s ease;
+      transition-delay: 0s;
+    }
+    .menu-overlay.open .menu-nav a {
+      opacity: 1; transform: none;
+      transition-delay: calc(var(--i, 0) * 60ms + 140ms);
+    }
+    .menu-nav a:hover { color: var(--gold-bright); }
+    .menu-nav a span {
+      font-family: var(--sans); font-size: .68rem; font-weight: 600;
+      letter-spacing: .22em; color: var(--gold);
+    }
+    .menu-cta { width: 100%; }
+    .menu-note {
+      margin-top: 1.6rem; text-align: center;
+      font-family: var(--sans); font-size: .74rem;
+      letter-spacing: .08em; color: var(--text-dark-muted);
+    }
+    .menu-note em { color: var(--gold); font-style: normal; }
+    body.menu-open { overflow: hidden; }
+
+    .ribbon {
+      position: fixed; top: 0; right: 20px; z-index: 58;
+      width: 5px; height: 0; background: var(--gold);
+      clip-path: polygon(0 0, 100% 0, 100% calc(100% - 7px), 50% 100%, 0 calc(100% - 7px));
+      will-change: height;
+    }
+
+    /* ---------- Page Hero ---------- */
+    .page-hero {
+      position: relative; overflow: hidden;
+      padding-top: calc(76px + clamp(3.5rem, 7vw, 5.5rem));
+      padding-bottom: clamp(3.5rem, 7vw, 5.5rem);
+      background: var(--black);
+      border-bottom: 1px solid var(--hairline-dark);
+    }
+    .page-hero-mark {
+      position: absolute; right: -2vw; bottom: -12%;
+      font-family: var(--serif); font-style: italic;
+      font-size: min(34vw, 400px); line-height: 1;
+      color: var(--gold); opacity: .045;
+      user-select: none; pointer-events: none;
+    }
+    .page-hero-inner { position: relative; z-index: 1; max-width: 840px; }
+    .page-hero .eyebrow { margin-bottom: 1.5rem; }
+    .page-hero .orn { margin: 2rem 0; }
+    .page-hero-lede {
+      font-size: 1.18rem; line-height: 1.8;
+      color: var(--text-dark-muted); max-width: 680px;
+    }
+
+    /* ---------- Quick Directory (Cream) ---------- */
+    .directory-section {
+      padding: clamp(3rem, 6vw, 4.5rem) 0;
+      background: var(--cream);
+      color: var(--text-light-bg);
+      border-bottom: 1px solid var(--hairline-light);
+    }
+    .directory-head {
+      display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between;
+      gap: 1rem; margin-bottom: 1.8rem;
+    }
+    .directory-head h2 { font-size: 1.45rem; color: var(--ink); }
+    .directory-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      border-top: 1px solid var(--hairline-light);
+      border-left: 1px solid var(--hairline-light);
+    }
+    .dir-link {
+      display: flex; flex-direction: column; justify-content: space-between;
+      padding: 1.15rem 1.1rem;
+      border-right: 1px solid var(--hairline-light);
+      border-bottom: 1px solid var(--hairline-light);
+      text-decoration: none;
+      background: var(--cream);
+      transition: background-color .3s ease, color .3s ease;
+    }
+    .dir-link:hover { background: var(--cream-deep); }
+    .dir-num {
+      font-family: var(--serif); font-style: italic;
+      font-size: .88rem; color: var(--gold-deep);
+      margin-bottom: .45rem;
+    }
+    .dir-title {
+      font-family: var(--serif); font-size: 1.02rem;
+      line-height: 1.3; color: var(--ink);
+    }
+
+    /* ---------- Service Articles ---------- */
+    .service-band {
+      padding: clamp(4.2rem, 8vw, 6.8rem) 0;
+      border-bottom: 1px solid var(--hairline-dark);
+    }
+    .service-band.section-light {
+      border-bottom-color: var(--hairline-light);
+    }
+    .service-layout {
+      display: grid;
+      grid-template-columns: 4.5fr 7.5fr;
+      gap: clamp(2.4rem, 5.5vw, 5rem);
+      align-items: start;
+    }
+    .service-summary {
+      position: sticky; top: 108px;
+    }
+    .service-index-tag {
+      display: inline-flex; align-items: center; gap: .75rem;
+      font-family: var(--sans); font-size: .7rem; font-weight: 600;
+      letter-spacing: .28em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 1.1rem;
+    }
+    .section-light .service-index-tag { color: var(--gold-deep); }
+    .service-index-tag b {
+      font-family: var(--serif); font-style: italic;
+      font-size: 1.15rem; font-weight: 400; letter-spacing: 0;
+    }
+    .service-summary h2 { margin-bottom: 1.2rem; }
+    .service-tagline {
+      font-family: var(--serif); font-style: italic;
+      font-size: 1.18rem; line-height: 1.6;
+      color: var(--gold-bright);
+      margin-bottom: 1.5rem;
+    }
+    .section-light .service-tagline { color: var(--gold-deep); }
+    .service-summary .orn { margin-bottom: 1.8rem; }
+
+    /* Four-part detail grid for each service */
+    .service-facets {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    .facet-card {
+      padding: 1.75rem 1.75rem;
+      border: 1px solid var(--hairline-dark);
+      background: var(--black-soft);
+    }
+    .section-light .facet-card {
+      border-color: var(--hairline-light);
+      background: var(--cream-deep);
+    }
+    .facet-label {
+      display: block;
+      font-family: var(--sans); font-size: .66rem; font-weight: 600;
+      letter-spacing: .26em; text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: .65rem;
+    }
+    .section-light .facet-label { color: var(--gold-deep); }
+    .facet-card h3 {
+      font-size: 1.2rem;
+      color: var(--cream);
+      margin-bottom: .65rem;
+    }
+    .section-light .facet-card h3 { color: var(--ink); }
+    .facet-card p {
+      font-size: .96rem;
+      line-height: 1.72;
+      color: var(--text-dark-muted);
+    }
+    .section-light .facet-card p { color: var(--text-light-muted); }
+
+    /* Ethical transparency banner */
+    .ethics-band {
+      padding: clamp(3.5rem, 6vw, 5rem) 0;
+      background: var(--cream-deep);
+      color: var(--ink);
+      border-bottom: 1px solid var(--hairline-light);
+    }
+    .ethics-box {
+      display: grid;
+      grid-template-columns: 4fr 8fr;
+      gap: clamp(2rem, 5vw, 4rem);
+      align-items: center;
+      padding: clamp(2rem, 4vw, 3rem);
+      border: 1px solid rgba(122, 93, 24, .45);
+      background: var(--cream);
+    }
+    .ethics-box h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); color: var(--ink); margin-top: .8rem; }
+    .ethics-box p { color: var(--text-light-muted); margin-bottom: 1rem; }
+    .ethics-box p:last-child { margin-bottom: 0; }
+
+    /* ---------- Final CTA ---------- */
+    .section { padding: clamp(4.5rem, 9vw, 8rem) 0; }
+    .section-dark  { background: var(--black); color: var(--text-dark-bg); }
+    .section-light { background: var(--cream); color: var(--text-light-bg); }
+
+    .cta-final { text-align: center; }
+    .cta-final .orn { justify-content: center; margin-bottom: 2.4rem; }
+    .cta-final h2 { max-width: 16ch; margin-inline: auto; }
+    .cta-final .cta-lede {
+      margin: 1.8rem auto 0; max-width: 580px;
+      color: var(--text-dark-muted); font-size: 1.08rem;
+    }
+    .cta-actions {
+      margin-top: 3rem; display: flex; flex-wrap: wrap;
+      justify-content: center; gap: 1.1rem;
+    }
+
+    /* ---------- Footer ---------- */
+    .site-footer {
+      background: var(--black);
+      border-top: 1px solid rgba(194, 161, 77, .35);
+      padding-top: clamp(3.5rem, 7vw, 5.5rem);
+    }
+    .footer-grid {
+      display: grid; grid-template-columns: 4fr 2fr 3fr 3fr;
+      gap: clamp(2rem, 5vw, 4rem);
+      padding-bottom: clamp(2.8rem, 5vw, 4rem);
+    }
+    .footer-brand .brand { margin-bottom: 1.4rem; }
+    .footer-brand .fb-tag {
+      font-family: var(--serif); font-style: italic;
+      color: var(--gold-bright); margin-bottom: 1rem;
+    }
+    .footer-brand p { font-size: .93rem; line-height: 1.7; color: var(--text-dark-muted); max-width: 34ch; }
+    .footer-col h4 {
+      font-family: var(--sans); font-size: .66rem; font-weight: 600;
+      letter-spacing: .3em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 1.2rem;
+    }
+    .footer-col li { margin-bottom: .55rem; }
+    .footer-col a {
+      text-decoration: none; font-family: var(--sans);
+      font-size: .82rem; letter-spacing: .04em;
+      color: var(--text-dark-muted); transition: color .3s ease;
+    }
+    .footer-col a:hover { color: var(--gold-bright); }
+    .footer-email {
+      display: block; font-family: var(--serif) !important;
+      font-size: 1.05rem !important; color: var(--cream) !important;
+      margin-bottom: .3rem;
+    }
+    .footer-bottom {
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 1rem; padding-block: 1.6rem;
+      border-top: 1px solid var(--hairline-dark);
+    }
+    .footer-bottom p, .footer-bottom a {
+      font-family: var(--sans); font-size: .74rem; letter-spacing: .06em;
+      color: var(--text-dark-muted); text-decoration: none;
+    }
+    .footer-bottom a:hover { color: var(--gold-bright); }
+    .footer-legal { display: flex; gap: 1.4rem; }
+    .to-top { display: inline-flex; align-items: center; gap: .5rem; }
+
+    /* ---------- Scroll reveal ---------- */
+    html:not(.no-js) .reveal {
+      opacity: 0; transform: translateY(24px);
+      transition: opacity .75s ease, transform .75s cubic-bezier(.22, .61, .36, 1);
+      transition-delay: var(--d, 0s);
+    }
+    html:not(.no-js) .reveal.in { opacity: 1; transform: none; }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 1100px) {
+      .site-nav, .nav-cta { display: none; }
+      .menu-toggle { display: block; margin-left: auto; }
+      .nav-row { height: 68px; }
+      .directory-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 920px) {
+      .service-layout, .ethics-box { grid-template-columns: 1fr; }
+      .service-summary { position: static; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .footer-brand { grid-column: 1 / -1; }
+    }
+    @media (max-width: 680px) {
+      .service-facets { grid-template-columns: 1fr; }
+      .directory-grid { grid-template-columns: 1fr; }
+      .ribbon { display: none; }
+      .cta-actions .btn { width: 100%; }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      html:not(.no-js) .reveal { opacity: 1; transform: none; transition: none; }
+      * { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div class="ribbon" aria-hidden="true"></div>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-row">
+      <!-- LOGO PLACEHOLDER: Place your logo file at GTO-LITERARY-MARKETING/logo.jpg -->
+      <a class="brand" href="index.html" aria-label="GTO Literary Marketing Home">
+        <span class="brand-logo">
+          <img src="Gilded Literary Marketing Emblem.png"
+               alt="GTO Literary Marketing Logo"
+               onerror="this.parentElement.classList.add('logo-missing')">
+          <span class="logo-fallback" aria-hidden="true">
+            <span class="logo-fallback-mark">G</span>
+            <span class="logo-fallback-tag">LOGO.JPG</span>
+          </span>
+        </span>
+        <span class="brand-text">
+          <span class="bt-name">GTO Literary</span>
+          <span class="bt-sub">Marketing</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="about.html">About</a></li>
+          <li><a class="nav-link" href="services.html" aria-current="page">Services</a></li>
+          <li><a class="nav-link" href="blog.html">Blog</a></li>
+          <li><a class="nav-link" href="faq.html">FAQ</a></li>
+          <li><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a class="btn btn-outline nav-cta" href="contact.html">Free Consultation</a>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="menu-overlay">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile menu overlay -->
+  <div class="menu-overlay" id="menu-overlay" aria-hidden="true">
+    <nav class="menu-nav" aria-label="Mobile navigation">
+      <ul>
+        <li><a href="index.html"    style="--i:0"><span>01</span>Home</a></li>
+        <li><a href="about.html"    style="--i:1"><span>02</span>About</a></li>
+        <li><a href="services.html" style="--i:2"><span>03</span>Services</a></li>
+        <li><a href="blog.html"     style="--i:3"><span>04</span>Blog</a></li>
+        <li><a href="faq.html"      style="--i:4"><span>05</span>FAQ</a></li>
+        <li><a href="contact.html"  style="--i:5"><span>06</span>Contact</a></li>
+      </ul>
+      <a class="btn btn-solid menu-cta" href="contact.html">Free Consultation</a>
+      <p class="menu-note">hello@gtoliterary.com <em></p>
+    </nav>
+  </div>
+
+  <main id="main">
+
+    <!-- ================= PAGE HERO ================= -->
+    <section class="page-hero" aria-labelledby="services-hero-heading">
+      <div class="page-hero-mark" aria-hidden="true">&Scedil;</div>
+      <div class="container page-hero-inner">
+        <p class="eyebrow">Book Promotion Services</p>
+        <h1 id="services-hero-heading">Ten Disciplines of <em>Book Discoverability.</em></h1>
+        <div class="orn" aria-hidden="true"><span></span><i></i><span></span></div>
+        <p class="page-hero-lede">
+          Every book has its own readership, retail category, and creative identity. You can engage
+          GTO Literary Marketing for a single focused service or combine several into a cohesive,
+          long-term book marketing plan.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= QUICK DIRECTORY ================= -->
+    <section class="directory-section" aria-labelledby="directory-heading">
+      <div class="container">
+        <div class="directory-head">
+          <h2 id="directory-heading">Service Directory</h2>
+          <p class="fine">Select any discipline to jump directly to its full breakdown.</p>
+        </div>
+        <nav class="directory-grid" aria-label="Services directory">
+          <a class="dir-link" href="#amazon-book-marketing">
+            <span class="dir-num">01</span>
+            <span class="dir-title">Amazon Book Marketing</span>
+          </a>
+          <a class="dir-link" href="#bookbub-promotion">
+            <span class="dir-num">02</span>
+            <span class="dir-title">BookBub Promotion</span>
+          </a>
+          <a class="dir-link" href="#ai-book-discoverability">
+            <span class="dir-num">03</span>
+            <span class="dir-title">AI Book Discoverability</span>
+          </a>
+          <a class="dir-link" href="#book-club-outreach">
+            <span class="dir-num">04</span>
+            <span class="dir-title">Book Club Outreach</span>
+          </a>
+          <a class="dir-link" href="#email-marketing">
+            <span class="dir-num">05</span>
+            <span class="dir-title">Email Marketing</span>
+          </a>
+          <a class="dir-link" href="#author-branding">
+            <span class="dir-num">06</span>
+            <span class="dir-title">Author Branding</span>
+          </a>
+          <a class="dir-link" href="#social-media-book-promotion">
+            <span class="dir-num">07</span>
+            <span class="dir-title">Social Media Book Promotion</span>
+          </a>
+          <a class="dir-link" href="#book-launch-campaigns">
+            <span class="dir-num">08</span>
+            <span class="dir-title">Book Launch Campaigns</span>
+          </a>
+          <a class="dir-link" href="#reader-funnel-development">
+            <span class="dir-num">09</span>
+            <span class="dir-title">Reader Funnel Development</span>
+          </a>
+          <a class="dir-link" href="#book-review-and-reader-outreach">
+            <span class="dir-num">10</span>
+            <span class="dir-title">Book Review &amp; Reader Outreach</span>
+          </a>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ================= 01. AMAZON BOOK MARKETING ================= -->
+    <article class="service-band section-dark" id="amazon-book-marketing" aria-labelledby="svc-01-title">
+      <div class="container service-layout">
+        <div class="service-summary reveal">
+          <span class="service-index-tag"><b>01</b> Retail Positioning</span>
+          <h2 id="svc-01-title">Amazon Book <em>Marketing</em></h2>
+          <p class="service-tagline">Positioning your book where millions of readers actively search for their next read.</p>
+          <div class="orn" aria-hidden="true"><span></span><i></i><span></span></div>
+          <a class="btn btn-outline" href="contact.html?service=Amazon+Book+Marketing">
+            Inquire About This Service
+            <svg class="arrow" width="18" height="12" viewBox="0 0 18 12" fill="none" aria-hidden="true">
+              <path d="M1 6h15M11.5 1.5 16 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="service-facets">
+          <div class="facet-card reveal">
+            <span class="facet-label">What It Involves</span>
+            <h3>Complete Retail Page &amp; Metadata Refinement</h3>
+            <p>
+              A comprehensive audit and refinement of your book&rsquo;s Amazon presence. This covers
+              category research, backend search keyword selection, compelling book description copywriting,
+              Editorial Reviews placement, Author Central profile alignment, A+ Content planning, and
+              foundational Amazon Ads readiness.
+            </p>
+          </div>
+          <div class="facet-card reveal" style="--d:.08s">
+            <span class="facet-label">Why It Matters to Authors</span>
+            <h3>Where Reader Intent Turns Into Action</h3>
+            <p>
+              Amazon is the largest book-buying search engine in the world. Even when readers hear about
+              your book through social media, podcasts, or word of mouth, they frequently visit Amazon to
+              evaluate it. If your categories are mismatched or your book description lacks clarity,
+              interested browsers leave without purchasing.
+            </p>
+          </div>
+          <div class="facet-card reveal" style="--d:.16s">
+            <span class="facet-label">What GTO Helps You Accomplish</span>
+            <h3>A Clear, Persuasive, Search-Aligned Product Page</h3>
+            <p>
+              We help you align your book with the specific shelving categories and search phrases your
+              ideal readers actually use, while sharpening your blurb, hooks, and visual presentation so
+              visitors immediately understand why your book belongs on their shelf.
+            </p>
+          </div>
+          <div class="facet-card reveal" style="--d:.24s">
+            <span class="facet-label">Long-Term Book Visibility</span>
+            <h3>A Retail Foundation That Works Around the Clock</h3>
+            <p>
+              Well-structured metadata and strong page conversion support every future promotion you run.
+              Instead of relying only on brief traffic spikes, your Amazon page becomes an evergreen asset
+              that accurately informs retail algorithms and welcomes readers year after year.
+            </p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ================= 02. BOOKBUB PROMOTION ================= -->
+    <article class="service-band section-light" id="bookbub-promotion" aria-labelledby="svc-02-title">
+      <div class="container service-layout">
+        <div class="service-summary reveal">
+          <span class="service-index-tag"><b>02</b> Deal &amp; Platform Campaigns</span>
+          <h2 id="svc-02-title">BookBub <em>Promotion</em></h2>
+          <p class="service-tagline">Strategic preparation and campaign planning for one of publishing&rsquo;s most dedicated reader platforms.</p>
+          <div class="orn" aria-hidden="true"><span></span><i></i><span></span></div>
+          <a class="btn btn-outline" href="contact.html?service=BookBub+Promotion">
+            Inquire About This Service
+            <svg class="arrow" width="18" height="12" viewBox="0 0 18 12" fill="none" aria-hidden="true">
+              <path d="M1 6h15M11.5 1.5 16 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="service-facets">
+          <div class="facet-card reveal">
+            <span class="facet-label">What It Involves</span>
+            <h3>Profile Setup, Submission Strategy &amp; Ad Planning</h3>
+            <p>
+              Optimization of your BookBub Author Profile, strategic preparation for Featured Deal and
+              New Release for Less submissions, pricing and retail-readiness audits prior to applying,
+              and guidance on BookBub Ads targeting comparable authors and genres.
+            </p>
+          </div>
+          <div class="facet-card reveal" style="--d:.08s">
+            <span class="facet-label">Why It Matters to Authors</span>
+            <h3>Reaching Habitual, High-Intent Readers</h3>
+            <p>
+              BookBub&rsquo;s audience consists specifically of active readers who subscribe to discover
+              books in their favorite genres. While Featured Deal selection is curated and competitive,
+              the wider BookBub ecosystem offers multiple ways to build follower alerts, preorders, and
+              targeted ad visibility.
+            </p>
+          </div>
+          <div class="facet-card reveal" style="--d:.16s">
+            <span class="facet-label">What GTO Helps You Accomplish</span>
+            <h3>Thoughtful Positioning Without Guesswork</h3>
+            <p>
+              While no consultancy can guarantee editorial acceptance by BookBub&rsquo;s review team,
+              we help you present the strongest possible submission, time your discount windows wisely,
+              grow your BookBub follower base, and coordinate complementary promotional activity around
+              your campaign dates.
+            </p>
+          </div>
+          <div class="facet-card reveal" style="--d:.24s">
+            <span class="facet-label">Long-Term Book Visibility</span>
+            <h3>Lasting Follower Alerts &amp; Series Read-Through</h3>
+            <p>
+              Every reader who follows you on BookBub receives automatic notifications when you release
+              future books or run new promotions. Combined with solid back-matter links inside your
+              book, promotional campaigns introduce new readers to your entire body of work.
+            </p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ================= 03. AI BOOK DISCOVERABILITY ================= -->
+    <article class="service-band section-dark" id="ai-book-discoverability" aria-labelledby="svc-03-title">
+      <div class="container service-layout">
+        <div class="service-summary reveal">
+          <span class="service-index-tag"><b>03</b> Modern Search &amp; Metadata</span>
+          <h2 id="svc-03-title">AI Book <em>Discoverability</em></h2>
+          <p class="service-tagline">Structuring your book&rsquo;s digital footprint so modern search tools and recommendation systems understand it clearly.</p>
+          <div class="orn" aria-hidden="true"><span></span><i></i><span></span></div>
+          <a class="btn btn-outline" href="contact.html?service=AI+Book+Discoverability">
+            Inquire About This Service
+            <svg class="arrow" width="18" height="12" viewBox="0 0 18 12" fill="none" aria-hidden="true">
+              <path d="M1 6h15M11.5 1.5 16 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="service-facets">
+          <div class="facet-card reveal">
+            <span class="facet-label">What It Involves</span>
+            <h3>Structured Data, Consistent Citations &amp; Semantic Clarity</h3>
+            <p>
+              Auditing and organizing how your book and author identity are described across the open web.
+              This includes schema.org Book and Person markup guidance for your author website, consistent
+              metadata across retail and cataloging platforms, clear thematic and comparable-title framing,
+              and authoritative Q&amp;A content.
+            </p>
+          </div>
+          <div class="facet-card reveal" style="--d:.08s">
+            <span class="facet-label">Why It Matters to Authors</span>
+            <h3>Readers Increasingly Ask Conversational Questions</h3>
+            <p>
+              Alongside traditional keyword searches, readers now ask AI-assisted search engines and
+              recommendation tools descriptive questions about themes, moods, settings, and comparable
+              books. If your online presence is fragmented or vague, these systems lack the context needed
+              to identify what your book is about.
+            </p>
+          </div>
+          <div class="facet-card reveal" style="--d:.16s">
+            <span class="facet-label">What GTO Helps You Accomplish</span>
+            <h3>Coherent, Machine-Readable &amp; Reader-Friendly Context</h3>
+            <p>
+              We never claim to control or guarantee third-party AI outputs. Instead, we help you build
+              clean, consistent, well-structured information across your website, press pages, and retail
+              listings so search engines and discovery tools can accurately interpret your book&rsquo;s
+              genre, audience, and subject matter.
+            </p>
+          </div>
+          <div class="facet-card reveal" style="--d:.24s">
+            <span class="facet-label">Long-Term Book Visibility</span>
+            <h3>Future-Proofing Your Digital Catalog</h3>
+            <p>
+              Clear semantic positioning benefits both human readers and evolving search technologies.
+              By establishing a unified, authoritative source of truth for your books today, your catalog
+              remains easier to index, reference, and discover as search habits continue to evolve.
+            </p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ================= 04. BOOK CLUB OUTREACH ================= -->
+    <article class="service-band section-light" id="book-club-outreach" aria-labelledby="svc-04-title">
+      <div class="container service-layout">
+        <div class="service-summary reveal">
+          <span class="service-index-tag"><b>04</b> Reading Communities</span>
+          <h2 id="svc-04-title">Book Club <em>Outreach</em></h2>
+          <p class="service-tagline">Connecting your book with reading groups that value rich discussion and word-of-mouth sharing.</p>
+          <div class="orn" aria-hidden="true"><span></span><i></i><span></span></div>
+          <a class="btn btn-outline" href="contact.html?service=Book+Club+Outreach">
+            Inquire About This Service
+            <svg class="arrow" width="18" height="12" viewBox="0 0 18 12" fill="none" aria-hidden="true">
+              <path d="M1 6h15M11.5 1.5 16 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="service-facets">
+          <div class="facet-card reveal">
+            <span class="facet-label">What It Involves</span>
+            <h3>Discussion Guides, Club Kits &amp; Targeted Outreach</h3>
+            <p>
+              Creation of a thoughtful reader discussion guide, an inviting Book Club Kit for your website,
+              identification of independent, library, online, and genre-specific reading groups that match
+              your book&rsquo;s themes, and tailored outreach materials offering virtual or in-person
+              author Q&amp;A sessions.
+            </p>
+          </div>
+          <div class="facet-card reveal" style="--d:.08s">
+            <span class="facet-label">Why It Matters to Authors</span>
+            <h3>Word of Mouth Begins Around Shared Conversation</h3>
+            <p>
+              Book clubs do more than read a title together; they talk about it with friends, librarians,
+              booksellers, and online communities. When a book sparks meaningful group discussion, it earns
+              some of the most genuine organic advocacy in publishing.
+            </p>
+          </div>
+          <div class="facet-card reveal" style="--d:.16s">
+            <span class="facet-label">What GTO Helps You Accomplish</span>
+            <h3>Making Your Book Easy for Organizers to Choose</h3>
+            <p>
+              Book club hosts are constantly looking for engaging selections that will sustain an hour of
+              conversation. We help you package your book&rsquo;s central questions, background notes, and
+              author availability so organizers can immediately see why their group will enjoy discussing it.
+            </p>
+          </div>
+          <div class="facet-card reveal" style="--d:.24s">
+            <span class="facet-label">Long-Term Book Visibility</span>
+            <h3>Sustained Backlist Life Beyond Launch Week</h3>
+            <p>
+              Book clubs frequently select titles months or years after their initial publication date.
+              A dedicated Book Club Kit and steady community outreach keep your book active in reading
+              circles long after launch campaigns have concluded.
+            </p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ================= 05. EMAIL MARKETING ================= -->
+    <article class="service-band section-dark" id="email-marketing" aria-labelledby="svc-05-title">
+      <div class="container service-layout">
+        <div class="service-summary reveal">
+          <span class="service-index-tag"><b>05</b> Direct Reader Relationships</span>
+          <h2 id="svc-05-title">Email <em>Marketing</em></h2>
+          <p class="service-tagline">Building a direct, permission-based line of communication with the readers who care most about your work.</p>
+          <div class="orn" aria-hidden="true"><span></span><i></i><span></span></div>
+          <a class="btn btn-outline" href="contact.html?service=Email+Marketing">
+            Inquire About This Service
+            <svg class="arrow" width="18" height="12" viewBox="0 0 18 12" fill="none" aria-hidden="true">
+              <path d="M1 6h15M11.5 1.5 16 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="service-facets">
+          <div class="facet-card reveal">
+            <span class="facet-label">What It Involves</span>
+            <h3>Newsletter Strategy, Welcome Sequences &amp; Launch Emails</h3>
+            <p>
+              Planning and structuring your author newsletter, crafting an automated welcome sequence that
+              introduces new subscribers to your books, developing sustainable content ideas that fit your
+              writing rhythm, and writing clear, engaging announcement sequences for cover reveals,
+              preorders, and release weeks.
+            </p>
+          </div>
+          <div class="facet-card reveal" style="--d:.08s">
+            <span class="facet-label">Why It Matters to Authors</span>
+            <h3>An Audience You Actually Own</h3>
+            <p>
+              Social media algorithms and retail platforms change constantly, often limiting how many of
+              your followers see your updates. Your email list is the one communication channel you truly
+              own, allowing you to reach readers directly in their inbox whenever you have news worth sharing.
+            </p>
+          </div>
+          <div class="facet-card reveal" style="--d:.16s">
+            <span class="facet-label">What GTO Helps You Accomplish</span>
+            <h3>Consistent Connection Without Newsletter Burnout</h3>
+            <p>
+              Many authors avoid email marketing because they worry about sounding pushy or running out
+              of things to say. We help you establish a warm, literary voice and a manageable sending
+              schedule that readers genuinely look forward to opening.
+            </p>
+          </div>
+          <div class="facet-card reveal" style="--d:.24s">
+            <span class="facet-label">Long-Term Book Visibility</span>
+            <h3>Every Future Launch Starts From Higher Ground</h3>
+            <p>
+              An engaged subscriber list compounds over your entire career. Instead of starting from zero
+              with each new manuscript, you build a loyal community of early readers, ARC reviewers, and
+              supporters ready to champion every title you publish.
+            </p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ================= 06. AUTHOR BRANDING ================= -->
+    <article class="service-band section-light" id="author-branding" aria-labelledby="svc-06-title">
+      <div class="container service-layout">
+        <div class="service-summary reveal">
+          <span class="service-index-tag"><b>06</b> Identity &amp; Positioning</span>
+          <h2 id="svc-06-title">Author <em>Branding</em></h2>
+          <p class="service-tagline">Defining a clear, authentic public identity that connects your books into a recognizable body of work.</p>
+          <div class="orn" aria-hidden="true"><span></span><i></i><span></span></div>
+          <a class="btn btn-outline" href="contact.html?service=Author+Branding">
+            Inquire About This Service
+            <svg class="arrow" width="18" height="12" viewBox="0 0 18 12" fill="none" aria-hidden="true">
+              <path d="M1 6h15M11.5 1.5 16 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="service-facets">
+          <div class="facet-card reveal">
+            <span class="facet-label">What It Involves</span>
+            <h3>Voice, Bio Suite, Media Kit &amp; Website Direction</h3>
+            <p>
+              Clarifying your author positioning statement, writing short, medium, and full-length author
+              biographies, developing an editorial media kit for press and podcast hosts, and providing
+              visual and structural direction for your author website and retail profiles.
+            </p>
+          </div>
+          <div class="facet-card reveal" style="--d:.08s">
+            <span class="facet-label">Why It Matters to Authors</span>
+            <h3>Readers Fall in Love With Authors, Not Just Single Titles</h3>
+            <p>
+              When a reader finishes a book they admire, their next instinct is to look up the person who
+              wrote it. A cohesive, professional author brand reassures readers, journalists, event
+              organizers, and booksellers that you are a serious voice in your field or genre.
+            </p>
+          </div>
+          <div class="facet-card reveal" style="--d:.16s">
+            <span class="facet-label">What GTO Helps You Accomplish</span>
+            <h3>Clarity on What You Stand For as a Writer</h3>
+            <p>
+              Branding for authors should never feel artificial or corporate. We help you articulate the
+              recurring themes, questions, and reader experiences that define your writing, giving you
+              polished materials you can use confidently across every platform.
+            </p>
+          </div>
+          <div class="facet-card reveal" style="--d:.24s">
+            <span class="facet-label">Long-Term Book Visibility</span>
+            <h3>Recognition That Carries Across Your Entire Career</h3>
+            <p>
+              A strong author brand links your backlist to your frontlist. As your reputation grows,
+              readers begin seeking out your name directly, making each subsequent book easier to
+              introduce to the market.
+            </p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ================= 07. SOCIAL MEDIA BOOK PROMOTION ================= -->
+    <article class="service-band section-dark" id="social-media-book-promotion" aria-labelledby="svc-07-title">
+      <div class="container service-layout">
+        <div class="service-summary reveal">
+          <span class="service-index-tag"><b>07</b> Content &amp; Community</span>
+          <h2 id="svc-07-title">Social Media Book <em>Promotion</em></h2>
+          <p class="service-tagline">Thoughtful, sustainable social media strategy designed to spark curiosity rather than exhaustion.</p>
+          <div class="orn" aria-hidden="true"><span></span><i></i><span></span></div>
+          <a class="btn btn-outline" href="contact.html?service=Social+Media+Book+Promotion">
+            Inquire About This Service
+            <svg class="arrow" width="18" height="12" viewBox="0 0 18 12" fill="none" aria-hidden="true">
+              <path d="M1 6h15M11.5 1.5 16 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="service-facets">
+          <div class="facet-card reveal">
+            <span class="facet-label">What It Involves</span>
+            <h3>Platform Selection, Content Pillars &amp; Campaign Assets</h3>
+            <p>
+              Identifying the one or two social platforms where your specific readership actually spends
+              time, defining three to four repeatable content pillars, writing engaging post hooks and
+              excerpt graphics concepts, and planning structured promotional arcs around key milestones.
+            </p>
+          </div>
+          <div class="facet-card reveal" style="--d:.08s">
+            <span class="facet-label">Why It Matters to Authors</span>
+            <h3>Replacing Repetitive &ldquo;Buy My Book&rdquo; Posts</h3>
+            <p>
+              Many authors feel frustrated by social media because constant sales pitches rarely earn
+              engagement. Readers respond to atmosphere, character insight, fascinating research details,
+              and genuine literary conversation far more than repeated purchase links.
+            </p>
+          </div>
+          <div class="facet-card reveal" style="--d:.16s">
+            <span class="facet-label">What GTO Helps You Accomplish</span>
+            <h3>A Focused Presence That Protects Your Writing Time</h3>
+            <p>
+              You do not need to be on every platform every day. We help you build a realistic, story-first
+              social strategy that highlights the heart of your book, connects with fellow writers and
+              bookish communities, and guides interested followers toward your website or newsletter.
+            </p>
+          </div>
+          <div class="facet-card reveal" style="--d:.24s">
+            <span class="facet-label">Long-Term Book Visibility</span>
+            <h3>Ongoing Discovery &amp; Reader Conversation</h3>
+            <p>
+              Consistent, value-driven social content creates multiple entry points into your world.
+              Over time, your profile serves as a living portfolio that introduces new readers to your
+              themes and keeps your titles part of ongoing genre conversations.
+            </p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ================= 08. BOOK LAUNCH CAMPAIGNS ================= -->
+    <article class="service-band section-light" id="book-launch-campaigns" aria-labelledby="svc-08-title">
+      <div class="container service-layout">
+        <div class="service-summary reveal">
+          <span class="service-index-tag"><b>08</b> Release Architecture</span>
+          <h2 id="svc-08-title">Book Launch <em>Campaigns</em></h2>
+          <p class="service-tagline">Structured pre-launch, release-week, and post-launch planning to give your book a coordinated debut.</p>
+          <div class="orn" aria-hidden="true"><span></span><i></i><span></span></div>
+          <a class="btn btn-outline" href="contact.html?service=Book+Launch+Campaigns">
+            Inquire About This Service
+            <svg class="arrow" width="18" height="12" viewBox="0 0 18 12" fill="none" aria-hidden="true">
+              <path d="M1 6h15M11.5 1.5 16 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="service-facets">
+          <div class="facet-card reveal">
+            <span class="facet-label">What It Involves</span>
+            <h3>End-to-End Launch Timeline &amp; Multi-Channel Coordination</h3>
+            <p>
+              A week-by-week launch roadmap covering preorder setup, cover and blurb reveals, advance
+              reader copy (ARC) distribution timelines, retail metadata readiness, email and social
+              countdown sequences, promotional stacking during release week, and thirty-day post-launch
+              follow-through.
+            </p>
+          </div>
+          <div class="facet-card reveal" style="--d:.08s">
+            <span class="facet-label">Why It Matters to Authors</span>
+            <h3>Coordinated Momentum Outperforms Scattered Effort</h3>
+            <p>
+              Without a structured timeline, launch week often arrives in a rush of last-minute tasks.
+              Coordinating your early reviews, retail optimization, newsletter announcements, and outreach
+              into a unified window gives your book noticeably stronger early traction.
+            </p>
+          </div>
+          <div class="facet-card reveal" style="--d:.16s">
+            <span class="facet-label">What GTO Helps You Accomplish</span>
+            <h3>A Calm, Methodical Path to Publication Day</h3>
+            <p>
+              Whether your book is three months from release or recently published and in need of a
+              relaunch, we organize every moving part into a clear sequence so you know what to focus on
+              each week and why it matters.
+            </p>
+          </div>
+          <div class="facet-card reveal" style="--d:.24s">
+            <span class="facet-label">Long-Term Book Visibility</span>
+            <h3>Turning Launch Energy Into Evergreen Momentum</h3>
+            <p>
+              A thoughtful launch does not end on release Tuesday. By capturing early reader reviews,
+              refining retail positioning based on real buyer response, and transitioning into post-launch
+              outreach, your debut window sets up months of continued discoverability.
+            </p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ================= 09. READER FUNNEL DEVELOPMENT ================= -->
+    <article class="service-band section-dark" id="reader-funnel-development" aria-labelledby="svc-09-title">
+      <div class="container service-layout">
+        <div class="service-summary reveal">
+          <span class="service-index-tag"><b>09</b> Audience Retention</span>
+          <h2 id="svc-09-title">Reader Funnel <em>Development</em></h2>
+          <p class="service-tagline">Creating natural pathways that turn a single book purchase or website visit into a lasting reader relationship.</p>
+          <div class="orn" aria-hidden="true"><span></span><i></i><span></span></div>
+          <a class="btn btn-outline" href="contact.html?service=Reader+Funnel+Development">
+            Inquire About This Service
+            <svg class="arrow" width="18" height="12" viewBox="0 0 18 12" fill="none" aria-hidden="true">
+              <path d="M1 6h15M11.5 1.5 16 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="service-facets">
+          <div class="facet-card reveal">
+            <span class="facet-label">What It Involves</span>
+            <h3>Reader Magnets, Landing Pages &amp; Back-Matter Design</h3>
+            <p>
+              Designing the complete journey from first discovery to long-term readership. This includes
+              reader magnet concepts (such as bonus chapters, short prequels, or companion guides),
+              high-converting signup landing pages, strategic front-matter and back-matter calls to action
+              inside your books, and onboarding email flows.
+            </p>
+          </div>
+          <div class="facet-card reveal" style="--d:.08s">
+            <span class="facet-label">Why It Matters to Authors</span>
+            <h3>Most Readers Finish a Book and Disappear</h3>
+            <p>
+              Retailers rarely share buyer contact details with authors. Even if someone loves your book,
+              they may forget your name six months later unless you invite them into your world right at
+              the moment they turn the final page.
+            </p>
+          </div>
+          <div class="facet-card reveal" style="--d:.16s">
+            <span class="facet-label">What GTO Helps You Accomplish</span>
+            <h3>A Seamless Bridge From One Book to the Next</h3>
+            <p>
+              We help you craft compelling, genre-appropriate incentives and clear book back-matter that
+              naturally guide readers to your next title, your review page, and your mailing list without
+              feeling intrusive.
+            </p>
+          </div>
+          <div class="facet-card reveal" style="--d:.24s">
+            <span class="facet-label">Long-Term Book Visibility</span>
+            <h3>Maximizing the Value of Every Reader You Reach</h3>
+            <p>
+              When a reader funnel is in place, every other marketing effort becomes more effective.
+              Every podcast interview, ad click, or book club selection has a built-in mechanism to retain
+              interested readers for the long haul.
+            </p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ================= 10. BOOK REVIEW AND READER OUTREACH ================= -->
+    <article class="service-band section-light" id="book-review-and-reader-outreach" aria-labelledby="svc-10-title">
+      <div class="container service-layout">
+        <div class="service-summary reveal">
+          <span class="service-index-tag"><b>10</b> Social Proof &amp; Credibility</span>
+          <h2 id="svc-10-title">Book Review &amp; Reader <em>Outreach</em></h2>
+          <p class="service-tagline">Ethical, targeted outreach to early readers, reviewers, and literary voices to help your book earn authentic social proof.</p>
+          <div class="orn" aria-hidden="true"><span></span><i></i><span></span></div>
+          <a class="btn btn-outline" href="contact.html?service=Book+Review+and+Reader+Outreach">
+            Inquire About This Service
+            <svg class="arrow" width="18" height="12" viewBox="0 0 18 12" fill="none" aria-hidden="true">
+              <path d="M1 6h15M11.5 1.5 16 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="service-facets">
+          <div class="facet-card reveal">
+            <span class="facet-label">What It Involves</span>
+            <h3>ARC Campaigns, Reviewer Pitching &amp; Blurb Strategy</h3>
+            <p>
+              Structuring your Advance Reader Copy (ARC) campaign, researching relevant book bloggers,
+              genre reviewers, Bookstagram and BookTok creators, and trade or independent review outlets,
+              writing respectful, personalized pitch letters, and crafting polite review reminders in your
+              book&rsquo;s back matter and email sequences.
+            </p>
+          </div>
+          <div class="facet-card reveal" style="--d:.08s">
+            <span class="facet-label">Why It Matters to Authors</span>
+            <h3>Readers Trust Other Readers</h3>
+            <p>
+              Honest reader reviews and editorial endorsements provide essential reassurance to prospective
+              buyers. A book page with thoughtful reviews signals that real people have invested their time
+              in the book and found it worthwhile.
+            </p>
+          </div>
+          <div class="facet-card reveal" style="--d:.16s">
+            <span class="facet-label">What GTO Helps You Accomplish</span>
+            <h3>Professional Outreach Built on Integrity</h3>
+            <p>
+              We strictly follow retail and publishing ethics: we never buy, fabricate, or guarantee
+              positive reviews. Instead, we help you put review copies into the hands of genuine readers
+              and reviewers who already appreciate your genre and are most inclined to read and share
+              their honest thoughts.
+            </p>
+          </div>
+          <div class="facet-card reveal" style="--d:.24s">
+            <span class="facet-label">Long-Term Book Visibility</span>
+            <h3>Compounding Credibility Across Retail &amp; Media</h3>
+            <p>
+              Every legitimate review and editorial quote strengthens your retail conversion rate, unlocks
+              eligibility for promotional platforms that require a minimum review count, and gives you
+              persuasive pull-quotes to feature across your website and marketing materials.
+            </p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ================= ETHICAL TRANSPARENCY NOTE ================= -->
+    <section class="ethics-band" aria-labelledby="ethics-heading">
+      <div class="container">
+        <div class="ethics-box reveal">
+          <div>
+            <p class="eyebrow">Our Standard of Integrity</p>
+            <h2 id="ethics-heading">Persuasive strategy. Realistic expectations.</h2>
+          </div>
+          <div>
+            <p>
+              At GTO Literary Marketing, we believe authors deserve candid, professional counsel.
+              While strategic marketing significantly improves a book&rsquo;s presentation, reach, and
+              discoverability, no ethical consultancy can guarantee specific book sales figures, bestseller
+              rankings, BookBub Featured Deal acceptance, positive reader reviews, or third-party AI
+              recommendations.
+            </p>
+            <p>
+              What we do guarantee is thoughtful preparation, tailored strategy, transparent communication,
+              and dedicated execution designed to give your book its strongest possible opportunity to
+              connect with readers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FINAL CTA ================= -->
+    <section class="section section-dark cta-final" aria-labelledby="services-cta-heading">
+      <div class="container">
+        <div class="orn reveal" aria-hidden="true"><span></span><i></i><span></span></div>
+        <h2 id="services-cta-heading" class="reveal" style="--d:.08s">Not sure which service fits <em>your book?</em></h2>
+        <p class="cta-lede reveal" style="--d:.16s">
+          You can request a single service or a customized combination tailored to your publishing
+          stage. Request a free consultation and we will help you prioritize the steps that matter most.
+        </p>
+        <div class="cta-actions reveal" style="--d:.24s">
+          <a class="btn btn-solid" href="contact.html">
+            Get a Free Book Marketing Consultation
+            <svg class="arrow" width="18" height="12" viewBox="0 0 18 12" fill="none" aria-hidden="true">
+              <path d="M1 6h15M11.5 1.5 16 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </a>
+          <a class="btn btn-outline" href="faq.html">Read Frequently Asked Questions</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" aria-label="GTO Literary Marketing Home">
+          <span class="brand-logo">
+            <img src="Gilded Literary Marketing Emblem.png"
+                 alt="GTO Literary Marketing Logo"
+                 onerror="this.parentElement.classList.add('logo-missing')">
+            <span class="logo-fallback" aria-hidden="true">
+              <span class="logo-fallback-mark">G</span>
+              <span class="logo-fallback-tag">LOGO.JPG</span>
+            </span>
+          </span>
+          <span class="brand-text">
+            <span class="bt-name">GTO Literary</span>
+            <span class="bt-sub">Marketing</span>
+          </span>
+        </a>
+        <p class="fb-tag">Helping Great Books Reach More Readers.</p>
+        <p>
+          A literary marketing consultancy providing book promotion services to authors,
+          publishers, and literary professionals worldwide.
+        </p>
+      </div>
+
+      <nav class="footer-col" aria-label="Footer navigation">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#amazon-book-marketing">Amazon Book Marketing</a></li>
+          <li><a href="services.html#book-launch-campaigns">Book Launch Campaigns</a></li>
+          <li><a href="services.html#bookbub-promotion">BookBub Promotion</a></li>
+          <li><a href="services.html#author-branding">Author Branding</a></li>
+          <li><a href="services.html">All services&hellip;</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <span class="footer-email">hello@gtoliterary.com</span>
+        <a class="link-more" href="contact.html">
+          Request a consultation
+          <svg class="arrow" width="18" height="12" viewBox="0 0 18 12" fill="none" aria-hidden="true">
+            <path d="M1 6h15M11.5 1.5 16 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; <span id="year">2025</span> GTO Literary Marketing. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+      </div>
+      <a class="to-top" href="#main" aria-label="Back to top">
+        Back to top
+        <svg width="12" height="14" viewBox="0 0 12 14" fill="none" aria-hidden="true">
+          <path d="M6 13V1M1.5 5.5 6 1l4.5 4.5" stroke="currentColor" stroke-width="1.5"/>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      'use strict';
+
+      var yearEl = document.getElementById('year');
+      if (yearEl) { yearEl.textContent = new Date().getFullYear(); }
+
+      var header = document.getElementById('site-header');
+      function onScrollHeader() {
+        if (header) {
+          header.classList.toggle('scrolled',
+            (window.scrollY || document.documentElement.scrollTop) > 8);
+        }
+      }
+
+      var toggle = document.getElementById('menu-toggle');
+      var overlay = document.getElementById('menu-overlay');
+
+      function setMenu(open) {
+        if (!toggle || !overlay) { return; }
+        toggle.classList.toggle('active', open);
+        overlay.classList.toggle('open', open);
+        document.body.classList.toggle('menu-open', open);
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        overlay.setAttribute('aria-hidden', open ? 'false' : 'true');
+      }
+
+      if (toggle && overlay) {
+        toggle.addEventListener('click', function () {
+          setMenu(!overlay.classList.contains('open'));
+        });
+        overlay.addEventListener('click', function (e) {
+          if (e.target.closest('a')) { setMenu(false); }
+        });
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && overlay.classList.contains('open')) {
+            setMenu(false);
+            toggle.focus();
+          }
+        });
+      }
+
+      var revealEls = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('in');
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+        revealEls.forEach(function (el) { io.observe(el); });
+      } else {
+        revealEls.forEach(function (el) { el.classList.add('in'); });
+      }
+
+      var ribbon = document.querySelector('.ribbon');
+      var maxRibbon = 420;
+      function updateRibbon() {
+        if (!ribbon) { return; }
+        var doc = document.documentElement;
+        var max = doc.scrollHeight - window.innerHeight;
+        var p = max > 0 ? Math.min(1, (window.scrollY || doc.scrollTop) / max) : 0;
+        ribbon.style.height = (p * maxRibbon) + 'px';
+      }
+
+      var ticking = false;
+      function onScroll() {
+        if (!ticking) {
+          window.requestAnimationFrame(function () {
+            onScrollHeader();
+            updateRibbon();
+            ticking = false;
+          });
+          ticking = true;
+        }
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', function () {
+        maxRibbon = Math.min(window.innerHeight * 0.55, 440);
+        updateRibbon();
+      });
+
+      maxRibbon = Math.min(window.innerHeight * 0.55, 440);
+      onScrollHeader();
+      updateRibbon();
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,1329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Let's Help Your Book Reach More Readers | GTO Literary Marketing</title>
+  <meta name="description" content="Request a complimentary literary marketing consultation with Gideon at GTO Literary Marketing. Discuss Amazon discoverability, launch strategy, author branding, and custom promotion." />
+  <meta name="keywords" content="Book Marketing Agency, Literary Marketing Consultant, Book Promotion Services, Book Marketing Consultation, Amazon Book Marketing, Author Branding, Book Launch Marketing" />
+  <meta name="author" content="Gideon - Founder &amp; Literary Marketing Consultant" />
+  <meta name="robots" content="index, follow" />
+
+  <style>
+    /* ==========================================================================
+       1. CSS VARIABLES & LUXURY BRAND PALETTE
+       ========================================================================== */
+    :root {
+      --color-black: #0B0B0C;
+      --color-black-surface: #121215;
+      --color-black-card: #18181C;
+      --color-black-border: #26262B;
+      --color-gold: #C5A059;
+      --color-gold-light: #DFBE7F;
+      --color-gold-dark: #9E7B36;
+      --color-gold-muted: rgba(197, 160, 89, 0.15);
+      --color-cream: #F9F6F0;
+      --color-cream-deep: #EFEAE0;
+      --color-white: #FFFFFF;
+      --color-text-dark: #161618;
+      --color-text-muted-dark: #58575C;
+      --color-text-muted-light: #B8B5AD;
+      --color-border-gold: rgba(197, 160, 89, 0.35);
+      --color-border-light: rgba(22, 22, 24, 0.12);
+      --color-error: #D9534F;
+      --color-success: #2E7D32;
+
+      --font-serif: "Playfair Display", "Didot", "Bodoni MT", "Georgia", serif;
+      --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+      --container-max: 1240px;
+      --container-narrow: 920px;
+      --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      --shadow-luxury: 0 16px 40px rgba(0, 0, 0, 0.08);
+      --shadow-card: 0 20px 45px rgba(0, 0, 0, 0.06);
+    }
+
+    /* ==========================================================================
+       2. RESET & BASE
+       ========================================================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--color-black);
+      color: var(--color-cream);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    img, svg {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    ul, ol {
+      list-style: none;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 1rem;
+      background: var(--color-gold);
+      color: var(--color-black);
+      padding: 0.75rem 1.25rem;
+      font-weight: 700;
+      z-index: 10000;
+    }
+    .skip-link:focus {
+      top: 1rem;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 1.75rem;
+    }
+
+    /* ==========================================================================
+       3. EXACT HEADER & SUB-BAR
+       ========================================================================== */
+    .site-header {
+      background-color: var(--color-black);
+      border-bottom: 1px solid rgba(197, 160, 89, 0.15);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 90px;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      gap: 1.5rem;
+    }
+
+    .brand-link {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+
+    .logo-box {
+      width: 54px;
+      height: 54px;
+      border: 1px solid var(--color-gold);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #0B0B0C;
+      position: relative;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .logo-box .logo-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: none;
+    }
+
+    .logo-box .logo-placeholder-letter {
+      font-family: var(--font-serif);
+      color: var(--color-gold);
+      font-size: 1.4rem;
+      font-style: italic;
+      line-height: 1;
+      margin-top: 2px;
+    }
+
+    .logo-box .logo-placeholder-text {
+      font-size: 0.45rem;
+      font-family: var(--font-sans);
+      color: var(--color-gold);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    .brand-text-block {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-title {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      color: var(--color-white);
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      line-height: 1.15;
+    }
+
+    .brand-subtitle {
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      color: var(--color-gold);
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-top: 0.2rem;
+    }
+
+    .nav-menu-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .nav-links-list {
+      display: flex;
+      align-items: center;
+      gap: 2.2rem;
+    }
+
+    .nav-links-list a {
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--color-text-muted-light);
+      padding: 0.45rem 0;
+      position: relative;
+    }
+
+    .nav-links-list a:hover,
+    .nav-links-list a.active {
+      color: var(--color-gold);
+    }
+
+    .nav-links-list a.active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 100%;
+      height: 1.5px;
+      background-color: var(--color-gold);
+    }
+
+    .header-cta-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--color-gold);
+      background: transparent;
+      color: var(--color-gold);
+      font-family: var(--font-sans);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 0.85rem 1.65rem;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+
+    .header-cta-btn:hover {
+      background: var(--color-gold);
+      color: var(--color-black);
+      box-shadow: 0 0 20px rgba(197, 160, 89, 0.25);
+    }
+
+    .header-sub-banner {
+      background-color: #0E0E10;
+      border-bottom: 1px solid rgba(197, 160, 89, 0.12);
+      padding: 0.75rem 0;
+      text-align: center;
+    }
+
+    .sub-banner-text {
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--color-gold);
+    }
+
+    .mobile-toggle {
+      display: none;
+      background: none;
+      border: 1px solid var(--color-gold);
+      color: var(--color-gold);
+      padding: 0.5rem;
+      cursor: pointer;
+    }
+
+    /* ==========================================================================
+       4. HERO BANNER
+       ========================================================================== */
+    .contact-hero {
+      padding: 5rem 0 3.75rem;
+      background: radial-gradient(circle at top center, rgba(197, 160, 89, 0.08) 0%, rgba(11, 11, 12, 1) 70%);
+      border-bottom: 1px solid var(--color-black-border);
+      text-align: center;
+    }
+
+    .section-eyebrow {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--color-gold);
+      margin-bottom: 1rem;
+    }
+
+    .contact-hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.2rem, 4.2vw, 3.4rem);
+      color: var(--color-white);
+      margin-bottom: 1.25rem;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    .contact-hero h1 span {
+      color: var(--color-gold);
+      font-style: italic;
+    }
+
+    .contact-hero p {
+      max-width: 680px;
+      margin: 0 auto;
+      color: var(--color-text-muted-light);
+      font-size: 1.05rem;
+      line-height: 1.75;
+    }
+
+    /* ==========================================================================
+       5. MAIN CONTACT SECTION & GRID
+       ========================================================================== */
+    .contact-section {
+      background-color: var(--color-cream);
+      color: var(--color-text-dark);
+      padding: 5rem 0 6.5rem;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 3.5rem;
+      align-items: start;
+    }
+
+    /* LEFT COLUMN: CONSULTANCY DETAILS */
+    .contact-info-col h2 {
+      font-family: var(--font-serif);
+      font-size: 1.95rem;
+      color: var(--color-text-dark);
+      margin-bottom: 1rem;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    .contact-lead {
+      color: var(--color-text-muted-dark);
+      font-size: 1.02rem;
+      line-height: 1.75;
+      margin-bottom: 2.25rem;
+    }
+
+    .consultation-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .step-card {
+      background: var(--color-white);
+      border: 1px solid var(--color-border-light);
+      padding: 1.5rem 1.65rem;
+      border-left: 3px solid var(--color-gold);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+    }
+
+    .step-card h3 {
+      font-family: var(--font-serif);
+      font-size: 1.12rem;
+      color: var(--color-text-dark);
+      margin-bottom: 0.35rem;
+    }
+
+    .step-card p {
+      font-size: 0.92rem;
+      color: var(--color-text-muted-dark);
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+
+    .direct-inquiry-box {
+      background: #0B0B0C;
+      color: var(--color-white);
+      border: 1px solid var(--color-border-gold);
+      padding: 2rem;
+      margin-top: 1.5rem;
+    }
+
+    .direct-inquiry-box h3 {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      color: var(--color-gold);
+      margin-bottom: 0.75rem;
+    }
+
+    .direct-inquiry-box p {
+      font-size: 0.92rem;
+      color: var(--color-text-muted-light);
+      line-height: 1.65;
+      margin-bottom: 1rem;
+    }
+
+    .planned-email-badge {
+      display: inline-block;
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: rgba(197, 160, 89, 0.15);
+      border: 1px solid rgba(197, 160, 89, 0.35);
+      color: var(--color-gold);
+      padding: 0.25rem 0.65rem;
+      margin-top: 0.35rem;
+    }
+
+    /* RIGHT COLUMN: CONSULTATION FORM */
+    .form-card {
+      background: var(--color-white);
+      border: 1px solid var(--color-border-light);
+      box-shadow: var(--shadow-card);
+      padding: 3rem 2.75rem;
+      position: relative;
+    }
+
+    .form-card-header {
+      margin-bottom: 2rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid var(--color-border-light);
+    }
+
+    .form-card-header h2 {
+      font-family: var(--font-serif);
+      font-size: 1.65rem;
+      color: var(--color-text-dark);
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .form-card-header p {
+      color: var(--color-text-muted-dark);
+      font-size: 0.92rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.84rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--color-text-dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .form-label span.req {
+      color: var(--color-gold-dark);
+      margin-left: 2px;
+    }
+
+    .form-label span.opt {
+      font-size: 0.75rem;
+      color: var(--color-text-muted-dark);
+      font-weight: 400;
+      text-transform: none;
+      letter-spacing: normal;
+      margin-left: 4px;
+    }
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      font-family: var(--font-sans);
+      font-size: 0.94rem;
+      border: 1px solid var(--color-border-light);
+      background-color: #FAF8F5;
+      color: var(--color-text-dark);
+      transition: var(--transition);
+      outline: none;
+    }
+
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
+      background-color: var(--color-white);
+      border-color: var(--color-gold-dark);
+      box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.15);
+    }
+
+    .form-input.has-error,
+    .form-select.has-error,
+    .form-textarea.has-error {
+      border-color: var(--color-error);
+      background-color: #FFF7F7;
+    }
+
+    .form-error-text {
+      display: none;
+      font-size: 0.78rem;
+      color: var(--color-error);
+      margin-top: 0.4rem;
+      font-weight: 500;
+    }
+
+    .form-textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .checkbox-group {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .checkbox-group input[type="checkbox"] {
+      margin-top: 0.3rem;
+      accent-color: var(--color-gold);
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+    }
+
+    .checkbox-label {
+      font-size: 0.85rem;
+      color: var(--color-text-muted-dark);
+      line-height: 1.55;
+    }
+
+    .submit-btn {
+      width: 100%;
+      background: var(--color-gold);
+      color: var(--color-black);
+      border: 1px solid var(--color-gold);
+      padding: 1.05rem 2rem;
+      font-family: var(--font-sans);
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+    }
+
+    .submit-btn:hover:not(:disabled) {
+      background: var(--color-gold-light);
+      border-color: var(--color-gold-light);
+      box-shadow: 0 10px 25px rgba(197, 160, 89, 0.28);
+      transform: translateY(-2px);
+    }
+
+    .submit-btn:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    /* SUCCESS & ERROR MESSAGE BOXES */
+    .form-alert {
+      display: none;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1.75rem;
+      font-size: 0.92rem;
+      line-height: 1.6;
+      border-radius: 2px;
+    }
+
+    .form-alert-success {
+      background-color: #E8F5E9;
+      border-left: 4px solid var(--color-success);
+      color: var(--color-success);
+    }
+
+    .form-alert-error {
+      background-color: #FFF2F2;
+      border-left: 4px solid var(--color-error);
+      color: var(--color-error);
+    }
+
+    .backend-note {
+      margin-top: 2rem;
+      padding: 1.25rem;
+      background: #FAF8F5;
+      border: 1px dashed var(--color-border-light);
+      font-size: 0.82rem;
+      color: var(--color-text-muted-dark);
+      line-height: 1.6;
+    }
+
+    .backend-note strong {
+      color: var(--color-text-dark);
+      display: block;
+      margin-bottom: 0.35rem;
+    }
+
+    /* ==========================================================================
+       6. ETHICAL TRANSPARENCY BANNER
+       ========================================================================== */
+    .transparency-banner {
+      background-color: var(--color-black);
+      border-top: 1px solid var(--color-border-gold);
+      padding: 4rem 0;
+      text-align: center;
+    }
+
+    .transparency-box {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .transparency-box h3 {
+      font-family: var(--font-serif);
+      font-size: 1.45rem;
+      color: var(--color-white);
+      margin-bottom: 0.75rem;
+    }
+
+    .transparency-box p {
+      color: var(--color-text-muted-light);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    /* ==========================================================================
+       7. FOOTER
+       ========================================================================== */
+    .site-footer {
+      background-color: #080809;
+      color: var(--color-text-muted-light);
+      padding: 4.5rem 0 2rem;
+      border-top: 1px solid rgba(197, 160, 89, 0.12);
+      font-size: 0.9rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 0.8fr 1fr 1.1fr;
+      gap: 2.5rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid rgba(197, 160, 89, 0.12);
+    }
+
+    .footer-brand p {
+      margin-top: 1.15rem;
+      font-size: 0.88rem;
+      line-height: 1.7;
+    }
+
+    .footer-quote {
+      font-family: var(--font-serif);
+      font-style: italic;
+      color: var(--color-gold);
+      margin-top: 0.6rem;
+      font-size: 0.95rem;
+    }
+
+    .footer-col h4 {
+      font-family: var(--font-serif);
+      color: var(--color-white);
+      font-size: 1.05rem;
+      margin-bottom: 1.25rem;
+      font-weight: 500;
+    }
+
+    .footer-links li {
+      margin-bottom: 0.65rem;
+    }
+
+    .footer-links a {
+      color: var(--color-text-muted-light);
+      font-size: 0.86rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--color-gold);
+      padding-left: 4px;
+    }
+
+    .placeholder-badge {
+      display: inline-block;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      background: rgba(197, 160, 89, 0.15);
+      color: var(--color-gold);
+      border: 1px solid rgba(197, 160, 89, 0.35);
+      padding: 0.15rem 0.5rem;
+      margin-top: 0.35rem;
+    }
+
+    .footer-bottom {
+      padding-top: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      font-size: 0.82rem;
+    }
+
+    .footer-legal a {
+      margin-left: 1.25rem;
+      color: var(--color-text-muted-light);
+    }
+
+    .footer-legal a:hover {
+      color: var(--color-gold);
+    }
+
+    /* ==========================================================================
+       8. RESPONSIVE BREAKPOINTS
+       ========================================================================== */
+    @media (max-width: 1024px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 860px) {
+      .mobile-toggle {
+        display: block;
+      }
+      .nav-menu-wrapper {
+        position: fixed;
+        top: 90px;
+        left: 0;
+        right: 0;
+        background: #0B0B0C;
+        border-bottom: 1px solid var(--color-border-gold);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2rem;
+        gap: 1.5rem;
+        transform: translateY(-130%);
+        opacity: 0;
+        visibility: hidden;
+        transition: var(--transition);
+      }
+      .nav-menu-wrapper.open {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+      }
+      .nav-links-list {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.2rem;
+        width: 100%;
+      }
+      .header-cta-btn {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .form-card {
+        padding: 2rem 1.5rem;
+      }
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+      .footer-legal a {
+        margin: 0 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ========================================================================
+       TOP HEADER (Matches Attached Pattern Exactly)
+       ======================================================================== -->
+  <header class="site-header" role="banner">
+    <div class="container nav-container">
+
+      <!-- LOGO PART -->
+      <a href="index.html" class="brand-link" aria-label="GTO Literary Marketing Home">
+        <div class="logo-box" id="logoBoxContainer">
+          <span class="logo-placeholder-letter" id="fallbackLetter">G</span>
+          <span class="logo-placeholder-text" id="fallbackSubtext">LOGO.JPG</span>
+          <img src="Gilded Literary Marketing Emblem.png" alt="GTO Literary Logo" class="logo-img" id="actualLogoImg" onerror="this.style.display='none';" onload="this.style.display='block'; document.getElementById('fallbackLetter').style.display='none'; document.getElementById('fallbackSubtext').style.display='none';" />
+        </div>
+        <div class="brand-text-block">
+          <span class="brand-title">GTO Literary</span>
+          <span class="brand-subtitle">MARKETING</span>
+        </div>
+      </a>
+
+      <!-- MOBILE TOGGLE BUTTON -->
+      <button class="mobile-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <!-- NAVIGATION MENU -->
+      <nav class="nav-menu-wrapper" id="navMenuWrapper" role="navigation" aria-label="Main Navigation">
+        <ul class="nav-links-list">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="services.html">SERVICES</a></li>
+          <li><a href="blog.html">BLOG</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html" class="active" aria-current="page">CONTACT</a></li>
+        </ul>
+        <a href="contact.html" class="header-cta-btn">FREE CONSULTATION</a>
+      </nav>
+
+    </div>
+
+    <!-- SUB-BAR BANNER -->
+    <div class="header-sub-banner">
+      <div class="container">
+        <p class="sub-banner-text">FOR AUTHORS, PUBLISHERS &amp; LITERARY PROFESSIONALS</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       MAIN PAGE CONTENT
+       ======================================================================== -->
+  <main id="main-content">
+
+    <!-- HERO SECTION -->
+    <section class="contact-hero">
+      <div class="container">
+        <span class="section-eyebrow">Direct Strategy Inquiry</span>
+        <h1>Let's Help Your Book <span>Reach More Readers</span></h1>
+        <p>
+          Every book has its own creative heart and distinct commercial path. Share your publishing milestones with Gideon to explore a tailored literary marketing roadmap.
+        </p>
+      </div>
+    </section>
+
+    <!-- CONSULTATION & FORM SECTION -->
+    <section class="contact-section">
+      <div class="container">
+        <div class="contact-grid">
+
+          <!-- LEFT COLUMN: WHAT TO EXPECT & DIRECT DETAILS -->
+          <div class="contact-info-col">
+            <h2>A Thoughtful, Pressure-Free Strategic Discussion</h2>
+            <p class="contact-lead">
+              Our initial consultation is exploratory. We do not use aggressive sales scripts. Our goal is to examine your current positioning, understand your creative goals, and honestly determine if GTO Literary Marketing is the right partner for your book.
+            </p>
+
+            <div class="consultation-steps">
+              <div class="step-card">
+                <h3>1. Meticulous Pre-Call Review</h3>
+                <p>
+                  Before our consultation, Gideon personally evaluates your book’s existing digital footprint, retail pages, and current positioning.
+                </p>
+              </div>
+
+              <div class="step-card">
+                <h3>2. 30-Minute Free Strategy Session</h3>
+                <p>
+                  We discuss your target audience, identify discoverability bottlenecks, and evaluate the specific marketing channels best suited for your genre.
+                </p>
+              </div>
+
+              <div class="step-card">
+                <h3>3. Clear, Tailored Proposal</h3>
+                <p>
+                  If there is mutual alignment, you will receive a transparent proposal detailing deliverables, timelines, and modular service options.
+                </p>
+              </div>
+            </div>
+
+            <!-- DIRECT INQUIRY DETAILS -->
+            <div class="direct-inquiry-box">
+              <h3>Direct Consultation Desk</h3>
+              <p>
+                <strong>Consultant:</strong> Gideon<br />
+                Founder &amp; Literary Marketing Consultant
+              </p>
+              <p>
+                <strong>Planned Business Email:</strong><br />
+                <span style="color: var(--color-gold); font-size: 1rem;">hello@gtoliterary.com</span><br />
+              </p>
+              <p style="margin-bottom: 0;">
+                <strong>Client Reach:</strong> Serving authors, publishers, and literary professionals internationally across all time zones.
+              </p>
+            </div>
+          </div>
+
+          <!-- RIGHT COLUMN: CONSULTATION FORM (CONNECTED TO FORMSPREE) -->
+          <div class="form-card">
+            <div class="form-card-header">
+              <h2>Request a Free Book Marketing Consultation</h2>
+              <p>Please complete the details below. Messages are delivered directly to Gideon’s inbox.</p>
+            </div>
+
+            <!-- ALERT MESSAGES -->
+            <div class="form-alert form-alert-success" id="formSuccessAlert" role="alert">
+              <strong>Thank You for Your Consultation Request.</strong><br />
+              Your message has been sent directly to Gideon. We will review your book's details and reach out within two business days to schedule your consultation.
+            </div>
+
+            <div class="form-alert form-alert-error" id="formErrorAlert" role="alert">
+              <strong>Submission Error.</strong><br />
+              <span id="errorMessageText">One or more required fields are incomplete or formatted incorrectly. Please review highlighted items below.</span>
+            </div>
+
+            <!-- FORM ELEMENT -->
+            <form id="consultationForm" action="https://formspree.io/f/mppdbrbd" method="POST" novalidate>
+
+              <!-- FULL NAME -->
+              <div class="form-group">
+                <label for="fullName" class="form-label">Full Name <span class="req">*</span></label>
+                <input type="text" id="fullName" name="Full Name" class="form-input" placeholder="e.g., Eleanor Vance" required />
+                <div class="form-error-text" id="nameError">Please enter your full name.</div>
+              </div>
+
+              <!-- EMAIL ADDRESS -->
+              <div class="form-group">
+                <label for="emailAddress" class="form-label">Email Address <span class="req">*</span></label>
+                <input type="email" id="emailAddress" name="email" class="form-input" placeholder="e.g., author@example.com" required />
+                <div class="form-error-text" id="emailError">Please enter a valid email address.</div>
+              </div>
+
+              <!-- BOOK TITLE & AUTHOR WEBSITE -->
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="bookTitle" class="form-label">Book Title <span class="req">*</span></label>
+                  <input type="text" id="bookTitle" name="Book Title" class="form-input" placeholder="Title &amp; subtitle" required />
+                  <div class="form-error-text" id="titleError">Please provide your book title.</div>
+                </div>
+
+                <div class="form-group">
+                  <label for="authorWebsite" class="form-label">Author Website <span class="opt">(Optional)</span></label>
+                  <input type="url" id="authorWebsite" name="Author Website" class="form-input" placeholder="https://..." />
+                  <div class="form-error-text" id="urlError">Please enter a valid URL beginning with http:// or https://</div>
+                </div>
+              </div>
+
+              <!-- SERVICE OF INTEREST -->
+              <div class="form-group">
+                <label for="serviceInterest" class="form-label">Primary Service of Interest <span class="req">*</span></label>
+                <select id="serviceInterest" name="Service of Interest" class="form-select" required>
+                  <option value="" disabled selected>Select an area of focus...</option>
+                  <option value="Comprehensive Book Marketing Consultation">Comprehensive Book Marketing Consultation</option>
+                  <option value="Amazon Book Marketing & Metadata">Amazon Book Marketing &amp; Metadata Optimization</option>
+                  <option value="BookBub Promotion & Featured Deals">BookBub Promotion &amp; Featured Deal Advisory</option>
+                  <option value="AI Book Discoverability">AI Book Discoverability &amp; Semantic Footprint</option>
+                  <option value="Book Club Outreach & Discussion Guides">Book Club Outreach &amp; Reading Guides</option>
+                  <option value="Email Marketing & Reader Funnels">Email Marketing &amp; Reader Retention</option>
+                  <option value="Author Branding & Platform Cohesion">Author Platform &amp; Brand Cohesion</option>
+                  <option value="Social Media Book Promotion">Social Media Book Promotion</option>
+                  <option value="Book Launch Campaigns">Book Launch Campaigns (Pre, Week &amp; Post)</option>
+                  <option value="Reader Funnel Development">Reader Funnel &amp; Backlist Growth</option>
+                  <option value="Book Review and ARC Reader Outreach">Book Review &amp; ARC Reader Outreach</option>
+                </select>
+                <div class="form-error-text" id="serviceError">Please select a service or general consultation.</div>
+              </div>
+
+              <!-- MESSAGE / NOTES -->
+              <div class="form-group">
+                <label for="consultationMessage" class="form-label">Tell Us About Your Book &amp; Goals <span class="req">*</span></label>
+                <textarea id="consultationMessage" name="Book Summary & Marketing Goals" class="form-textarea" placeholder="Include your book's genre, current publishing status (upcoming launch, newly released, or backlist title), and specific marketing challenges..." required></textarea>
+                <div class="form-error-text" id="messageError">Please share a brief message describing your book.</div>
+              </div>
+
+              <!-- PRIVACY & EXPLORATORY CONSENT -->
+              <div class="checkbox-group">
+                <input type="checkbox" id="consentCheck" name="Consent Acknowledged" value="Yes" required />
+                <label for="consentCheck" class="checkbox-label">
+                  I understand that this consultation request is complimentary, confidential, and exploratory. My information will never be shared or sold.
+                </label>
+              </div>
+              <div class="form-error-text" id="consentError" style="margin-top: -1rem; margin-bottom: 1.5rem;">Please check this box to confirm.</div>
+
+              <!-- SUBMIT BUTTON -->
+              <button type="submit" class="submit-btn" id="submitBtn">
+                <span id="btnText">Submit Consultation Request</span>
+                <svg id="btnArrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </button>
+            </form>
+
+            <!-- BACKEND ACTIVE NOTIFICATION -->
+            <div class="backend-note">
+              <strong>Form Status: Connected &amp; Live</strong>
+              Inquiries submitted through this form are securely transmitted via Formspree directly to Gideon's inbox.
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- TRANSPARENCY BANNER -->
+    <section class="transparency-banner">
+      <div class="container transparency-box">
+        <span class="section-eyebrow">Our Ethical Standard</span>
+        <h3>Honest Counsel, No Exaggerations</h3>
+        <p>
+          We do not guarantee sales figures, bestseller badges, or BookBub editorial acceptance, because no external agency controls platform algorithms or reader taste. What we guarantee is rigorous, professional, and strategic execution tailored to your book's unique identity.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <a href="index.html" class="brand-link">
+            <div class="logo-box" style="width: 44px; height: 44px;">
+              <span class="logo-placeholder-letter" style="font-size: 1.1rem;">G</span>
+              <span class="logo-placeholder-text" style="font-size: 0.4rem;">LOGO</span>
+            </div>
+            <div class="brand-text-block">
+              <span class="brand-title" style="font-size: 1.15rem;">GTO Literary</span>
+              <span class="brand-subtitle" style="font-size: 0.65rem;">MARKETING</span>
+            </div>
+          </a>
+          <p class="footer-quote">"Helping Great Books Reach More Readers."</p>
+          <p>
+            An international literary marketing consultancy dedicated to helping authors, publishers, and literary professionals achieve sustainable visibility and reader engagement.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="blog.html">Blog &amp; Resources</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Consultancy Focus</h4>
+          <ul class="footer-links">
+            <li><a href="services.html">Amazon Book Marketing</a></li>
+            <li><a href="services.html">Book Launch Strategy</a></li>
+            <li><a href="services.html">Author Platform Branding</a></li>
+            <li><a href="services.html">Book Club Outreach</a></li>
+            <li><a href="services.html">AI Book Discoverability</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Consultancy Inquiries</h4>
+          <div style="margin-bottom: 0.85rem;">
+            <strong style="color: var(--color-white); display: block;">Founder &amp; Consultant</strong>
+            <span>Gideon</span>
+          </div>
+          <div style="margin-bottom: 0.85rem;">
+            <strong style="color: var(--color-white); display: block;">Planned Business Email</strong>
+            <span>hello@gtoliterary.com</span><br />
+          </div>
+          <div>
+            <strong style="color: var(--color-white); display: block;">Client Scope</strong>
+            <span>Serving Authors Worldwide</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="yearEl">2025</span> GTO Literary Marketing. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       INTERNAL JAVASCRIPT (Formspree AJAX, Validation, Mobile Menu & Year)
+       ======================================================================== -->
+  <script>
+    (function () {
+      // 1. Current Year
+      var yr = document.getElementById('yearEl');
+      if (yr) yr.textContent = new Date().getFullYear();
+
+      // 2. Mobile Nav Toggle
+      var toggle = document.getElementById('mobileNavToggle');
+      var menu = document.getElementById('navMenuWrapper');
+      if (toggle && menu) {
+        toggle.addEventListener('click', function () {
+          var open = menu.classList.toggle('open');
+          toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+      }
+
+      // 3. Consultation Form Validation & Asynchronous Formspree Submission
+      var form = document.getElementById('consultationForm');
+      var submitBtn = document.getElementById('submitBtn');
+      var btnText = document.getElementById('btnText');
+      var successAlert = document.getElementById('formSuccessAlert');
+      var errorAlert = document.getElementById('formErrorAlert');
+      var errorMessageText = document.getElementById('errorMessageText');
+
+      // Fields
+      var nameInput = document.getElementById('fullName');
+      var emailInput = document.getElementById('emailAddress');
+      var titleInput = document.getElementById('bookTitle');
+      var websiteInput = document.getElementById('authorWebsite');
+      var serviceSelect = document.getElementById('serviceInterest');
+      var messageInput = document.getElementById('consultationMessage');
+      var consentCheck = document.getElementById('consentCheck');
+
+      // Error Labels
+      var nameError = document.getElementById('nameError');
+      var emailError = document.getElementById('emailError');
+      var titleError = document.getElementById('titleError');
+      var urlError = document.getElementById('urlError');
+      var serviceError = document.getElementById('serviceError');
+      var messageError = document.getElementById('messageError');
+      var consentError = document.getElementById('consentError');
+
+      function isValidEmail(email) {
+        var pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return pattern.test(email);
+      }
+
+      function isValidURL(url) {
+        if (!url || url.trim() === '') return true;
+        try {
+          var parsed = new URL(url);
+          return parsed.protocol === 'http:' || parsed.protocol === 'https:';
+        } catch (_) {
+          return false;
+        }
+      }
+
+      if (form) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+
+          var isValid = true;
+
+          // Reset feedback displays
+          successAlert.style.display = 'none';
+          errorAlert.style.display = 'none';
+
+          // Validate Full Name
+          if (!nameInput.value.trim()) {
+            nameInput.classList.add('has-error');
+            nameError.style.display = 'block';
+            isValid = false;
+          } else {
+            nameInput.classList.remove('has-error');
+            nameError.style.display = 'none';
+          }
+
+          // Validate Email
+          if (!emailInput.value.trim() || !isValidEmail(emailInput.value.trim())) {
+            emailInput.classList.add('has-error');
+            emailError.style.display = 'block';
+            isValid = false;
+          } else {
+            emailInput.classList.remove('has-error');
+            emailError.style.display = 'none';
+          }
+
+          // Validate Book Title
+          if (!titleInput.value.trim()) {
+            titleInput.classList.add('has-error');
+            titleError.style.display = 'block';
+            isValid = false;
+          } else {
+            titleInput.classList.remove('has-error');
+            titleError.style.display = 'none';
+          }
+
+          // Validate Optional Website
+          if (websiteInput.value.trim() && !isValidURL(websiteInput.value.trim())) {
+            websiteInput.classList.add('has-error');
+            urlError.style.display = 'block';
+            isValid = false;
+          } else {
+            websiteInput.classList.remove('has-error');
+            urlError.style.display = 'none';
+          }
+
+          // Validate Service Select
+          if (!serviceSelect.value) {
+            serviceSelect.classList.add('has-error');
+            serviceError.style.display = 'block';
+            isValid = false;
+          } else {
+            serviceSelect.classList.remove('has-error');
+            serviceError.style.display = 'none';
+          }
+
+          // Validate Message
+          if (!messageInput.value.trim()) {
+            messageInput.classList.add('has-error');
+            messageError.style.display = 'block';
+            isValid = false;
+          } else {
+            messageInput.classList.remove('has-error');
+            messageError.style.display = 'none';
+          }
+
+          // Validate Consent Checkbox
+          if (!consentCheck.checked) {
+            consentError.style.display = 'block';
+            isValid = false;
+          } else {
+            consentError.style.display = 'none';
+          }
+
+          if (!isValid) {
+            errorMessageText.textContent = 'One or more required fields are incomplete or formatted incorrectly. Please review highlighted items below.';
+            errorAlert.style.display = 'block';
+            errorAlert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            return;
+          }
+
+          // Initiate Asynchronous Submission to Formspree
+          submitBtn.disabled = true;
+          btnText.textContent = 'Sending Message...';
+
+          var formData = new FormData(form);
+
+          fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+              'Accept': 'application/json'
+            }
+          })
+          .then(function (response) {
+            if (response.ok) {
+              successAlert.style.display = 'block';
+              errorAlert.style.display = 'none';
+              form.reset();
+              successAlert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            } else {
+              return response.json().then(function (data) {
+                if (data && data.errors && data.errors.length > 0) {
+                  errorMessageText.textContent = data.errors.map(function(error) { return error.message; }).join(', ');
+                } else {
+                  errorMessageText.textContent = 'There was an issue sending your message. Please try again or email hello@gtoliterary.com.';
+                }
+                errorAlert.style.display = 'block';
+                errorAlert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+              });
+            }
+          })
+          .catch(function (error) {
+            errorMessageText.textContent = 'Network error: Unable to connect to submission server. Please verify your connection and try again.';
+            errorAlert.style.display = 'block';
+            errorAlert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          })
+          .finally(function () {
+            submitBtn.disabled = false;
+            btnText.textContent = 'Submit Consultation Request';
+          });
+
+        });
+
+        // Dismiss field errors on user input
+        var inputs = [nameInput, emailInput, titleInput, websiteInput, serviceSelect, messageInput];
+        inputs.forEach(function (inp) {
+          inp.addEventListener('input', function () {
+            inp.classList.remove('has-error');
+            var err = inp.parentElement.querySelector('.form-error-text');
+            if (err) err.style.display = 'none';
+          });
+        });
+
+        consentCheck.addEventListener('change', function () {
+          if (consentCheck.checked) {
+            consentError.style.display = 'none';
+          }
+        });
+      }
+
+    })();
+  </script>
+</body>
+</html>
